@@ -4,3 +4,10 @@
 @import "components/index";
 @import "layout/index";
 @import "themes/index";
+
+.hidden {
+    display: none;
+}
+a {
+    text-decoration: none;    
+}

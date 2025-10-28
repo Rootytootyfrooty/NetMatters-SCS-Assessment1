@@ -1,0 +1,30 @@
+            // @media (min-width: 768px) {
+            //     flex: 50%;
+            // }
+            // @media (min-width: 992px) {
+            //     flex: 25%;
+            // }
+            // @media (min-width: 1260px) {
+            //     margin-bottom: 40px;
+            // }
+
+//breakpoints
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1260px;
+
+@mixin sm {
+    @media (min-width: #{$screen-sm}) {
+        @content; 
+    }
+}
+@mixin md {
+    @media (min-width: #{$screen-md}) {
+        @content; 
+    }
+}
+@mixin lg {
+    @media (min-width: #{$screen-lg}) {
+        @content; 
+    }
+}

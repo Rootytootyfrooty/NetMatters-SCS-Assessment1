@@ -1,12 +1,21 @@
-//colour variables
+//colour variables descriptive
 
-$color--consult-dev: #f7b322;
-$color--it-support: #4183d7;
-$color--dig-market: #2ecc71;
-$color--telecoms: #d64541;
-$color--web-design: #926fb1;
-$color--cyber-sec: #f62459;
-$color--dev-train: #ce4125;
-$color--main-bg: #fff;
-$color--div-bg: #333645;
+$c__consultancy-dev-yellow: #f7b322;
+$c__it-support-blue: #4183d7;
+$c__digital-market-green: #2ecc71;
+$c__telecoms-red: #d64541;
+$c__web-design-purple: #926fb1;
+$c__cyber-security-pink: #f62459;
+$c__dev-training-orange: #ce4125;
 
+//colour variables functional
+
+$dev-yellow: $c__consultancy-dev-yellow;
+$support-blue: $c__it-support-blue;
+$market-green: $c__digital-market-green;
+$telecoms-red: $c__telecoms-red;
+$design-purple: $c__web-design-purple;
+$security-pink: $c__cyber-security-pink;
+$training-orange: $c__dev-training-orange;
+$bg-white: #fff;
+$bg-midnight: #333645;

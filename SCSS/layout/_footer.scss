@@ -1,9 +1,8 @@
 footer {
-    background-color: #323544;
-    color: #fff;
+    background-color: $bg-midnight;
+    color: $bg-white;
     padding: 30px 0 0;
     position: relative;
-
     .footer-row {
         display: flex;
         flex-wrap: wrap;
@@ -12,13 +11,13 @@ footer {
             flex:100%;
             margin-bottom: 30px;
 
-            @media (min-width: 768px) {
+            @include sm {
                 flex: 50%;
             }
-            @media (min-width: 992px) {
+            @include md {
                 flex: 25%;
             }
-            @media (min-width: 1260px) {
+            @include lg {
                 margin-bottom: 40px;
             }
 
@@ -29,4 +28,10 @@ footer {
             }
         }
     }
+}
+footer a {
+    color: white;
+}
+ul {
+    list-style: none;
 }
