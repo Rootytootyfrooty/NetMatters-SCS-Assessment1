@@ -1,0 +1,20 @@
+.carousel-1 {
+    position: relative;
+    border: 1px #bbb clear;
+    padding: 30px 0 0;
+    box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+    height: auto;
+    text-align: center;
+}
+
+.btn-big {
+    position: relative;
+    top: 0;
+    transition: top .5s ease, background-color .5s ease, color .5s ease;
+    border: 1px solid #bbb;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+    height: auto;
+    text-align: center;
+}
