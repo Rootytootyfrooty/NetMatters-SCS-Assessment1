@@ -19,3 +19,14 @@ $security-pink: $c__cyber-security-pink;
 $training-orange: $c__dev-training-orange;
 $bg-white: #fff;
 $bg-midnight: #333645;
+
+//button colours map
+$btn-colors: (
+  dev-yellow: $dev-yellow,
+  support-blue: $support-blue,
+  market-green: $market-green,
+  telecoms-red: $telecoms-red,
+  design-purple: $design-purple,
+  security-pink: $security-pink,
+  training-orange: $training-orange
+);

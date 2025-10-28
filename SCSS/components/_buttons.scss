@@ -1,0 +1,52 @@
+.btn, .btn-sm {
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 12px 32px;
+    margin-top: 25px;
+}
+.btn-big {
+    position: relative;
+    top: 0;
+    transition: top .5s ease, background-color .5s ease, color .5s ease;
+    border: 1px solid #bbb;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+    height: auto;
+    text-align: center;
+}
+
+
+.btn-big {
+@each $name, $color in $btn-colors {
+  &--#{$name} {
+    background-color: $bg-white;
+    color: $bg-midnight;
+        &:hover {
+            top: -10px;
+            background-color: $color;
+            color: $bg-white;
+
+            .btn-sm--#{$name} {
+                background-color: $bg-white;
+                 color: $color;
+            }
+        }
+    }
+  }
+}
+
+.btn-sm {
+@each $name, $color in $btn-colors {
+  &--#{$name} {
+    background-color: $color;
+    color: $bg-white;
+    }
+  }
+}
