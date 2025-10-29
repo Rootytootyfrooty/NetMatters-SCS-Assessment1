@@ -1,3 +1,11 @@
-.btn-big--art-1 {
-    background-image: url("https://placehold.co/630x690");
+// .btn-big--art-1 {
+//     background-image: url("img/netmattersbuilding.png");
+//     height: 100%;
+// }
+.news img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90vw;
+    border: 10px solid, grey;
+    border-radius: 10px;
 }

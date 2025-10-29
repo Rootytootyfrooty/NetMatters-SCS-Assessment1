@@ -16,7 +16,7 @@ $screen-lg: 1260px;
 @mixin sm {
     @media (min-width: #{$screen-sm}) {
         @content; 
-    }
+        }
 }
 @mixin md {
     @media (min-width: #{$screen-md}) {
