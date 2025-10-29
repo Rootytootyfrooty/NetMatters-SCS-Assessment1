@@ -26,7 +26,6 @@
     text-align: center;
 }
 
-
 .btn-big {
 @each $name, $color in $btn-colors {
   &--#{$name} {
