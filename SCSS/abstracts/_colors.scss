@@ -8,6 +8,12 @@ $c__web-design-purple: #926fb1;
 $c__cyber-security-pink: #f62459;
 $c__dev-training-orange: #ce4125;
 
+$c__welcome-black: #121318;
+$c__google-blue: #166af4;
+$c__trustpilot-green: #009b69;
+
+$orange: orange;
+
 //colour variables functional
 
 $dev-yellow: $c__consultancy-dev-yellow;
@@ -20,7 +26,11 @@ $training-orange: $c__dev-training-orange;
 $bg-white: #fff;
 $bg-midnight: #333645;
 
-//button colours map
+$wel-black: $c__welcome-black;
+$gg-blue: $c__google-blue;
+$tp-green: $c__trustpilot-green;
+
+//our services button colours map
 $btn-colors: (
   dev-yellow: $dev-yellow,
   support-blue: $support-blue,
@@ -30,3 +40,4 @@ $btn-colors: (
   security-pink: $security-pink,
   training-orange: $training-orange
 );
+

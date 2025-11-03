@@ -6,3 +6,43 @@
 .about a {
     color: $bg-white;
 }
+.h2up {
+    font-size: 2.25rem;
+    font-weight: 600;
+    font-family: inherit;
+}
+.quote {
+    margin: 0;
+    padding: 0;
+}
+
+
+// buttons- welcome section 1 & 2; google; trustpilot; 
+
+.btn-wel {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1fr;
+    > a {
+        background-color: $wel-black;
+        border: $wel-black;
+    }
+}
+.btn-wel2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+}
+.btn-gg {
+    background-color: $gg-blue;
+    border: $gg-blue;
+}
+.btn-tp {
+    background-color: $tp-green;
+    border: $tp-green;
+}
+.btn-gg, .btn-tp {
+    height: auto;
+    max-width: fit-content;
+}
+// for star and and arrow icons, see themes/icons.scss
