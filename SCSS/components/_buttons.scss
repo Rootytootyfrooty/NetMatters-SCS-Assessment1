@@ -34,7 +34,11 @@
 
             .btn-sm--#{$name} {
                 background-color: $bg-white;
-                 color: $color;
+                color: $color;
+            }
+            .btn-logo--#{$name} {
+                background-color: $bg-white;
+                color: $color;
             }
         }
     }
@@ -48,4 +52,23 @@
     color: $bg-white;
     }
   }
+}
+.btn-logo {
+@each $name, $color in $btn-colors {
+  &--#{$name} {
+    display: inline-grid;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: $color;
+    color: $bg-white;
+    }
+  }
+}
+.btn-logo img {  
+  justify-self: center;
+  align-self: center;
+  path {
+      fill: currentColor;
+    }
 }

@@ -1,5 +1,8 @@
-img {
+.logo {
     max-width: 402px;
+    max-height: 100%;
+    object-fit: scale-down;
+    float: left;
 }
 .container-header {
     display: flex;
@@ -41,3 +44,38 @@ img {
     }
 }
 
+.burger {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 63px;
+    height: 56px;
+    background-color: $bg-midnight;
+    border-radius: 5px;
+        .mid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 35px;
+        height: 4px;
+        background-color: $bg-white;
+        transform: translate(-50%, -50%);
+        transition: 0.4s;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 35px;
+                height: 4px;
+                top: -10px;
+                transition: 0.4s;
+                background-color: $bg-white;
+}
+            &::before {
+                top: -10px;
+            }
+            &::after {
+                top: 10px;
+            }
+    }
+}
