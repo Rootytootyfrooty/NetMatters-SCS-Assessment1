@@ -1,35 +1,28 @@
-// stars in welcome section, not changing colour
+// stars in welcome section
 
 .stars {
     display: flex;
     flex-direction: row;
-    fill: orange;
 }
 .star {
+    display: inline-block;
     width: 50px;
     height: 50px;
-    font-size: 50px;
-    fill: #ffa500;
 }
 
-//multi-use arrow, also not changing colour
+//multi-use arrow
 
-.arrow::after {
-    content: '';
+.arrow {
+    width: 20px;
+    height: 20px;
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0.5rem;
-    font-size: 20px;
-    background-image: url("../img/icons/SVG/arrow-right2.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    margin-left: 10px;
     vertical-align: middle;
 }
+.phone {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
 
-// <svg class="star" viewBox="0 0 32 32">
-//   <path d="M19.414 27.414l10-10c0.781-0.781 ..." />
-// </svg>
 
-// <path fill="#000000" d="M19.414 27.414l10-10..." />
-// <path fill="currentColor" d="M19.414 27.414l10-10..." />

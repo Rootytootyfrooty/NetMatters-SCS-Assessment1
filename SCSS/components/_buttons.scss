@@ -16,7 +16,7 @@
 .btn-big {
     position: relative;
     top: 0;
-    transition: top .5s ease, background-color .5s ease, color .5s ease;
+    transition: top .5s ease;
     border: 1px solid #bbb;
     border-radius: 15px;
     padding: 30px;
@@ -34,16 +34,16 @@
             top: -10px;
             background-color: $color;
             color: $bg-white;
-
             .btn-sm--#{$name} {
                 background-color: $bg-white;
+                background-image: url(img/icons/SVG/con-dev-co.svg);
                 color: $color;
             }
-            .btn-logo--#{$name} {
+            .btn-logo {
                 background-color: $bg-white;
-                color: $color;
+                background-image: url(img/icons/SVG/con-dev-co.svg);
             }
-        }
+                    }
     }
   }
 }
@@ -52,7 +52,7 @@
 @each $name, $color in $btn-colors {
   &--#{$name} {
     background-color: $color;
-    border-color: $color;
+    border-color: transparent;
     color: $bg-white;
     }
   }
@@ -65,12 +65,11 @@
     width: 65px;
     border-radius: 50%;
     background-color: $color;
-    border-color: $color;
-    fill: currentColor;
+    border-color: transparent;
+    & img {  
+      justify-self: center;
+      align-self: center;
+      }
     }
   }
 }
-.btn-logo img {  
-  justify-self: center;
-  align-self: center;
-  }

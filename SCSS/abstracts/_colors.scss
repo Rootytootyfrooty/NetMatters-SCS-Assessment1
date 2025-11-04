@@ -1,6 +1,7 @@
 //colour variables descriptive
 
 $c__consultancy-dev-yellow: #f7b322;
+$c__consultancy-dev-grey: #67809f;
 $c__it-support-blue: #4183d7;
 $c__digital-market-green: #2ecc71;
 $c__telecoms-red: #d64541;
@@ -12,11 +13,12 @@ $c__welcome-black: #121318;
 $c__google-blue: #166af4;
 $c__trustpilot-green: #009b69;
 
-$orange: orange;
+$orange: #ffa500;
 
 //colour variables functional
 
 $dev-yellow: $c__consultancy-dev-yellow;
+$dev-grey: $c__consultancy-dev-grey;
 $support-blue: $c__it-support-blue;
 $market-green: $c__digital-market-green;
 $telecoms-red: $c__telecoms-red;
@@ -30,9 +32,12 @@ $wel-black: $c__welcome-black;
 $gg-blue: $c__google-blue;
 $tp-green: $c__trustpilot-green;
 
+
+
 //our services button colours map
 $btn-colors: (
   dev-yellow: $dev-yellow,
+  dev-grey: $dev-grey,
   support-blue: $support-blue,
   market-green: $market-green,
   telecoms-red: $telecoms-red,
