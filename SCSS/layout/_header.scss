@@ -19,18 +19,14 @@
     }
     > :nth-child(4) {
         order: 4;
-        // flex: 0 0 100%;
         display: flex;
         justify-content: center;
-        form {
-            // flex-basis: 100%;
-            max-width: 600px;
-        }
     }
     > :nth-child(-n + 3) {
         flex: 0 1 auto;
         white-space: nowrap;
     }
+    
     @include sm {
         > :nth-child(4) {
             order: 2;
@@ -51,7 +47,7 @@
     width: 63px;
     height: 56px;
     background-color: $bg-midnight;
-    border-radius: 5px;
+    border-radius: 3px;
         .mid {
         position: absolute;
         top: 50%;
@@ -78,4 +74,16 @@
                 top: 10px;
             }
     }
+}
+
+.container-header input {
+    padding: 6px;
+    width: 500px;
+}
+.container-header button {
+    float: right;
+    padding: 5px 10px;
+    background: #bbb;
+    border: none;
+    cursor: pointer;
 }

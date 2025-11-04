@@ -13,10 +13,14 @@
 //multi-use arrow
 
 .arrow {
+    display: inline-block;
     width: 20px;
     height: 20px;
     display: inline-block;
     margin-left: 10px;
+    vertical-align: middle;
+}
+a .inline-title {
     vertical-align: middle;
 }
 .phone {
