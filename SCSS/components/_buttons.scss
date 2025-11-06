@@ -73,3 +73,13 @@
     }
   }
 }
+
+.btn-sm {
+@each $name, $color in $btn-colors {
+  &--#{$name} {
+    background-color: $color;
+    border-color: transparent;
+    color: $bg-white;
+    }
+  }
+}

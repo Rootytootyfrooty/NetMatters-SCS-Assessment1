@@ -10,10 +10,18 @@ $c__cyber-security-pink: #f62459;
 $c__dev-training-orange: #ce4125;
 
 $c__welcome-black: #121318;
-$c__google-blue: #166af4;
-$c__trustpilot-green: #009b69;
+
+$c__google-blue: #4387f6;
+$c__google-blue-hov: #166af4;
+$c__trustpilot-green: #00b67b;
+$c__trustpilot-green-hov: #009b69;
 
 $orange: #ffa500;
+
+$c__instagram-pink: #d93175;
+$c__twitter-blue: #00aced;
+$c__linked-blue: #0077b5;
+$c__facebook-blue: #3b5998;
 
 //colour variables functional
 
@@ -30,9 +38,14 @@ $bg-midnight: #333645;
 
 $wel-black: $c__welcome-black;
 $gg-blue: $c__google-blue;
+$gg-blue-h: $c__google-blue-hov;
 $tp-green: $c__trustpilot-green;
+$tp-green-h: $c__trustpilot-green-hov;
 
-
+$inst-pink: $c__instagram-pink;
+$twit-blue: $c__twitter-blue;
+$link-blue: $c__linked-blue;
+$face-blue: $c__facebook-blue;
 
 //our services button colours map
 $btn-colors: (
@@ -46,3 +59,10 @@ $btn-colors: (
   training-orange: $training-orange
 );
 
+//social media buttons colour map
+  $soc-med-colors: (
+  inst-pink: $inst-pink,
+  twit-blue: $twit-blue,
+  link-blue: $link-blue,
+  face-blue: $face-blue,
+);

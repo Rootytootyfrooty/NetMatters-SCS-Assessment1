@@ -28,17 +28,28 @@
     display: flex;
     flex-direction: column;
     flex-basis: auto;
+    padding-bottom: 2rem;
+    font-size: 20px;
 }
 .btn-gg {
     background-color: $gg-blue;
     border: $gg-blue;
+    &:hover {
+        background-color: $gg-blue-h;
+    }
 }
 .btn-tp {
     background-color: $tp-green;
     border: $tp-green;
+    &:hover {
+        background-color: $tp-green-h;
+    }
 }
 .btn-gg, .btn-tp {
     height: auto;
     max-width: fit-content;
 }
-// for star and and arrow icons, see themes/icons.scss
+
+
+
+// for star and arrow icons, see themes/icons.scss

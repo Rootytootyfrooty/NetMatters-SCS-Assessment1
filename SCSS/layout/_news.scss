@@ -6,6 +6,16 @@
     display: flex;
     margin: 0 auto;
     max-width: 90vw;
-    border: 10px solid, grey;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.article {
+    top: 0;
+    margin-bottom: 2rem;
+    &:hover {
+        position: relative;
+        top: -10px;
+        transition: top 0.5s ease;
+    }
 }
