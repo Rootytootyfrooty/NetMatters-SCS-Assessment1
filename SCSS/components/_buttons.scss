@@ -23,7 +23,9 @@
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: auto;
     text-align: center;
-}
+  }
+
+
 
 .btn-big {
 @each $name, $color in $btn-colors {
@@ -43,7 +45,7 @@
                 background-color: $bg-white;
                 background-image: url(img/icons/SVG/con-dev-co.svg);
             }
-                    }
+        }
     }
   }
 }
@@ -74,12 +76,11 @@
   }
 }
 
-.btn-sm {
-@each $name, $color in $btn-colors {
-  &--#{$name} {
+.btn-soc {
+@each $name, $color in $soc-med-colors {
+  &--#{$name}:hover {
     background-color: $color;
     border-color: transparent;
-    color: $bg-white;
     }
   }
 }

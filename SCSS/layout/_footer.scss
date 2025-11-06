@@ -1,8 +1,8 @@
 footer {
     background-color: $bg-midnight;
     color: $bg-white;
-    padding: 30px 0 0;
-    position: relative;
+    padding: 50px 0;
+    margin: 0;
     .footer-row {
         display: flex;
         flex-wrap: wrap;
@@ -10,8 +10,7 @@ footer {
         .footer-menu {
             flex:100%;
             margin-bottom: 30px;
-            // padding-left: 15px;
-            // padding-right: 15px;
+            
             margin: 0 auto;
             @include sm {
                 flex: 50%;
@@ -48,21 +47,33 @@ footer {
 .list-soc {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: flex-start;
     li {
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 65px;
         height: 55px;
-        background-color: #212330;
+        background-color: $wel-black;
         margin-right: 10px;
         margin-bottom: 10px;
         padding: 12px 22px 16px;
     }
     a {
-        align-self: center;
-        
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 32px;
     }
 }
-// fb lin x ins
 
+// after footer
+
+.footer-aft {
+    background-color: $wel-black;
+    color: $bg-white
+}

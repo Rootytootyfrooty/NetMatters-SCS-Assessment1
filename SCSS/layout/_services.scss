@@ -1,0 +1,36 @@
+.con {
+  grid-area: con;
+}
+.sup {
+  grid-area: sup;
+}
+.mar {
+  grid-area: mar;
+}
+.tel {
+  grid-area: tel;
+}
+.des {
+  grid-area: des;
+}
+.sec {
+  grid-area: sec;
+}
+.tra {
+  grid-area: tra;
+}
+
+@include sm {
+      .our-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        grid-template-areas:
+        "con con"
+        "sup sup"
+        "mar mar"
+        "tel des"
+        "sec tra";
+      }
+    }
