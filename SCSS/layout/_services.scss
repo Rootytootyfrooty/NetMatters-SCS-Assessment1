@@ -27,7 +27,7 @@
       .our-services {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr repeat(5, 1fr);
+        grid-template-rows: 0.1fr repeat(4, 1fr);
         gap: 20px;
         grid-template-areas:
         " . vowg1"
@@ -62,3 +62,63 @@
       padding-bottom: 50px;
     }
   }
+
+@include md { 
+  .our-services { 
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: 0.1fr 1fr 0.75fr 0.75fr; 
+    gap: 1.25rem; 
+
+    .btn-sm, .services { 
+      margin-top: 0;
+    } 
+
+    p { 
+      padding-top: 0; 
+    } 
+    .vowg1 { grid-area: 1 / 2 / 8 / 13; }
+    .con    { grid-area: 2 / 1 / 3 / 5; }
+    .sup    { grid-area: 2 / 5 / 3 / 9; }
+    .mar    { grid-area: 2 / 9 / 3 / 13; }
+    .tel    { grid-area: 3 / 1 / 4 / 7; }
+    .des    { grid-area: 3 / 7 / 4 / 13; }
+    .sec    { grid-area: 4 / 1 / 5 / 7; }
+    .tra    { grid-area: 4 / 7 / 5 / 13; }
+  }
+}
+// @include lg { 
+//   .our-services { 
+//     display: grid; 
+//     grid-template-columns: repeat(12, 1fr); 
+//     grid-template-rows: 0.1fr 1fr 0.75fr 0.75fr; 
+//     gap: 1.25rem; 
+
+//     .btn-sm, .services { 
+//       margin-top: 0;
+//     } 
+
+//     p { 
+//       padding-top: 0; 
+//     } 
+//     .vowg1 { grid-area: 1 / 2 / 8 / 13; }
+//     .con    { grid-area: 2 / 1 / 3 / 5; }
+//     .sup    { grid-area: 2 / 5 / 3 / 9; }
+//     .mar    { grid-area: 2 / 9 / 3 / 13; }
+//     .tel    { grid-area: 3 / 1 / 4 / 7; }
+//     .des    { grid-area: 3 / 7 / 4 / 13; }
+//     .sec    { grid-area: 4 / 1 / 5 / 7; }
+//     .tra    { grid-area: 4 / 7 / 5 / 13; }
+//   }
+// }
+
+
+// failed function :(
+// @each $name, $values in $our-services-grid-md {
+//           .services.#{$name},
+//           .#{$name} {
+//             grid-row: map-get($values, row);
+//             grid-column: map-get($values, col);
+//             border: 3px red dotted;
+//           }
+//         }
