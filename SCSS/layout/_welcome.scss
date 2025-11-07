@@ -2,6 +2,8 @@
 .about {
     background-color: $bg-midnight;
     color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .about a {
     color: $bg-white;
@@ -17,7 +19,7 @@
 
 .btn-wel {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: left;
     width: 1fr;
     > a {
         background-color: $wel-black;
@@ -30,6 +32,10 @@
     flex-basis: auto;
     padding-bottom: 2rem;
     font-size: 20px;
+    @include sm {
+        flex-direction: row;
+        justify-content: left;
+    }
 }
 .btn-gg {
     background-color: $gg-blue;
