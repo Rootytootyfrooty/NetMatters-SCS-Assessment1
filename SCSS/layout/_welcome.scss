@@ -1,7 +1,7 @@
 //welcome to netmatters & what our clients think sections
 .about {
     background-color: $bg-midnight;
-    color: white;
+    color: $bg-white;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -12,8 +12,18 @@
 .quote {
     margin: 0;
     padding: 0;
+    font-style: italic;
+    line-height: 1.875rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.quotee {
+   color: $c__quotee-grey;
 }
 
+.wel1 p {
+    line-height: 1.875rem;
+}
 
 // buttons- welcome section 1 & 2; google; trustpilot; 
 
@@ -22,8 +32,13 @@
     justify-content: left;
     width: 1fr;
     > a {
-        background-color: $wel-black;
-        border: $wel-black;
+        font-size: 1.25rem;
+        background-color: $wel-btn;
+        border: $wel-btn;
+        &:hover {
+            background-color: $wel-btn-hov;
+            border: $wel-btn-hov;
+        }
     }
 }
 .btn-wel2 {
