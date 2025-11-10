@@ -27,3 +27,55 @@
         width: 100vw;
     }
 }
+.carousel-logos-2,
+.carousel-logos-3,
+.carousel-logos-4 {
+    display: none;
+}
+
+@include sm {
+    .carousel-3 {
+        max-width: 750px;
+    }
+    .carousel-logos-1,
+    .carousel-logos-3,
+    .carousel-logos-4 {
+        display: none;
+    }
+    .carousel-logos-2 {
+        display: block;
+    }
+}
+
+@include md {
+    .carousel-3 {
+        max-width: 970px;
+    }
+    .carousel-logos-1,
+    .carousel-logos-2,
+    .carousel-logos-4 {
+        display: none;
+    }
+    .carousel-logos-3 {
+        display: block;
+    }
+}
+
+@include lg {
+    .carousel-3 {
+        max-width: 1200px;
+    }
+    .carousel-logos-1,
+    .carousel-logos-3,
+    .carousel-logos-2 {
+        display: none;
+    }
+    .carousel-logos-4 {
+        display: block;
+    }
+}
+//breakpoints
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1260px;
+

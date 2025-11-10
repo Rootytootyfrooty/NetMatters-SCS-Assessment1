@@ -1,15 +1,41 @@
-// .btn-big--art-1 {
-//     background-image: url("img/netmattersbuilding.png");
-//     height: 100%;
-// }
 .news img {
     display: flex;
-    margin: 0 auto;
-    max-width: 90vw;
     border: 1px solid #ccc;
     border-radius: 3px;
+    object-fit: scale-down;
+    max-width: 95%;
 }
-
+.news-sec {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 0 auto;
+    @include sm {
+        flex-direction: row;
+        .art3 {
+            display: none;
+        }
+        .article img {
+            height: 570px;
+            object-fit: fill;
+        }
+    }
+    @include md {
+        .article img {
+        height: 633px;
+        width: 455px;
+        }
+    }
+    @include lg {
+        .article img {
+            height: 583px;
+            width: 370px;
+        }
+        .art3 {
+            display: initial;
+        }
+    }
+}
 .article {
     top: 0;
     margin-bottom: 2rem;

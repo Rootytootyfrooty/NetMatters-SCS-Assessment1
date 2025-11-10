@@ -1,7 +1,7 @@
 footer {
     background-color: $bg-midnight;
     color: $bg-white;
-    padding: 50px 0;
+    padding: 27px 0;
     margin: 0;
     .footer-row {
         display: flex;
@@ -30,6 +30,11 @@ footer {
         }
     }
 }
+.logo-2 {
+    margin-bottom: -30px;
+    width: 320px;
+    height: 65px;
+}
 footer {
     a {
     color: white;
@@ -43,7 +48,11 @@ footer {
             }
     }
 }
-
+.container-soc {
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 26px;
+}
 .list-soc {
     display: flex;
     flex-direction: row;
@@ -75,5 +84,7 @@ footer {
 
 .footer-aft {
     background-color: $wel-black;
-    color: $bg-white
+    color: $bg-white;
+    padding-left: auto;
+    padding-right: auto;
 }
