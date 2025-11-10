@@ -6,37 +6,8 @@
 .container-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0;
-    margin: 0 auto;
-    > div {
-        flex: 1 1 auto;
-    }
-    > :nth-child(1) {
-        justify-self: left;
-    }
-    > :nth-child(4) {
-        order: 4;
-        display: flex;
-        justify-content: center;
-    }
-    > :nth-child(-n + 3) {
-        flex: 0 1 auto;
-        white-space: nowrap;
-    }
-    
-    @include sm {
-        > :nth-child(4) {
-            order: 2;
-        }
-        > :nth-child(2) {
-            order: 4;
-        }
-        > :nth-child(3) {
-            order: 3;
-        }
-    }
 }
 
 .burger {
@@ -75,14 +46,70 @@
     }
 }
 
-.container-header input {
-    padding: 6px;
-    width: 500px;
+#phone-icon {
+    @include sm {
+        display: none;
+    }
 }
-.container-header button {
-    float: right;
-    padding: 5px 10px;
-    background: #bbb;
-    border: none;
-    cursor: pointer;
+
+.header-order {
+    padding: 15px 0px;
+}
+
+.btn-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: right;
+    padding: 15px;
+}
+
+//smallest screen search bar
+
+#search-bar--sm {
+    justify-self: center;
+    padding: 0px 15px;
+    input {
+        padding: 5px 40px 5px 15px;
+        height: 47px;
+    }
+    button {
+        float: right;
+        padding: 5px 10px;
+        height: 47px;
+        background: #bbb;
+        border: none;
+        cursor: pointer;
+    }
+    @include sm {
+        display: none;
+    }
+}
+
+//breakpoint small search bar
+
+#search-bar--sm-2 {
+    display: none;
+    @include sm {
+        display: inline-flex;
+        margin-right: 20px;
+        input {
+            padding: 5px 15px;
+            width: 174px;
+            height: 56px;
+            border: 1px solid grey;
+        }
+
+        button {
+            float: right;
+            padding: 7px 20px 3px 20px;
+            width: 63px;
+            height: 56px;
+            align-content: center;
+            background: #bbb;
+            border: transparent;
+            border-radius: 0px 3px 3px 0px;
+            cursor: pointer;
+        }
+    }
 }
