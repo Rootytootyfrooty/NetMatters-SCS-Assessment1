@@ -1,15 +1,9 @@
 .logo {
+    width: 100%;
     max-width: 402px;
-    max-height: 100%;
+    height: auto;
+    // max-height: 100%;
     object-fit: scale-down;
-}
-.container-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0px 15px;
 }
 
 .burger {
@@ -49,29 +43,67 @@
 }
 
 #phone-icon {
+    display: block;
     @include sm {
         display: none;
     }
 }
 
 .header-order {
-    padding: 15px 0px;
-}
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    > .container-logo,
+    > .btn-header {
+        flex: 1 1 auto;
+    }
+    > .container-logo {
+        display: flex;
+        align-items: center;
+    }
+    &::before {
+        content: "";
+        display: flex;
+    }
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "logo header"
+    "search search";
 
+  > .container-logo {
+    grid-area: logo;
+  }
+  > .btn-header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  > #search-bar--sm {
+    grid-area: search;
+    width: 100%;
+  }
+}
 .btn-header {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-items: right;
+    justify-content: flex-end;
+    width: 100%;
     padding: 15px;
 }
 
 //smallest screen search bar
 
 #search-bar--sm {
-    justify-self: center;
+    display: flex;
+    flex: 1;
+    width: 100%;
     padding: 0px 15px;
     input {
+        flex: 1;
         padding: 5px 40px 5px 15px;
         height: 47px;
     }
@@ -93,8 +125,13 @@
 #search-bar--sm-2 {
     display: none;
     @include sm {
-        display: inline-flex;
-        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        margin-right: 1.25rem;
+        form {
+            display: flex;
+            align-items: center;
+        }
         input {
             padding: 5px 15px;
             width: 174px;
@@ -103,7 +140,7 @@
         }
 
         button {
-            float: right;
+            // float: right;
             padding: 7px 20px 3px 20px;
             width: 63px;
             height: 56px;

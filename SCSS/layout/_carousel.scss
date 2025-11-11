@@ -12,11 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-image: url("../img/netmattersbuilding.png");
-    background-blend-mode: darken;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/netmattersbuilding.png"), no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
     overflow: hidden;
