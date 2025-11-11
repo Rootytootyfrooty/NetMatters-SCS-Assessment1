@@ -1,4 +1,6 @@
 //colour variables descriptive
+$c__search-bar--text-grey: #888;
+$c__search-bar--bg-grey: rgba(0, 0, 0, 0.1);
 
 $c__consultancy-dev-yellow: #f7b322;
 $c__consultancy-dev-grey: #67809f;
@@ -27,6 +29,9 @@ $c__linked-blue: #0077b5;
 $c__facebook-blue: #3b5998;
 
 //colour variables functional
+
+$srch-tx-grey: $c__search-bar--text-grey;
+$srch-bg-grey: $c__search-bar--bg-grey;
 
 $dev-yellow: $c__consultancy-dev-yellow;
 $dev-grey: $c__consultancy-dev-grey;

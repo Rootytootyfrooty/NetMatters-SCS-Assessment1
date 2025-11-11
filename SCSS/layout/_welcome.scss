@@ -2,8 +2,7 @@
 .about {
     background-color: $bg-midnight;
     color: $bg-white;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: rem(50);
 }
 .about a {
     color: $bg-white;
@@ -37,6 +36,8 @@
         font-size: 1.25rem;
         background-color: $wel-btn;
         border: $wel-btn;
+        border-radius: rem(6);
+        margin-right: rem(12);
         &:hover {
             background-color: $wel-btn-hov;
             border: $wel-btn-hov;
@@ -57,6 +58,7 @@
 .btn-gg {
     background-color: $gg-blue;
     border: $gg-blue;
+    border-radius: rem(6);
     &:hover {
         background-color: $gg-blue-h;
     }
@@ -64,6 +66,7 @@
 .btn-tp {
     background-color: $tp-green;
     border: $tp-green;
+    border-radius: rem(6);
     &:hover {
         background-color: $tp-green-h;
     }
