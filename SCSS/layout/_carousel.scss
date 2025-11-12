@@ -5,6 +5,35 @@
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: auto;
     text-align: center;
+    p {
+        font-weight: 600;
+        line-height: 1.75rem;
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        align-self: center;
+
+    }
+    .btn {
+        align-self: center;
+    }
+    @include md {
+        h1 {
+            width: 80%;
+            font-size: rem(64);
+            line-height: rem(80);
+            text-align: start;
+        }
+        p {
+            width: 80%;
+            font-size: rem(26);
+            line-height: rem(40);
+            text-align: start;
+            align-self: initial;
+        }
+        .btn {
+            align-self: start;
+        }
+    }
 }
 
 //Top carousel- image after header
@@ -19,7 +48,7 @@
     background-attachment: inherit;
     background-position: center center;
     overflow: hidden;
-    height: 550px;
+    height: rem(600);
     max-width: 100vw;
     color: $bg-white;
     @include sm {
@@ -33,7 +62,9 @@
 .carousel-logos-4 {
     display: none;
 }
-
+.carousel {
+    padding-bottom: rem(50);
+}
 @include sm {
     .carousel-3 {
         max-width: 750px;

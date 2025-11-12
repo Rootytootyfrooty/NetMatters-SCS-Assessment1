@@ -1,5 +1,28 @@
 #news {
-    margin-top: rem(67);
+    padding-top: rem(50);
+    h2 {
+        padding: 0;
+    }
+    @include sm {
+    .va2 {
+        display: none;
+        }
+    .va1 {
+        display: block;
+        padding-left: rem(15);
+        padding-right: rem(15);
+        text-align: center;
+        float: right;
+        color: inherit;
+        text-decoration: none;
+    }
+    h3 {
+        margin: 0 auto;
+    }
+    h2 {
+        margin-bottom: rem(15);
+    }
+    }
 }
 .news img {
     display: flex;
@@ -8,10 +31,19 @@
     object-fit: scale-down;
     max-width: 95%;
 }
+.va1 {
+    display: none;
+    @include sm {
+      display: inline-block;
+      justify-self: end;
+      align-self: center;
+      margin-top: 0;
+    }
+}
 .news-sec {
     display: flex;
     flex-direction: column;
-    padding: auto;
+    padding-bottom: rem(50);
     margin: 0 auto;
     justify-content: center;
     @include sm {

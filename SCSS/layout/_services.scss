@@ -1,27 +1,12 @@
-.vowg1 {
-  grid-area: vowg1;
-}
-.con {
-  grid-area: con;
-}
-.sup {
-  grid-area: sup;
-}
-.mar {
-  grid-area: mar;
-}
-.tel {
-  grid-area: tel;
-}
-.des {
-  grid-area: des;
-}
-.sec {
-  grid-area: sec;
-}
-.tra {
-  grid-area: tra;
-}
+// our services grid small breakpoint
+.vowg1 { grid-area: vowg1; }
+.con {  grid-area: con; }
+.sup {  grid-area: sup; }
+.mar {  grid-area: mar; }
+.tel {  grid-area: tel; }
+.des {  grid-area: des; }
+.sec {  grid-area: sec; }
+.tra {  grid-area: tra; }
 
 @include sm {
       .our-services {
