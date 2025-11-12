@@ -1,0 +1,13 @@
+.main-nav-bar {
+    display: none;
+    @include md {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        height: rem(117);
+        background-color: $bg-midnight;
+    }
+    @include lg {
+        height: rem(99);
+    }
+}

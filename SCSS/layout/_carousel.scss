@@ -16,7 +16,11 @@
     .btn {
         align-self: center;
     }
+    @include sm {
+        padding-top: 0;
+    }
     @include md {
+        
         h1 {
             width: 80%;
             font-size: rem(64);

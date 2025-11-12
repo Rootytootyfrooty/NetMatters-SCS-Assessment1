@@ -1,9 +1,9 @@
 .logo {
     width: 100%;
-    max-width: 402px;
+    max-width: rem(402);
     height: auto;
-    // max-height: 100%;
     object-fit: scale-down;
+    padding: 0 rem(15);
 }
 
 .burger {
@@ -53,11 +53,41 @@
 #phone-icon4 {
     display: none;
 }
+@include md {
+    #phone-icon2,
+    #phone-icon3,
+    #phone-icon4 {
+        display: inline-block;
+        position: relative;
+        height: 56px;
+        border-radius: 3px;
+        background-color: $bg-midnight;
+        color: $bg-white;
+        font-size: rem(20);
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        text-transform: uppercase;
 
+        img {
+            // transform: translate(50%);
+            
+        }
+    }
+    #phone-icon4 {
+        width: 63px;
+        padding: rem(7) rem(20) rem(3);
+    }
+    #phone-icon2,
+    #phone-icon3 {
+        padding: rem(5) rem(15);
+    }
+}
 .header-order {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: rem(20) 0;
     > .container-logo,
     > .btn-header {
         flex: 1 1 auto;
@@ -97,7 +127,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    padding: 15px;
+    // padding: rem(20);
 }
 
 //smallest screen search bar
@@ -159,5 +189,8 @@
             border-radius: 0px 3px 3px 0px;
             cursor: pointer;
         }
+    }
+    @include md {
+        display: none;
     }
 }
