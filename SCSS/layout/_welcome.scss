@@ -31,13 +31,12 @@
 .btn-wel {
     display: flex;
     justify-content: left;
-    width: 1fr;
+    gap: rem(25);
     > a {
         font-size: 1.25rem;
         background-color: $wel-btn;
         border: $wel-btn;
         border-radius: rem(6);
-        margin-right: rem(12);
         &:hover {
             background-color: $wel-btn-hov;
             border: $wel-btn-hov;
@@ -46,10 +45,9 @@
 }
 .btn-wel2 {
     display: flex;
-    flex-direction: column;
-    flex-basis: auto;
     padding-bottom: 2rem;
     font-size: 20px;
+    gap: rem(25);
     @include sm {
         flex-direction: row;
         justify-content: left;
@@ -76,6 +74,60 @@
     max-width: fit-content;
 }
 
+// 992px breakpoint
 
+@include md {
+    .welcome-sec {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+        padding: rem(50) rem(15);
+            .h2up {
+            width: max-content;
+        }
+    }
+    
+    .btn-wel,
+    .btn-wel2 {
+        flex-direction: column;
+        max-width: fit-content;
+        justify-content: flex-end;
+        gap: 0;
+    }
+    .wel1,
+    .wel2 {
+        padding: rem(10);
+        flex: 1 1 0;
+        height: 100%;
+        padding: 0 rem(15);
+    }
+    .about {
+        padding: 0;
+    }
+    .btn-gg,
+    .btn-tp {
+        padding: rem(10) rem(25);
+        transform: translateY(100%);
+    }
+}
+
+// 1200px breakpoint
+
+@include lg {
+    .welcome-sec {
+        .btn-tp .arrow,
+        .btn-gg .arrow {
+            margin-left: 0;
+        }
+        .btn-wel,
+        .btn-wel2, {
+            flex-direction: row;
+            height: auto;
+            gap: rem(10);
+            line-height: rem(35);
+        }
+    }
+}
 
 // for star and arrow icons, see themes/icons.scss

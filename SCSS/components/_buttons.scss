@@ -6,7 +6,7 @@
     text-transform: uppercase;
     border: rem(1) solid #bbb;
     border-radius: rem(3);
-    padding: rem(12) rem(32);
+    padding: rem(10) rem(30);
     margin-bottom: rem(25);
 }
 
@@ -23,8 +23,6 @@
     height: auto;
     text-align: center;
   }
-
-
 
 .btn-big {
 @each $name, $color in $btn-colors {
@@ -49,6 +47,8 @@
   }
 }
 
+//the small 'buttons' in the our services section
+
 .btn-sm {
 @each $name, $color in $btn-colors {
   &--#{$name} {
@@ -58,6 +58,9 @@
     }
   }
 }
+
+// round colour logo/icons in the our services section
+
 .btn-logo {
 @each $name, $color in $btn-colors {
   &--#{$name} {
@@ -74,6 +77,8 @@
     }
   }
 }
+
+//social media buttons
 
 .btn-soc {
 @each $name, $color in $soc-med-colors {

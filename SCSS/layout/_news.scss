@@ -11,8 +11,9 @@
 .news-sec {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: auto;
     margin: 0 auto;
+    justify-content: center;
     @include sm {
         flex-direction: row;
         .art3 {
