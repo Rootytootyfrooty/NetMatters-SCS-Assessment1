@@ -23,18 +23,24 @@
         "sec tra";
       }
     }
-
+.vow2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .vow1 {
   display: none;
 }
+.our-services {
+      padding-bottom: 50px;
+    }
 @include sm {
     .h2up {
       margin-bottom: 0;
     }
     .vow1 {
-      display: inline-block;
-      justify-self: end;
-      align-self: center;
+      display: flex;
+      align-items: center;
       margin-top: 0;
       h3 {
         margin-top: 0;
@@ -44,9 +50,6 @@
     }
     .vow2 {
       display: none;
-    }
-    .our-services {
-      padding-bottom: 50px;
     }
     .vowg1 {
       margin-top: 0;
@@ -118,6 +121,9 @@
     .tra    { grid-area: 3 / 10 / 4 / 13; }
   }
 }
+
+
+//icons in our services
 
 
 // failed function :(

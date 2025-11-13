@@ -35,12 +35,13 @@
             color: $bg-white;
             .btn-sm--#{$name} {
                 background-color: $bg-white;
-                background-image: url(img/icons/SVG/con-dev-co.svg);
+                // background-image: url(img/icons/SVG/con-dev-co.svg);
                 color: $color;
             }
             .btn-logo {
                 background-color: $bg-white;
-                background-image: url(img/icons/SVG/con-dev-co.svg);
+                color: $color;
+                // background-image: url(img/icons/SVG/con-dev-co.svg);
             }
         }
     }
@@ -69,10 +70,13 @@
     width: 65px;
     border-radius: 50%;
     background-color: $color;
+    color: $bg-white;
     border-color: transparent;
-    & img {  
+    & svg {  
       justify-self: center;
       align-self: center;
+      height: rem(32);
+      width: rem(32);
       }
     }
   }

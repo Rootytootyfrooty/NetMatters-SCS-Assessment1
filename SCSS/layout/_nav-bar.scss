@@ -1,7 +1,8 @@
 .main-nav-bar {
     display: none;
     @include md {
-        display: block;
+        display: flex;
+        justify-content: center;
         margin: 0 auto;
         padding: 0;
         height: rem(117);
@@ -11,3 +12,110 @@
         height: rem(99);
     }
 }
+
+.nav-bar-icon {
+@each $name, $color in $btn-colors {
+  &--#{$name} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: rem(18) 0;
+    // height: rem(283);
+    width: rem(134);
+    border: 1px solid pink;
+    background-color: $bg-midnight;
+    color: $bg-white;
+    border: none;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: rem(18);
+    small {
+        font-size: rem(10);
+        transform: translateY(50%);
+    }
+    &:hover {
+        background-color: $color;
+        color: $bg-white;
+        .nav-bar-banner {
+            display: block;
+            background-color: $color;
+            height: rem(490);
+        }
+        svg {
+            color: $bg-white;
+        }
+        .sub-banner--dev-grey {
+        display: block;
+        height: rem(490);
+        background-color: $dev-grey;
+        }
+    }
+    > svg {  
+      justify-self: center;
+      align-self: center;
+      height: rem(23);
+      width: auto;
+      color: $color;
+      }
+    }
+  }
+}
+
+
+// banner popup
+
+.nav-bar-banner .sub-banner {
+    display: none;
+}
+
+@each $name, $color in $btn-colors {
+    .btn-logo--#{$name}:hover ~ .nav-bar-banner .sub-banner--#{$name} {
+        display: block;
+        background-color: $color;
+    }
+}
+
+// .nav-bar-icon--dev-grey:hover {
+//     .nav-bar-banner {
+//         display: block;
+//     }
+//     .sub-banner--dev-grey {
+//         display: block;
+//         height: rem(490);
+//         background-color: $dev-grey;
+//     }
+// }
+
+// .nav-bar:hover .nav-bar-banner {
+//     display: block;
+// }
+
+// .nav-bar:hover .sub-banner--grey {
+//     display: block;
+//     height: rem(490);
+//     background-color: $dev-grey;
+// }
+
+
+// .sub-banner {
+// @each $name, $color in $btn-colors {
+//   &--#{$name} {
+//     display: block;
+//     height: 65px;
+//     width: 65px;
+//     border-radius: 50%;
+//     background-color: $color;
+//     color: $bg-white;
+//     border-color: transparent;
+//     & svg {  
+//       justify-self: center;
+//       align-self: center;
+//       height: rem(32);
+//       width: rem(32);
+//       }
+//     }
+//   }
+// }
+
