@@ -1,4 +1,5 @@
 .main-nav-bar {
+    position: relative;
     display: none;
     @include md {
         display: flex;
@@ -21,7 +22,6 @@
     justify-content: space-around;
     align-items: center;
     padding: rem(18) 0;
-    // height: rem(283);
     width: rem(134);
     border: 1px solid pink;
     background-color: $bg-midnight;
@@ -33,23 +33,12 @@
     font-size: rem(18);
     small {
         font-size: rem(10);
-        transform: translateY(50%);
     }
     &:hover {
         background-color: $color;
         color: $bg-white;
-        .nav-bar-banner {
-            display: block;
-            background-color: $color;
-            height: rem(490);
-        }
         svg {
             color: $bg-white;
-        }
-        .sub-banner--dev-grey {
-        display: block;
-        height: rem(490);
-        background-color: $dev-grey;
         }
     }
     > svg {  
@@ -65,57 +54,71 @@
 
 
 // banner popup
-
-.nav-bar-banner .sub-banner {
+.banner-title {
+    width: 100%;
+    font-weight: 500;
+    margin-top: rem(15);
+    margin-bottom: rem(10);
+    font-size: rem(32);
+}
+.nav-bar-icon {
+    height: 100%;
+}
+.sub-banner {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    z-index: 30;
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+    color: $bg-white;
+    text-decoration: none;
+    a {
+        color: inherit;
+    }
+}
+.main-nav-list > li {    
+    text-decoration: none;
+    list-style: none;
+}
+.main-nav-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
 }
 
 @each $name, $color in $btn-colors {
-    .btn-logo--#{$name}:hover ~ .nav-bar-banner .sub-banner--#{$name} {
-        display: block;
-        background-color: $color;
+    .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
+            display: block;
+            background-color: darken($color, 10%);
+    }
+    .sub-banner--#{$name}:hover {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: darken($color, 10%);
+        ul ba-li {
+            flex: 33%;
+            text-align: left;
+            font-size: rem(19);
+            line-height: rem(20);
+            padding: rem(10) 0;  
+        }
     }
 }
 
-// .nav-bar-icon--dev-grey:hover {
-//     .nav-bar-banner {
-//         display: block;
-//     }
-//     .sub-banner--dev-grey {
-//         display: block;
-//         height: rem(490);
-//         background-color: $dev-grey;
-//     }
-// }
 
-// .nav-bar:hover .nav-bar-banner {
-//     display: block;
-// }
 
-// .nav-bar:hover .sub-banner--grey {
-//     display: block;
-//     height: rem(490);
-//     background-color: $dev-grey;
-// }
-
+//list inside sub banners
 
 // .sub-banner {
-// @each $name, $color in $btn-colors {
-//   &--#{$name} {
-//     display: block;
-//     height: 65px;
-//     width: 65px;
-//     border-radius: 50%;
-//     background-color: $color;
-//     color: $bg-white;
-//     border-color: transparent;
-//     & svg {  
-//       justify-self: center;
-//       align-self: center;
-//       height: rem(32);
-//       width: rem(32);
-//       }
+//     display: flex;
+//     flex-wrap: wrap;
+//     .ba-li {
+//         flex: 33%;
+//         text-align: left;
+//         font-size: rem(19);
+//         line-height: rem(20);
 //     }
-//   }
 // }
-
