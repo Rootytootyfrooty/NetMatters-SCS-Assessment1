@@ -35,8 +35,20 @@
         font-size: rem(10);
     }
     &:hover {
+        
         background-color: $color;
         color: $bg-white;
+        &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                width: 0;
+                height: 0;
+                border-left: rem(20) solid transparent;
+                border-right: rem(20) solid transparent;
+                border-top: rem(20) solid $color;
+                z-index: 10;
+            }
         svg {
             color: $bg-white;
         }
@@ -63,6 +75,10 @@
 }
 .nav-bar-icon {
     height: 100%;
+    width: rem(134);
+    @include lg {
+        width: rem(167);
+    }
 }
 .sub-banner {
     display: none;
@@ -70,7 +86,7 @@
     top: 100%;
     left: 0;
     width: 100vw;
-    z-index: 30;
+    z-index: 9;
     padding-top: rem(50);
     padding-bottom: rem(50);
     color: $bg-white;
@@ -89,36 +105,82 @@
     margin: 0;
 }
 
+// @each $name, $color in $btn-colors {
+//     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
+//             display: block;
+//             background-color: darken($color, 10%);
+            
+//     }
+//     .sub-banner--#{$name}:hover {
+//         display: flex;
+//         flex-wrap: wrap;
+//         background-color: darken($color, 10%);
+//         ul ba-li {
+//             flex: 33%;
+//             text-align: left;
+//             font-size: rem(19);
+//             line-height: rem(20);
+//             padding: rem(10) 0;  
+//         }
+//         .nav-bar-icon--#{$name} {
+//             color: $bg-white;
+//             background-color: $color;
+//         }
+//     }
+    
+// }
+
 @each $name, $color in $btn-colors {
     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
             display: block;
             background-color: darken($color, 10%);
+            
     }
-    .sub-banner--#{$name}:hover {
+  li:hover .nav-bar-icon--#{$name} {
+    color: $bg-white;
+    background-color: $color;
+    &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                width: 0;
+                height: 0;
+                border-left: rem(20) solid transparent;
+                border-right: rem(20) solid transparent;
+                border-top: rem(20) solid $color;
+                z-index: 100;
+                @include lg {
+                        width: 10%;
+                }
+            }
+  }
+  li:hover svg {
+    color: $bg-white;
+  }
+  li:hover .sub-banner--#{$name} {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darken($color, 10%);
+    ul {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        background-color: darken($color, 10%);
-        ul ba-li {
-            flex: 33%;
-            text-align: left;
-            font-size: rem(19);
-            line-height: rem(20);
-            padding: rem(10) 0;  
-        }
+        flex-direction: row;
+        list-style: none;
     }
+    
+  }
 }
-
-
-
 //list inside sub banners
-
-// .sub-banner {
-//     display: flex;
-//     flex-wrap: wrap;
-//     .ba-li {
-//         flex: 33%;
-//         text-align: left;
-//         font-size: rem(19);
-//         line-height: rem(20);
-//     }
-// }
+.ba-li {
+      width: 33%;
+      text-align: left;
+      flex-grow: 1;
+      font-size: rem(19);
+      line-height: rem(20);
+      padding: rem(10) 0;
+      text-decoration: none;
+      :hover {
+        text-decoration: underline;
+      }
+    }
