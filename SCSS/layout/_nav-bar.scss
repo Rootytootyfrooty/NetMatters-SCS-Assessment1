@@ -25,6 +25,7 @@
     width: rem(134);
     border: 1px solid pink;
     background-color: $bg-midnight;
+    fill: $color;
     color: $bg-white;
     border: none;
     text-align: center;
@@ -37,7 +38,8 @@
     &:hover {
         
         background-color: $color;
-        color: $bg-white;
+        fill: $bg-white;
+
         &::after {
                 content: "";
                 position: absolute;
@@ -94,6 +96,9 @@
     a {
         color: inherit;
     }
+    > .ban-menu {
+        width: rem(970);
+    }
 }
 .main-nav-list > li {    
     text-decoration: none;
@@ -137,6 +142,7 @@
             
     }
   li:hover .nav-bar-icon--#{$name} {
+    fill: $bg-white;
     color: $bg-white;
     background-color: $color;
     &::after {
@@ -162,7 +168,6 @@
     flex-wrap: wrap;
     background-color: darken($color, 10%);
     ul {
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -184,3 +189,11 @@
         text-decoration: underline;
       }
     }
+    .icon-ban {
+        fill: $bg-white;
+        height: rem(19);
+        width: rem(25);
+        z-index: 11;
+        padding-right: rem(10);
+        vertical-align: middle;
+      }

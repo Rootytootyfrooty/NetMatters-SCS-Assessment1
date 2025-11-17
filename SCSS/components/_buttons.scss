@@ -35,13 +35,11 @@
             color: $bg-white;
             .btn-sm--#{$name} {
                 background-color: $bg-white;
-                // background-image: url(img/icons/SVG/con-dev-co.svg);
                 color: $color;
             }
             .btn-logo {
                 background-color: $bg-white;
-                color: $color;
-                // background-image: url(img/icons/SVG/con-dev-co.svg);
+                fill: $color;
             }
         }
     }
@@ -70,7 +68,7 @@
     width: 65px;
     border-radius: 50%;
     background-color: $color;
-    color: $bg-white;
+    fill: $bg-white;
     border-color: transparent;
     & svg {  
       justify-self: center;

@@ -1,0 +1,76 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-question-circle {
+  width: 0.857421875em;
+}
+
+.icon-code {
+  width: 1.0712890625em;
+}
+
+.icon-lock {
+  width: 0.642578125em;
+}
+
+.icon-clock-o {
+  width: 0.857421875em;
+}
+
+.icon-shopping-cart {
+  width: 0.9287109375em;
+}
+
+.icon-phone-square {
+  width: 0.857421875em;
+}
+
+.icon-phone {
+  width: 0.7861328125em;
+}
+
+.icon-pencil {
+  width: 0.845703125em;
+}
+
+.icon-line-chart {
+  width: 1.142578125em;
+}
+
+.icon-money {
+  width: 1.0712890625em;
+}
+
+.icon-handshake-o {
+  width: 1.2861328125em;
+}
+
+.icon-cloud-download {
+  width: 1.0712890625em;
+}
+
+.icon-laptop {
+  width: 1.0712890625em;
+}
+
+.icon-group {
+  width: 1.0712890625em;
+}
+
+.icon-cogs {
+  width: 1.0712890625em;
+}
