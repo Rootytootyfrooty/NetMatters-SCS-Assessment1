@@ -3,11 +3,11 @@
 .stars {
     display: inline;
     flex-direction: row;
-    margin: 25px 0px;
+    margin: rem(25) 0;
     & svg {
         display: inline-block;
-        width: 50px;
-        height: 50px;
+        width: rem(50);
+        height: rem(50);
         fill: $orange;
     }
 }
@@ -17,16 +17,13 @@
 
 .arrow {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+    width: rem(20);
+    height: rem(20);
+    margin-left: rem(10);
     vertical-align: middle;
 }
-// a .inline-title {
-//     vertical-align: middle;
-// }
 .phone {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: rem(32);
+    height: rem(32);
 }

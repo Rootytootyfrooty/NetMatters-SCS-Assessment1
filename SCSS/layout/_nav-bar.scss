@@ -34,6 +34,8 @@
     font-size: rem(18);
     small {
         font-size: rem(10);
+        padding-bottom: 1px;
+        margin-bottom: -10px;
     }
     &:hover {
         
@@ -89,6 +91,7 @@
     left: 0;
     width: 100vw;
     z-index: 9;
+    margin-top: -rem(15);
     padding-top: rem(50);
     padding-bottom: rem(50);
     color: $bg-white;
@@ -110,30 +113,6 @@
     margin: 0;
 }
 
-// @each $name, $color in $btn-colors {
-//     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
-//             display: block;
-//             background-color: darken($color, 10%);
-            
-//     }
-//     .sub-banner--#{$name}:hover {
-//         display: flex;
-//         flex-wrap: wrap;
-//         background-color: darken($color, 10%);
-//         ul ba-li {
-//             flex: 33%;
-//             text-align: left;
-//             font-size: rem(19);
-//             line-height: rem(20);
-//             padding: rem(10) 0;  
-//         }
-//         .nav-bar-icon--#{$name} {
-//             color: $bg-white;
-//             background-color: $color;
-//         }
-//     }
-    
-// }
 
 @each $name, $color in $btn-colors {
     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
@@ -171,6 +150,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        row-gap: rem(10);
         list-style: none;
     }
     

@@ -1,7 +1,14 @@
 //colour variables descriptive
+
+// mobile first search bar
 $c__search-bar--text-grey: #888;
 $c__search-bar--bg-grey: rgba(0, 0, 0, 0.1);
 
+//2nd breakpoint search bar
+$c__search-bar2--bg-grey: #999aa2;
+$c__search-bar2--bg-grey-hover: #7e808a;
+
+// our services and mg, lg nav bar
 $c__consultancy-dev-yellow: #f7b322;
 $c__consultancy-dev-grey: #67809f;
 $c__it-support-blue: #4183d7;
@@ -11,6 +18,7 @@ $c__web-design-purple: #926fb1;
 $c__cyber-security-pink: #f62459;
 $c__dev-training-orange: #ce4125;
 
+//welcome section background/text/buttons/star
 $c__welcome-black: #212330;
 $c__welcome-button-grey: #272936;
 $c__welcome-button-grey-hover: #121318;
@@ -23,6 +31,7 @@ $c__trustpilot-green-hov: #009b69;
 
 $orange: #ffa500;
 
+//footer social media buttons
 $c__instagram-pink: #d93175;
 $c__twitter-blue: #00aced;
 $c__linked-blue: #0077b5;
@@ -30,9 +39,15 @@ $c__facebook-blue: #3b5998;
 
 //colour variables functional
 
+// mobile first search bar
 $srch-tx-grey: $c__search-bar--text-grey;
 $srch-bg-grey: $c__search-bar--bg-grey;
 
+//2nd breakpoint search bar
+$srch2-bg: $c__search-bar2--bg-grey;
+$srch2-bg-hov: $c__search-bar2--bg-grey-hover;
+
+// our services and mg, lg nav bar
 $dev-yellow: $c__consultancy-dev-yellow;
 $dev-grey: $c__consultancy-dev-grey;
 $support-blue: $c__it-support-blue;
@@ -44,6 +59,8 @@ $training-orange: $c__dev-training-orange;
 $bg-white: #fff;
 $bg-midnight: #333645;
 
+
+//welcome section background/text/buttons/star
 $wel-btn: $c__welcome-button-grey;
 $wel-btn-hov: $c__welcome-button-grey-hover;
 $q-grey: $c__quotee-grey;
@@ -54,6 +71,7 @@ $gg-blue-h: $c__google-blue-hov;
 $tp-green: $c__trustpilot-green;
 $tp-green-h: $c__trustpilot-green-hov;
 
+//footer social media buttons
 $inst-pink: $c__instagram-pink;
 $twit-blue: $c__twitter-blue;
 $link-blue: $c__linked-blue;

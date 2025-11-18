@@ -31,8 +31,24 @@ p {
     gap: 1.5rem;
     margin: 0 auto;
 }
+.container-head {
+    font-weight: 400;
+    font-size: rem(43);
+}
 .inline-title {
     margin: 0;
+}
+.vowg1 {
+    font-size: rem(36);
+    font-weight: 600;
+    line-height: 1.1;
+}
+.view:hover {
+    text-decoration: underline;
+    color: inherit;
+    & .arrow {
+        text-decoration: underline;
+    }
 }
 // .view {
 //     padding-left: rem(15);

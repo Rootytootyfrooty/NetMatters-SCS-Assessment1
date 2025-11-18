@@ -1,7 +1,6 @@
 .carousel-1 {
     position: relative;
     border: 1px #bbb clear;
-    padding: 30px 0 0;
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: auto;
     text-align: center;
@@ -57,6 +56,41 @@
     color: $bg-white;
     @include sm {
         width: 100vw;
+    }
+}
+//carousel after our services
+.carousel-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    > img {
+        padding: 0 rem(20);
+        filter: grayscale(1);
+        opacity: 0.8;
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+    .c2-logo2,
+    .c2-logo3,
+    .c2-logo4 {
+        display: none;
+    }
+    @include sm {
+        .c2-logo2 {
+            display: inline-block;
+        }
+    }
+    @include md {
+        .c2-logo3 {
+            display: inline-block;
+        }
+    }
+    @include lg {
+        .c2-logo4 {
+            display: inline-block;
+        }
     }
 }
 
