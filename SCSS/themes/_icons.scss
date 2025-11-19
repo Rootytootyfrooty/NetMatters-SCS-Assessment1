@@ -3,7 +3,6 @@
 .stars {
     display: inline;
     flex-direction: row;
-    margin: rem(25) 0;
     & svg {
         display: inline-block;
         width: rem(50);
@@ -11,7 +10,9 @@
         fill: $orange;
     }
 }
-
+.star {
+    margin-bottom: rem(25);
+}
 
 //multi-use arrow
 

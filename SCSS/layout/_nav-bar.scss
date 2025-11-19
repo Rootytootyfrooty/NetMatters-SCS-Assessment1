@@ -1,6 +1,8 @@
 .main-nav-bar {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: none;
+    z-index: 12;
     @include md {
         display: flex;
         justify-content: center;
@@ -44,15 +46,25 @@
 
         &::after {
                 content: "";
-                position: absolute;
-                top: 100%;
                 width: 0;
                 height: 0;
-                border-left: rem(20) solid transparent;
-                border-right: rem(20) solid transparent;
-                border-top: rem(20) solid $color;
-                z-index: 10;
+                border-style: solid;
+                border-width: 35px 23px 0 23px;
+                border-color: $color transparent transparent transparent;
+                position: absolute;
+                top: 100%;
+                z-index: 13;
             }
+    //         .main-nav-list:first-child &::after {
+    //         @include md {
+    //         border-width: 35px 68px 0 68px;
+    //     }
+    // }
+    // @include lg {
+    //     &::after {
+    //         border-width: 35px 83px 0 83px;
+    //     }
+    // }
         svg {
             color: $bg-white;
         }
@@ -125,20 +137,31 @@
     color: $bg-white;
     background-color: $color;
     &::after {
-                content: "";
-                position: absolute;
-                top: 100%;
-                width: 0;
-                height: 0;
-                border-left: rem(20) solid transparent;
-                border-right: rem(20) solid transparent;
-                border-top: rem(20) solid $color;
-                z-index: 100;
-                @include lg {
-                        width: 10%;
-                }
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 18px 35px 0 35px;
+            border-color: $color transparent transparent transparent;
+            top: 100%;
+            top: 100%;
+            z-index: 13;
+            position: absolute;
+            @include lg {
+                border-width: 35px 83px 0 83px;
             }
-  }
+            }
+    //     .main-nav-list:first-child &::after {
+    //         @include md {
+    //         border-width: 35px 68px 0 68px;
+    //     }
+    // }
+    // @include lg {
+    //     &::after {
+    //         border-width: 35px 83px 0 83px;
+    //     }
+    // }
+}
   li:hover svg {
     color: $bg-white;
   }

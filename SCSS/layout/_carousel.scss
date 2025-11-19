@@ -38,7 +38,9 @@
         }
     }
 }
-
+.carousel {
+    padding: rem(50) 0;
+}
 //Top carousel- image after header
 
 .hero-img {
@@ -58,12 +60,19 @@
         width: 100vw;
     }
 }
-//carousel after our services
-.carousel-2 {
+//carousel after our services & after news
+
+.carousel-2, 
+.carousel-3 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    overflow-x: hidden;
+    height: rem(70);
+    gap: rem(50);
     > img {
+        align-self: center;
+        max-height: rem(70);
         padding: 0 rem(20);
         filter: grayscale(1);
         opacity: 0.8;
@@ -72,78 +81,8 @@
             opacity: 1;
         }
     }
-    .c2-logo2,
-    .c2-logo3,
-    .c2-logo4 {
-        display: none;
-    }
-    @include sm {
-        .c2-logo2 {
-            display: inline-block;
-        }
-    }
-    @include md {
-        .c2-logo3 {
-            display: inline-block;
-        }
-    }
-    @include lg {
-        .c2-logo4 {
-            display: inline-block;
-        }
-    }
 }
 
-//carousel of logos above footer
-.carousel-logos-2,
-.carousel-logos-3,
-.carousel-logos-4 {
-    display: none;
-}
-.carousel {
-    padding-bottom: rem(50);
-}
-@include sm {
-    .carousel-3 {
-        max-width: 750px;
-    }
-    .carousel-logos-1,
-    .carousel-logos-3,
-    .carousel-logos-4 {
-        display: none;
-    }
-    .carousel-logos-2 {
-        display: block;
-    }
-}
-
-@include md {
-    .carousel-3 {
-        max-width: 970px;
-    }
-    .carousel-logos-1,
-    .carousel-logos-2,
-    .carousel-logos-4 {
-        display: none;
-    }
-    .carousel-logos-3 {
-        display: block;
-    }
-}
-
-@include lg {
-    .carousel-3 {
-        max-width: 1200px;
-    }
-    .carousel-logos-1,
-    .carousel-logos-3,
-    .carousel-logos-2 {
-        display: none;
-    }
-    .carousel-logos-4 {
-        display: block;
-    }
-}
 //breakpoints
 $screen-sm: 768px;
 $screen-md: 992px;
