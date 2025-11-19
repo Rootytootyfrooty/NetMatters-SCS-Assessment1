@@ -56,9 +56,6 @@
     height: rem(600);
     max-width: 100vw;
     color: $bg-white;
-    @include sm {
-        width: 100vw;
-    }
 }
 //carousel after our services & after news
 

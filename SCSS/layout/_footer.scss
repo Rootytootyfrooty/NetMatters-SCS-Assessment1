@@ -3,15 +3,19 @@ footer {
     color: $bg-white;
     padding: 27px 0;
     margin: 0;
+    @include lg {
+        padding-top: 0;
+    }
     .footer-row {
         display: flex;
         flex-wrap: wrap;
 
         .footer-menu {
+            min-width: 0;
             flex:100%;
             margin-bottom: 30px;
-            
             margin: 0 auto;
+            line-height: 1.1;
             @include sm {
                 flex: 50%;
             }
@@ -19,30 +23,39 @@ footer {
                 flex: 25%;
             }
             @include lg {
-                margin-bottom: 40px;
+                padding: 0 rem(15);
             }
 
             h4 {
                 text-transform: uppercase;
                 font-size: 1rem;
                 margin-bottom: 26px;
+                margin-top: 0;
+                font-weight: 400;
+            }
+            .nowrap {
+                text-wrap: nowrap;
             }
         }
     }
 }
-// .sub-nav-list {
-//     display: flex;
-//     flex-wrap: wrap;
-//     .sub-banner {
-//         flex: 33%;
-//     }
-// }
+@include lg {
+    .footer-all {
+        display: flex;
+        flex: 20%;
+        padding: rem(40) rem(15);
+    }
+    .footer-info {
+        flex-grow: 2;
+    }
+}
 .logo-2 {
     margin-bottom: -30px;
     width: 320px;
-    height: 65px;
+    height: auto;
 }
 footer {
+    padding-bottom: 0;
     a {
     color: white;
     }
