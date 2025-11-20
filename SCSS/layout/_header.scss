@@ -214,12 +214,12 @@
     grid-area: header;
     display: flex;
     align-items: center;
-    gap: rem(16);
+    gap: rem(18);
     @include sm {
         gap: 0;
     }
     @include md {
-        gap: rem(16);
+        gap: rem(18);
     }
   }
   > #search-bar--sm {

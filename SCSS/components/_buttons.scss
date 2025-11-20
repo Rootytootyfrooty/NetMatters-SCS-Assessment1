@@ -1,7 +1,6 @@
 .btn, .btn-sm {
     height: auto;
     text-align: center;
-    vertical-align: middle;
     cursor: pointer;
     text-transform: uppercase;
     border: rem(1) solid #bbb;
@@ -9,7 +8,13 @@
     padding: rem(10) rem(30);
     margin-bottom: rem(25);
 }
-
+.btn {
+  display: inline-flex;
+  align-items: center;
+  height: rem(62);
+  padding: 5px 20px;
+  margin: 0 0 18px 0;
+}
 // big our services buttons
 
 .btn-big {
