@@ -48,15 +48,45 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../img/netmattersbuilding.png"), no-repeat;
     background-size: cover;
     background-attachment: inherit;
     background-position: center center;
     overflow: hidden;
-    height: rem(600);
+    height: rem(577);
     max-width: 100vw;
     color: $bg-white;
+    @include md {
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+    @include lg {
+        max-height: rem(550);
+    }
 }
+
+//hero image dots
+
+.container-hi-dot {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    bottom: rem(45);
+    left: 50%;
+    transform: translateX(-50%);
+    .hi-dot {
+        display: block;
+        margin: 0 rem(10);
+        background-color: $hi-dot-grey;
+        border-radius: 50%;
+        height: rem(11);
+        width: rem(11);
+        align-self: flex-end;
+    }
+}
+
 //carousel after our services & after news
 
 .carousel-2, 
