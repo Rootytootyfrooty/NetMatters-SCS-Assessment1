@@ -111,6 +111,9 @@
     }
     > .ban-menu {
         width: rem(970);
+        @include lg {
+            width: rem(1200);
+        }
     }
 }
 .main-nav-list > li {    

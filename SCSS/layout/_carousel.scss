@@ -21,7 +21,6 @@
     @include md {
         
         h1 {
-            width: 80%;
             font-size: rem(64);
             line-height: rem(80);
             text-align: start;
@@ -41,7 +40,7 @@
 .carousel {
     padding: rem(50) 0;
 }
-//Top carousel- image after header
+//Top carousel- image after header/nav bar
 
 .hero-img {
     display: flex;
@@ -84,6 +83,9 @@
         height: rem(11);
         width: rem(11);
         align-self: flex-end;
+        &:hover {
+            background-color: $bg-white;
+        }
     }
     > div:first-child::after{
         content: "";

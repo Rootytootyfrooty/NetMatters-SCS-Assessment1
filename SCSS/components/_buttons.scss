@@ -6,8 +6,14 @@
     border: rem(1) solid #bbb;
     border-radius: rem(3);
     padding: rem(10) rem(30);
-    margin-bottom: rem(25);
+    // margin-bottom: rem(25);
 }
+// .btn-sm {
+//     align-self: center;
+//     margin-top: auto;
+//     position: relative;
+//     bottom: 0;
+// }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -16,17 +22,32 @@
   margin: 0 0 18px 0;
 }
 // big our services buttons
-
+.btn-sm {
+    margin-top: auto; 
+    align-self: center; 
+}
 .btn-big {
-    position: relative;
-    top: 0;
-    transition: top .5s ease;
-    border: 1px solid #bbb;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 35px rgba(0,0,0,0.1);
-    height: auto;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  top: 0;
+  transition: top .5s ease;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 35px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  // justify-content: space-between;
+    @include md {
+      align-self: stretch;
+      height: 100%;
+    }
+    @include lg 
+      p {
+      margin-bottom: rem(13);
+    }
   }
 
 .btn-big {
@@ -69,12 +90,13 @@
 @each $name, $color in $btn-colors {
   &--#{$name} {
     display: inline-grid;
-    height: 65px;
-    width: 65px;
+    min-height: 65px;
+    min-width: 65px;
     border-radius: 50%;
     background-color: $color;
     fill: $bg-white;
     border-color: transparent;
+    align-self: center;
     & svg {  
       justify-self: center;
       align-self: center;
