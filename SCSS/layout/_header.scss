@@ -78,21 +78,25 @@
         color: $bg-white;
         font-size: rem(20);
         text-align: center;
-        // vertical-align: middle;
         cursor: pointer;
         text-transform: uppercase;
-        // align-items: center;
         margin-right: 1.25rem;
         form {
             display: flex;
             align-items: center;
         }
         input {
+            font-family: 'Poppins', sans-serif;
             padding: 5px 15px;
             width: 174px;
             height: 56px;
             border: rem(1) solid #ccc;
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            &:focus {
+            border-color: #5bc0de;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+            outline: 0;
+            }
         }
 
         button {
@@ -115,6 +119,7 @@
                 align-self: center;
             }
         }
+        
     }
 }
 

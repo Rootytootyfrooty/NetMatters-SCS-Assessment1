@@ -28,6 +28,7 @@
 }
 .btn-big {
   font-family: 'Poppins', sans-serif;
+  // height: auto;
   top: 0;
   transition: top .5s ease;
   border: 1px solid #bbb;
@@ -38,10 +39,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-self: stretch;
   // justify-content: space-between;
     @include md {
-      align-self: stretch;
+      // align-self: stretch;
       height: 100%;
     }
     @include lg 

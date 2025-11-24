@@ -31,16 +31,23 @@
 }
 .our-services {
       padding-bottom: 50px;
+      > .services {
+        margin-bottom: rem(20);
+      }
     }
 .h2up1 {
-      margin-bottom: 0;
+      margin-bottom: rem(30);
       margin-top: 0;
     }
 @include sm {
+    .h2up1 {
+      margin-bottom: 0;
+    }
     .vow1 {
       display: flex;
       align-items: center;
       margin-top: 0;
+      margin-bottom: rem(30);
       float: right;
       color: initial;
       &:hover {
@@ -68,9 +75,8 @@
   .our-services { 
     display: grid; 
     grid-template-columns: repeat(12, 1fr); 
-    grid-template-rows: rem(358) rem(291) rem(291); 
+    grid-template-rows: rem(378) rem(311) rem(311); 
     gap: 1.25rem;
-    // height: 100%;
     margin-top: 0;
     p { 
       padding-top: 0; 
@@ -99,7 +105,7 @@
   .our-services { 
     display: grid; 
     grid-template-columns: repeat(12, 1fr); 
-    grid-template-rows: rem(314) rem(314); 
+    grid-template-rows: rem(334) rem(334); 
     gap: rem(24); 
 
     // .btn-sm { 

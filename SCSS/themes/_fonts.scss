@@ -39,12 +39,14 @@ p {
     font-weight: 600;
     font-family: inherit;
     margin-top: 0;
+    margin-bottom: 0;
     line-height: 1.1;
 }
 
 .container-head {
     font-weight: 400;
     font-size: rem(43);
+    margin-bottom: -50px;
 }
 .inline-title {
     margin: 0;

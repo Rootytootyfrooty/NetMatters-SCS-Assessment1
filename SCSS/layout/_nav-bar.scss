@@ -35,7 +35,10 @@
     small {
         font-size: rem(10);
         padding-bottom: 1px;
-        margin-bottom: -10px;
+        margin-bottom: -12px;
+        @include lg {
+            margin-bottom: -5px;
+        }
     }
     &:hover {
         
@@ -87,10 +90,14 @@
     margin-bottom: rem(10);
     font-size: rem(32);
 }
+.sub-nav-bar {
+    height: 117px;
+}
 .nav-bar-icon {
-    height: 100%;
+    height: 117px;
     width: rem(134);
     @include lg {
+        height: 99px;
         width: rem(167);
     }
 }
@@ -99,7 +106,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 9;
     margin-top: -rem(15);
     padding-top: rem(50);
@@ -137,6 +144,7 @@
     fill: $bg-white;
     color: $bg-white;
     background-color: $color;
+    
     &::after {
             content: "";
             width: 0;
@@ -148,10 +156,14 @@
             top: 100%;
             z-index: 13;
             position: absolute;
+           
             @include lg {
                 border-width: 35px 83px 0 83px;
             }
             }
+            // li:not(:first-child)::after {
+            //     border-width: 35px 68px 0 68px;
+            // } 
     //     .main-nav-list:first-child &::after {
     //         @include md {
     //         border-width: 35px 68px 0 68px;
