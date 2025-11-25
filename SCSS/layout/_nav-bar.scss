@@ -197,20 +197,22 @@
 }
 //list inside sub banners
 .ba-li {
-      width: 33%;
-      text-align: left;
-      font-size: rem(19);
-      line-height: 1.4;
-      padding: rem(10) 0;
-      text-decoration: none;
-      :hover {
+    // text-wrap: ;
+    align-items: center;
+    width: 33%;
+    text-align: left;
+    font-size: rem(19);
+    line-height: 1.4;
+    padding: rem(10) 0;
+    text-decoration: none;
+    :hover {
         text-decoration: underline;
-      }
     }
-    .icon-ban {
-        fill: $bg-white;
-        height: rem(32);
-        width: rem(32);
-        padding-right: rem(10);
-        vertical-align: middle;
-      }
+}
+.icon-ban {
+    fill: $bg-white;
+    height: rem(32);
+    width: rem(32);
+    padding-right: rem(10);
+    vertical-align: middle;
+}
