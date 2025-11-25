@@ -9,7 +9,9 @@ footer {
     .footer-row {
         display: flex;
         flex-wrap: wrap;
-
+        a:hover {
+            text-decoration: underline;
+        }
         .footer-menu {
             min-width: 0;
             flex:100%;
@@ -44,9 +46,13 @@ footer {
         display: flex;
         flex: 20%;
         padding: rem(40) rem(15);
+        flex-grow: 1;
+        ul {
+            font-size: 0.8rem;
+        }
     }
     .footer-info {
-        flex-grow: 2;
+        width: rem(400);
     }
 }
 .logo-2 {
@@ -112,4 +118,12 @@ footer {
 
 .footer-cr {
     padding: rem(10) 0; 
+    font-size: 0.8125rem;
+    a {
+        margin-left: 8px;
+        color: $bg-white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

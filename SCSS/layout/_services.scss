@@ -10,6 +10,9 @@
 @include sm {
       .our-services {
         display: grid;
+        // grid-auto-rows: 0;
+        // grid-row: auto;
+        // grid-area: auto;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, rem(291));
         gap: 20px;
@@ -46,7 +49,6 @@
     .vow1 {
       display: flex;
       align-items: center;
-      margin-top: 0;
       margin-bottom: rem(30);
       float: right;
       color: initial;
@@ -63,21 +65,21 @@
       display: none;
     }
     .vowg1 {
-      margin-top: 0;
       display: block;
     }
-    // .btn-sm { 
-    //   margin-top: 0;
-    // }
   }
 
 @include md { 
   .our-services { 
     display: grid; 
+    // grid-auto-rows: 0;
+    // grid-row: auto;
+    // grid-area: auto;
     grid-template-columns: repeat(12, 1fr); 
     grid-template-rows: rem(378) rem(311) rem(311); 
     gap: 1.25rem;
-    margin-top: 0;
+    margin-bottom: 1px;
+    padding-bottom: 0;
     p { 
       padding-top: 0; 
     } 
@@ -90,11 +92,10 @@
     .tra    { grid-area: 3 / 7 / 4 / 13; }
 
     .vowg1 {
-      justify-self: end;
+      display: block;
       align-self: center;
       h3 {
         margin-top: 0;
-        margin-bottom: 0;
         font-size: 2.25rem;
         color: $bg-midnight;
       }
@@ -102,27 +103,26 @@
   }
 }
 @include lg { 
+  .idk {
+    display: block;
+    height: 100px;
+    margin: 1px;
+    padding: 1px;
+  }
   .our-services { 
     display: grid; 
+    // grid-auto-rows: 0;
+    // grid-row: auto;
+    // grid-area: auto;
     grid-template-columns: repeat(12, 1fr); 
-    grid-template-rows: rem(334) rem(334); 
+    grid-template-rows: rem(334) rem(334);
+    margin-bottom: 0; 
     gap: rem(24); 
-
-    // .btn-sm { 
-    //   margin-top: 0;
-    // } 
+    grid-auto-rows: 0;
 
     p { 
       padding-top: 0; 
     } 
-    .vowg1 { 
-        h3 {
-          margin-top: 0;
-          margin-bottom: 0;
-          font-size: 2.25rem;
-      }
-    
-    }
     .con    { grid-area: 1 / 1 / 2 / 5; }
     .sup    { grid-area: 1 / 5 / 2 / 9; }
     .mar    { grid-area: 1 / 9 / 2 / 13; }

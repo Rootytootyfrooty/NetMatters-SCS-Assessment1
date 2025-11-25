@@ -23,8 +23,12 @@
 .wel1 p {
     line-height: 1.875rem;
 }
-.wel1 h2 {
+.wel1 .h2up,
+.wel2 .h2up {
     margin-bottom: 40px;
+}
+.wel2 .h2up {
+    margin-top: 40px;
 }
 // buttons- welcome section 1 & 2; google; trustpilot; 
 
@@ -48,6 +52,7 @@
     padding-bottom: 2rem;
     font-size: 20px;
     gap: rem(25);
+    border-radius: 6px;
     @include sm {
         flex-direction: row;
         justify-content: left;
@@ -56,7 +61,7 @@
 .btn-gg {
     background-color: $gg-blue;
     border: $gg-blue;
-    border-radius: rem(6);
+    
     &:hover {
         background-color: $gg-blue-h;
     }
@@ -64,7 +69,7 @@
 .btn-tp {
     background-color: $tp-green;
     border: $tp-green;
-    border-radius: rem(6);
+    
     &:hover {
         background-color: $tp-green-h;
     }
@@ -110,6 +115,9 @@
         padding: rem(10) rem(25);
         transform: translateY(100%);
     }
+        .wel2 .h2up {
+        margin-top: 0;
+    }
 }
 
 // 1200px breakpoint
@@ -121,13 +129,14 @@
             margin-left: 0;
         }
         .btn-wel,
-        .btn-wel2, {
+        .btn-wel2 {
             flex-direction: row;
             height: auto;
             gap: rem(10);
             line-height: rem(35);
         }
     }
+    
 }
 
 // for star and arrow icons, see themes/icons.scss

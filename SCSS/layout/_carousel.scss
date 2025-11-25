@@ -39,6 +39,7 @@
 }
 .carousel {
     padding: rem(50) 0;
+    position: relative;
 }
 //Top carousel- image after header/nav bar
 
@@ -107,6 +108,7 @@
 
 .carousel-2, 
 .carousel-3 {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -114,6 +116,7 @@
     height: rem(70);
     gap: rem(50);
     > img {
+        
         align-self: center;
         max-height: rem(70);
         padding: 0 rem(20);
@@ -126,8 +129,99 @@
     }
 }
 
+// case study logo images
+//logo-img img-1 to img- 7
+// .logo-img {
+//     // overflow-x: hidden;
+// }
+.img-1:hover + .cs1,
+    div:hover .cs1 {
+        display: block;
+        // overflow: visible;
+    }
+
+    .cs1 {
+    display:none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    // transform: translateY(-200%);
+    z-index: 9999;
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+    text-decoration: none;
+    width: 280px;
+    height: 200px;
+    color: $bg-white;
+    background-color: $bg-midnight;
+    border: 3px solid $bg-midnight;
+    text-align: center;
+}
+// .cs1 {
+//     display:none;
+//     position: absolute;
+//     // bottom: 100%;
+//     left: 0;
+//     bottom: 0;
+//     transform: translateY(-100%);
+//     z-index: 9999;
+    // padding-top: rem(50);
+    // padding-bottom: rem(50);
+    // text-decoration: none;
+    // width: 280px;
+    // height: 200px;
+    // color: $bg-white;
+    // background-color: $bg-midnight;
+    // border: 3px solid $bg-midnight;
+// }
+
+
+    // .cs1 {
+    //     display:none;
+    //     position: absolute;
+    //     bottom: 100%;
+    //     left: 50%;
+    //     transform: translate(-50%, -10px);
+    //     z-index: 9999;
+    //     padding-top: rem(50);
+    //     padding-bottom: rem(50);
+    //     text-decoration: none;
+    //     width: 280px;
+    //     // height: 200px;
+    //     color: $bg-white;
+    //     background-color: $bg-midnight;
+    //     border: 3px solid $bg-midnight;
+    //     text-align: center;
+    //     white-space: nowrap;
+    // }
+    // img-1:hover .cs1 {
+    //     display: block;
+    // }
+// .img-1:hover {
+//         .cs1 {
+//             display: block;
+//         }
+// .carousel-3 {
+//     > img:hover {
+//         + .cs1 {
+//         display: block;
+//         }
+//     }
+//         // &::before {
+//         //     content: "";
+//         //     width: 0;
+//         //     height: 0;
+//         //     border-style: solid;
+//         //     border-width: 18px 35px 0 35px;
+//         //     border-color: $bg-midnight transparent transparent transparent;
+//         //     top: 100%;
+//         //     top: 100%;
+//         //     z-index: 13;
+//         //     position: absolute;
+//         // }
+//     }
+
 //breakpoints
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1260px;
-
