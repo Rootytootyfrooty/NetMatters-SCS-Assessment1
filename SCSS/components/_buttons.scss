@@ -114,6 +114,7 @@
   &--#{$name}:hover {
     background-color: $color;
     border-color: transparent;
+    cursor: pointer;
     }
   }
 }
