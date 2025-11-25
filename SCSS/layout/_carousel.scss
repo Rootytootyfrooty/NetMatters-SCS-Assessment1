@@ -129,34 +129,34 @@
     }
 }
 
-// case study logo images
+// case study logo images Failed
 //logo-img img-1 to img- 7
 // .logo-img {
 //     // overflow-x: hidden;
 // }
-.img-1:hover + .cs1,
-    div:hover .cs1 {
-        display: block;
-        // overflow: visible;
-    }
+// .img-1:hover + .cs1,
+//     div:hover .cs1 {
+//         display: block;
+//         // overflow: visible;
+//     }
 
-    .cs1 {
-    display:none;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    // transform: translateY(-200%);
-    z-index: 9999;
-    padding-top: rem(50);
-    padding-bottom: rem(50);
-    text-decoration: none;
-    width: 280px;
-    height: 200px;
-    color: $bg-white;
-    background-color: $bg-midnight;
-    border: 3px solid $bg-midnight;
-    text-align: center;
-}
+//     .cs1 {
+//     display:none;
+//     position: absolute;
+//     bottom: 100%;
+//     left: 0;
+//     // transform: translateY(-200%);
+//     z-index: 9999;
+//     padding-top: rem(50);
+//     padding-bottom: rem(50);
+//     text-decoration: none;
+//     width: 280px;
+//     height: 200px;
+//     color: $bg-white;
+//     background-color: $bg-midnight;
+//     border: 3px solid $bg-midnight;
+//     text-align: center;
+// }
 // .cs1 {
 //     display:none;
 //     position: absolute;

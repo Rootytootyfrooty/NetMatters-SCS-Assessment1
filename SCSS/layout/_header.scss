@@ -12,11 +12,7 @@
     object-fit: scale-down;
     padding-right: rem(15);
 }
-@include sm {
-    btn-header {
-        gap: 0;
-    }
-}
+
 #phone-icon {
     height: rem(32);
     width: rem(32);
@@ -80,7 +76,6 @@
         text-align: center;
         cursor: pointer;
         text-transform: uppercase;
-        margin-right: 1.25rem;
         form {
             display: flex;
             align-items: center;
@@ -120,6 +115,9 @@
             }
         }
         
+    }
+    .header-order > .btn-header {
+        gap: 0;
     }
 }
 
@@ -175,6 +173,9 @@
     #search-text {
         display: none;
     }
+    .header-order > .btn-header {
+        gap: rem(18);
+    }
 }
 
 @include lg {
@@ -220,12 +221,6 @@
     display: flex;
     align-items: center;
     gap: rem(18);
-    @include sm {
-        gap: 0;
-    }
-    @include md {
-        gap: rem(18);
-    }
   }
   > #search-bar--sm {
     grid-area: search;

@@ -13,6 +13,7 @@
         height: rem(99);
     }
 }
+//nav items matching the our services buttons
 
 .nav-bar-icon {
 @each $name, $color in $btn-colors {
@@ -44,7 +45,7 @@
         
         background-color: $color;
         fill: $bg-white;
-
+        //the triangle under the nav bar icons
         &::after {
                 content: "";
                 width: 0;
@@ -56,6 +57,7 @@
                 top: 100%;
                 z-index: 13;
             }
+    //  Failed attempt at making only the first child traingle full width
     //         .main-nav-list:first-child &::after {
     //         @include md {
     //         border-width: 35px 68px 0 68px;
@@ -86,7 +88,7 @@
 .banner-title {
     width: 100%;
     font-weight: 500;
-    margin-top: rem(15);
+    // margin-top: rem(15);
     margin-bottom: rem(10);
     font-size: rem(32);
 }
@@ -161,6 +163,7 @@
                 border-width: 35px 83px 0 83px;
             }
             }
+            //  another failed attempt at making only the first child traingle full width
             // li:not(:first-child)::after {
             //     border-width: 35px 68px 0 68px;
             // } 
@@ -186,7 +189,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        row-gap: rem(10);
+        // row-gap: rem(10);
         list-style: none;
     }
     
@@ -196,9 +199,8 @@
 .ba-li {
       width: 33%;
       text-align: left;
-      flex-grow: 1;
       font-size: rem(19);
-      line-height: rem(20);
+      line-height: 1.4;
       padding: rem(10) 0;
       text-decoration: none;
       :hover {
