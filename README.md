@@ -22,3 +22,7 @@
 	
 <b>View all buttons mobile:</b>
 	Mobile viewport 'view all' buttons don't extend the underline on hover to the arrow, it only underlines the word.
+
+<b>Footer Social Media Icons in Google Chrome</b>
+	I have just noticed that the icons for the social media buttons in the footer are...very wrong in Chrome.
+	I will be looking into this. The nav bar icons are fine.
