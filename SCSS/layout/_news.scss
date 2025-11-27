@@ -23,7 +23,7 @@
         display: none;
         }
     .va1 {
-        display: flex;
+        display: inline;
         align-items: center;
         color: inherit;
         text-decoration: none;
@@ -42,14 +42,14 @@
     // }
     }
 }
-.news img {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+// .news-img {
+//     // display: flex;
+//     border: 1px solid #ccc;
+//     border-radius: 3px;
+//     object-fit: contain;
+//     // max-width: 100%;
+//     // max-height: 100%;
+// }
 .va1 {
     display: none;
 }
@@ -59,32 +59,95 @@
     padding: rem(32) 0 rem(50) 0;
     margin: 0 auto;
     justify-content: center;
+    .article {
+        display: block;
+        height: rem(693);
+    }
     @include sm {
         flex-direction: row;
-        .art3 {
+        .article {
+            height: rem(569);
+        }
+        .article3 {
             display: none;
         }
-        .article img {
-            object-fit: fill;
-        }
+        // .article img {
+        //     object-fit: fill;
+        // }
     }
     @include md {
-        .article img {
+        .article {
         width: 455px;
+        height: rem(663);
         }
     }
     @include lg {
-        .article img {
+        .article {
             width: 370px;
+            height: rem(583);
         }
-        .art3 {
-            display: initial;
+        .article3 {
+            display: block;
         }
     }
 }
-.article {
+
+// .article {
+//     display: block;
+// }
+.news-image {
+    width: 100%;
+    @include sm {
+        width: rem(333)
+    }
+    @include md {
+        width: rem(455);
+    }
+    @include lg {
+        width: rem(370);
+    }
+}
+.news-logo {
+    // display: inline-block;
+    height: rem(47);
+    width: rem(47);
+}
+// .news-sec {
+//     display: flex;
+//     flex-direction: column;
+//     padding: rem(32) 0 rem(50) 0;
+//     margin: 0 auto;
+//     justify-content: center;
+//     @include sm {
+//         flex-direction: row;
+//         #article3 {
+//             display: none;
+//         }
+//         .news-link {
+//             object-fit: fill;
+//         }
+//     }
+//     @include md {
+//         .news-link {
+//             width: 455px;
+//         }
+//     }
+//     @include lg {
+//         .news-link {
+//             width: 370px;
+//         }
+//         .art3 {
+//             display: initial;
+//         }
+//     }
+// }
+
+.news-link:hover {
+    cursor: pointer;
+}
+.news-link {
     position: relative;
-    padding: 0 rem(15);
+    margin: 0 rem(15);
     margin-bottom: 2rem;
     top: 0;
     transition: top 0.5s ease;
@@ -94,3 +157,72 @@
         transition: top 0.5s ease;
     }
 }
+.news-tool {
+    position: absolute;
+    right: 0;
+    color: $bg-white;
+    font-size: rem(12);
+    padding: 0 rem(10);
+    line-height: 1.438rem;
+    text-transform: uppercase;
+}
+.newh3 {
+    font-size: rem(16);
+    color: $bg-midnight;
+}
+.news-txt {
+    padding: rem(30);
+    border: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    .btn-sm {
+        background-color: $dev-yellow;
+        color: $bg-white;
+        // padding: 5px 15px;
+        // margin: 50px 0;
+        height: 47px;
+        width: 130px;
+    }
+    p {
+        line-height: rem(22);
+        font-size: rem(13);
+        color: #666;
+    }
+}
+
+// .image {
+//     display: block;
+//     position: relative;
+//     height: rem(350);
+//     @include sm {
+//         height: rem(200);
+//     }
+//     @include md {
+//         height: rem(263);
+//     }
+//     @include lg {
+//         height: rem(220);
+//     }
+// }
+.insight-tooltip {
+    background-color: #67809f;
+    border: none;
+}
+.career-tooltip {
+    background-color: #4183d7;
+    border: none;
+}
+
+// .news-image {
+//     display: block;
+//     height: rem(693);
+//     @include sm {
+//         height: rem(569);
+//     }
+//     @include md {
+//         height: rem(663);
+//     }
+//     @include lg {
+//         height: rem(583);
+//     }
+// }
