@@ -22,7 +22,19 @@
 	
 <b>View all buttons mobile:</b>
 	Mobile viewport 'view all' buttons don't extend the underline on hover to the arrow, it only underlines the word.
+	I'm in process of changing the imgs to svgs and getting the styling uniform on the arrows.
 
-<b>Footer Social Media Icons in Google Chrome</b>
-	I have just noticed that the icons for the social media buttons in the footer are...very wrong in Chrome.
-	I will be looking into this. The nav bar icons are fine.
+<b>Icons:</b>
+	The site needs to be viewed on a live server or the icons won't load, apparently a limitation of the clean code
+	you get from using icomoon? It's also why there's a chunk of javascript in the project.
+
+<b>News Section:</b>
+	The articles are now in HTML instead of just being images. I need more time/to do more work to refine the layout
+
+<b>The Case Studies Section</b>
+	This part is really bad! I definitely need more time to work on this.
+	> The popups aren't fully visible while overflow:hidden is applied to the carousel-3.
+	If overflow is not hidden it results in a horizontal scroll bar.
+	I can't seem to find a solution to this that doesn't involve: moving the popups outside the carousel
+	and using JS; some sort of mask or filter; some other method of hiding the carousel overflows.
+	None of my attempts at the latter 2 were successful.
