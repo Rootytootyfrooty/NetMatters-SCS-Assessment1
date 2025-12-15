@@ -57,6 +57,14 @@
                 top: 100%;
                 z-index: 13;
             }
+        &.nav-bar-icon--dev-grey:hover {
+            &::after {
+                border-width: 35px 67px 0 67px;  
+                @include lg {
+                border-width: 35px 83px 0 83px;
+            }
+                }
+            }
     //  Failed attempt at making only the first child traingle full width
     //         .main-nav-list:first-child &::after {
     //         @include md {
@@ -158,26 +166,20 @@
             top: 100%;
             z-index: 13;
             position: absolute;
-           
+            
             @include lg {
                 border-width: 35px 83px 0 83px;
             }
             }
-            //  another failed attempt at making only the first child traingle full width
-            // li:not(:first-child)::after {
-            //     border-width: 35px 68px 0 68px;
-            // } 
-    //     .main-nav-list:first-child &::after {
-    //         @include md {
-    //         border-width: 35px 68px 0 68px;
-    //     }
-    // }
-    // @include lg {
-    //     &::after {
-    //         border-width: 35px 83px 0 83px;
-    //     }
-    // }
-}
+        }
+    li:hover .nav-bar-icon--dev-grey::after {
+        border-width: 35px 67px 0 67px;
+        @include lg {
+                border-width: 35px 83px 0 83px;
+            }
+    }
+
+
   li:hover svg {
     color: $bg-white;
   }
@@ -189,12 +191,14 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        // row-gap: rem(10);
         list-style: none;
     }
-    
   }
 }
+.nav-bar-icon--dev-grey::after {
+                border-width: 35px 67px 0 67px;  
+            }
+
 //list inside sub banners
 .ba-li {
     // text-wrap: ;

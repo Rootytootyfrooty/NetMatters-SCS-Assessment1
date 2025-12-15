@@ -44,9 +44,10 @@
       // align-self: stretch;
       height: 100%;
     }
-    @include lg 
+    @include lg {
       p {
       margin-bottom: rem(13);
+      }
     }
   }
 

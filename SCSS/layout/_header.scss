@@ -17,6 +17,9 @@
     height: rem(32);
     width: rem(32);
 }
+.ph-hov:hover {
+    text-decoration: underline;
+}
 .burger {
     display: inline-block;
     position: relative;
@@ -232,7 +235,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 rem(15);
+    padding-left: rem(15);
 }
 
 //smallest screen search bar

@@ -14,6 +14,10 @@
     }
     .btn {
         align-self: center;
+        &:hover {
+            background-color: #7e57a0;
+            border-color: #735093;
+        }
     }
     @include sm {
         padding-top: 0;
@@ -145,9 +149,9 @@
 
 // case study logo images Failed
 //logo-img img-1 to img- 7
-.logo-img {
-    // overflow-x: hidden;
-}
+// .logo-img {
+//     overflow-x: hidden;
+// }
 .img-1:hover + .cs1,
     div:hover .cs1 {
         display: block;
