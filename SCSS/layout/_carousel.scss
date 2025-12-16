@@ -139,12 +139,14 @@
     justify-content: space-evenly;
     overflow-x: clip;
     height: rem(70);
-    gap: rem(100);
+    h4 {
+        margin: 0;
+    }
+    
     img {
-        
         align-self: center;
         max-height: rem(70);
-        padding: 0 rem(20);
+        // padding: 0 rem(20);
         filter: grayscale(1);
         opacity: 0.8;
         &:hover {
@@ -159,34 +161,39 @@
 
 .carousel-item {
     position: relative;
+    margin: 0 50px;
 }
 .popup {
     position: absolute;
     flex-direction: column;
     align-items: center;
-    top: -200px;
+    
     left: 50%;
+    // left: -200px;
+    // right: -200px;
+    bottom: calc(100% + 40px);
     transform: translateX(-50%);
     display: none;
     width: rem(280);
-    padding-top: rem(50);
-    padding-bottom: rem(50);
+    padding: rem(20);
     text-decoration: none;
     color: $bg-white;
     background-color: $bg-midnight;
     border: 3px solid $bg-midnight;
     text-align: center;
-    &::after {
-        content: "";
-        display: inline-block;
-        margin: auto;
-        border-color: $bg-midnight transparent transparent;
-        border-width: rem(35) rem(35) 0;
-        border-style: solid;
-        position: absolute;
-        bottom: rem(10);
-        // left: 50%;
-    }
+}
+.logo-tri::after {
+    content: "";
+    display: none;
+    margin: auto;
+    border-color: $bg-midnight transparent transparent;
+    border-width: rem(35) rem(35) 0;
+    border-style: solid;
+    position: absolute;
+    // bottom: calc(10px + 40px);
+    // bottom: 50px;
+    top: -41px;
+    left: calc(50% - 36px);
 }
 
 // //breakpoints
@@ -198,6 +205,10 @@
     &:hover .popup,
     &:focus-within .popup {
         display: flex;
+    }
+    &:hover .logo-tri::after,
+    &:focus-within .logo-tri::after {
+        display: inline-block;
     }
 }
 $logo-pops: (
@@ -220,9 +231,14 @@ $logo-pops: (
     }
 }
 
-.btn-logo {
+.logo-btn {
     display: flex;
     flex-direction: row;
     text-align: center;
-    align-self: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 3px;
+    width: rem(240);
+    height: rem(47);
+    padding: 5px 15px;
 }
