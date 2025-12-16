@@ -108,10 +108,8 @@
     }
 }
 
-//carousel after our services & after news
-
-.carousel-2, 
-.carousel-3 {
+//carousel after our services 
+.carousel-2 {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -132,115 +130,99 @@
         }
     }
 }
+// after news
+ 
+.carousel-3 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-x: clip;
+    height: rem(70);
+    gap: rem(100);
+    img {
+        
+        align-self: center;
+        max-height: rem(70);
+        padding: 0 rem(20);
+        filter: grayscale(1);
+        opacity: 0.8;
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
 
 
 //case study popups
+
 .carousel-item {
     position: relative;
 }
 .popup {
     position: absolute;
-    top: -250px;
+    flex-direction: column;
+    align-items: center;
+    top: -200px;
     left: 50%;
     transform: translateX(-50%);
     display: none;
     width: rem(280);
-}
-
-// case study logo images Failed
-//logo-img img-1 to img- 7
-// .logo-img {
-//     overflow-x: hidden;
-// }
-.img-1:hover + .cs1,
-    div:hover .cs1 {
-        display: block;
-        // overflow: visible;
-    }
-
-//     .cs1 {
-//     display:none;
-//     position: absolute;
-//     bottom: 100%;
-//     left: 0;
-//     // transform: translateY(-200%);
-//     z-index: 9999;
-.cs1 {
     padding-top: rem(50);
     padding-bottom: rem(50);
     text-decoration: none;
-    // width: 280px;
-    // height: 200px;
     color: $bg-white;
     background-color: $bg-midnight;
     border: 3px solid $bg-midnight;
     text-align: center;
+    &::after {
+        content: "";
+        display: inline-block;
+        margin: auto;
+        border-color: $bg-midnight transparent transparent;
+        border-width: rem(35) rem(35) 0;
+        border-style: solid;
+        position: absolute;
+        bottom: rem(10);
+        // left: 50%;
+    }
 }
-// .cs1 {
-//     display:none;
-//     position: absolute;
-//     // bottom: 100%;
-//     left: 0;
-//     bottom: 0;
-//     transform: translateY(-100%);
-//     z-index: 9999;
-//     padding-top: rem(50);
-//     padding-bottom: rem(50);
-//     text-decoration: none;
-//     width: 280px;
-//     height: 200px;
-//     color: $bg-white;
-//     background-color: $bg-midnight;
-//     border: 3px solid $bg-midnight;
-// }
 
-
-//     .cs1 {
-//         display:none;
-//         position: absolute;
-//         bottom: 100%;
-//         left: 50%;
-//         transform: translate(-50%, -10px);
-//         z-index: 9999;
-//         padding-top: rem(50);
-//         padding-bottom: rem(50);
-//         text-decoration: none;
-//         width: 280px;
-//         // height: 200px;
-//         color: $bg-white;
-//         background-color: $bg-midnight;
-//         border: 3px solid $bg-midnight;
-//         text-align: center;
-//         white-space: nowrap;
-//     }
-//     .img-1:hover .cs1 {
-//         display: block;
-//     }
-// .img-1:hover {
-//         .cs1 {
-//             display: block;
-//         }
-// .carousel-3 {
-//     > img:hover {
-//         + .cs1 {
-//         display: block;
-//         }
-//     }
-//         &::before {
-//             content: "";
-//             width: 0;
-//             height: 0;
-//             border-style: solid;
-//             border-width: 18px 35px 0 35px;
-//             border-color: $bg-midnight transparent transparent transparent;
-//             top: 100%;
-//             top: 100%;
-//             z-index: 13;
-//             position: absolute;
-//         }
-//     }
-// }
 // //breakpoints
 // $screen-sm: 768px;
 // $screen-md: 992px;
 // $screen-lg: 1260px;
+.logo-wrap {
+    position: relative;
+    &:hover .popup,
+    &:focus-within .popup {
+        display: flex;
+    }
+}
+$logo-pops: (
+    img-1: cs1,
+    img-2: cs2,
+    img-3: cs3,
+    img-4: cs4,
+    img-5: cs5,
+    img-6: cs6,
+    img-7: cs7,
+);
+
+.logo-img {
+    @each $name, $popup in $logo-pops {
+    &--#{$name} {
+            &:hover + .#{$popup} {
+                display: flex;
+            }
+        }
+    }
+}
+
+.btn-logo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-self: center;
+}
