@@ -9,9 +9,16 @@
             // }
 
 //breakpoints
+$screen-xs: 470px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1260px;
+
+@mixin xs {
+    @media (min-width: #{$screen-xs}) {
+        @content; 
+        }
+}
 
 @mixin sm {
     @media (min-width: #{$screen-sm}) {

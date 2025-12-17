@@ -65,17 +65,6 @@
             }
                 }
             }
-    //  Failed attempt at making only the first child traingle full width
-    //         .main-nav-list:first-child &::after {
-    //         @include md {
-    //         border-width: 35px 68px 0 68px;
-    //     }
-    // }
-    // @include lg {
-    //     &::after {
-    //         border-width: 35px 83px 0 83px;
-    //     }
-    // }
         svg {
             color: $bg-white;
         }
@@ -201,7 +190,6 @@
 
 //list inside sub banners
 .ba-li {
-    // text-wrap: ;
     align-items: center;
     width: 33%;
     text-align: left;
@@ -211,6 +199,11 @@
     text-decoration: none;
     :hover {
         text-decoration: underline;
+    }
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 .icon-ban {

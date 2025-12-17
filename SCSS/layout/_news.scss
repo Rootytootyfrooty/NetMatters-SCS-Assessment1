@@ -23,7 +23,8 @@
         display: none;
         }
     .va1 {
-        display: inline;
+        display: flex;
+        flex-direction: row;
         align-items: center;
         color: inherit;
         text-decoration: none;
@@ -32,6 +33,11 @@
             margin: 0;
             white-space: nowrap;
         }
+        // &:hover {
+        //     img {
+        //         text-decoration: underline;
+        //     }
+        // }
     }
     .view {
         display: flex;
@@ -65,7 +71,8 @@
     justify-content: center;
     .article {
         display: block;
-        height: rem(693);
+        height: 100%;
+        width: 100%;
     }
     @include sm {
         flex-direction: row;
@@ -75,9 +82,6 @@
         .article3 {
             display: none;
         }
-        // .article img {
-        //     object-fit: fill;
-        // }
     }
     @include md {
         .article {
@@ -123,8 +127,16 @@
 .grey {
     color: $dev-grey;
 }
-.blue {
-    color: $support-blue;
+.blue:hover {
+        background-color: $btn-blue-hover;
+}
+
+.yell:hover {
+        background-color: $btn-yell-hover;
+}
+
+.green:hover {
+        background-color: $btn-green-hover;
 }
 // .news-sec {
 //     display: flex;
@@ -162,9 +174,21 @@
 .news-link {
     position: relative;
     margin: 0 rem(15);
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     top: 0;
     transition: top 0.5s ease;
+    height: rem(693);
+    @include sm {
+            height: rem(569);
+    }
+    @include md {
+        width: 455px;
+        height: rem(663);
+    }
+    @include lg {
+            width: 370px;
+            height: rem(583);
+    }
     &:hover {
         position: relative;
         top: -10px;
@@ -174,6 +198,7 @@
 .news-tool {
     position: absolute;
     right: 0;
+    top: 10px;
     color: $bg-white;
     font-size: rem(12);
     padding: 0 rem(10);
@@ -182,6 +207,9 @@
 }
 .newh3 {
     font-size: rem(16);
+    height: 48px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 .news-txt {
     padding: rem(30);
@@ -191,7 +219,7 @@
     .btn-new {
         display: inline-block;
         padding: 5px 15px;
-        margin: 25px 0;
+        margin: 15px 0;
         height: 40px;
         width: 130px;
         width: fit-content;
@@ -199,6 +227,7 @@
         vertical-align: middle;
         text-align: center;
         align-self: center;
+        text-transform: uppercase;
         p {
             padding-top: 3px;
             display: inline;
@@ -258,7 +287,7 @@
     flex-direction: row;
     align-items: center;
     padding-top: 30px;
-    
+    border-top: 1px solid #ccc;
     .post-deet {
         padding-left: 20px;
     }

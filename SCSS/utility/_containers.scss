@@ -25,6 +25,9 @@
     margin: 0 auto;
     height: rem(457);
     padding: rem(60) 0;
+    @include sm {
+        justify-content: center;
+    }
     @include md {
         height: rem(577);
     }
@@ -35,5 +38,10 @@
             bottom: 50%;
             
         }
+    }
+    p {
+        margin-bottom: .375rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
 }
