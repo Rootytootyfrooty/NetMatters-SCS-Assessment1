@@ -13,8 +13,3 @@
 	
 <b>View all buttons mobile:</b>
 	Mobile viewport 'view all' buttons don't extend the underline on hover to the arrow, it only underlines the word.
-	I'm in process of changing the imgs to svgs and getting the styling uniform on the arrows.
-
-<b>Font:</b>
-	I can't seem to get the font to work properly, it's just a generic sans-serif at the moment
-	Google doesn't seem to have this font.

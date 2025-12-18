@@ -1,3 +1,4 @@
+// 1st carousel containing hero image/s
 .carousel-1 {
     position: relative;
     border: 1px #bbb clear;
@@ -14,6 +15,7 @@
     }
     .btn {
         align-self: center;
+        height: 62px;
         &:hover {
             background-color: #7e57a0;
             border-color: #735093;
@@ -94,6 +96,7 @@
             background-color: $bg-white;
         }
     }
+    // active hero image dot
     > div:first-child {
         background-color: $bg-white;
         &::after {
@@ -132,7 +135,7 @@
         }
     }
 }
-// after news
+// carousel of logos/case studies- after news
  
 .carousel-3 {
     position: relative;
@@ -157,8 +160,7 @@
     }
 }
 
-
-//case study popups
+// case study popups on carousel-3 logos
 
 .carousel-item {
     position: relative;
@@ -169,20 +171,23 @@
     flex-direction: column;
     align-items: center; 
     left: 50%;
-    bottom: calc(100% + 40px);
+    bottom: 100%;
     transform: translateX(-50%);
     display: none;
     width: rem(280);
     padding: rem(20);
+    margin-bottom: 40px;
     text-decoration: none;
     color: $bg-white;
     background-color: $bg-midnight;
     border: 3px solid $bg-midnight;
     text-align: center;
 }
-// .popup > * {
-//     transform: translateY(40px);
-// }
+//triangle under popup
+
+.logo-tri {
+    min-width: 100%;
+}
 .logo-tri::after {
     content: "";
     display: none;
@@ -197,10 +202,6 @@
     padding-bottom: 40px;
 }
 
-// //breakpoints
-// $screen-sm: 768px;
-// $screen-md: 992px;
-// $screen-lg: 1260px;
 .logo-wrap {
     position: relative;
     &:hover .popup,
@@ -212,6 +213,9 @@
         display: inline-block;
     }
 }
+
+// mixin for logo/case studies popups
+
 $logo-pops: (
     img-1: cs1,
     img-2: cs2,
@@ -250,4 +254,7 @@ $logo-pops: (
 .arrow-right {
     margin-left: 12px;
     margin-right: -6px;
+}
+.underline {
+    margin-left: 0;
 }

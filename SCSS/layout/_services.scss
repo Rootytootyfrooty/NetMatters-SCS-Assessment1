@@ -8,36 +8,36 @@
 .tra {  grid-area: tra; }
 
 @include sm {
-      .our-services {
-        display: grid;
-        // grid-auto-rows: 0;
-        // grid-row: auto;
-        // grid-area: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, rem(291));
-        gap: 20px;
-        grid-template-areas:
-        "con con"
-        "sup sup"
-        "mar mar"
-        "tel des"
-        "sec tra";
-      }
-    }
+  .our-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, rem(291));
+    gap: 20px;
+    grid-template-areas:
+    "con con"
+    "sup sup"
+    "mar mar"
+    "tel des"
+    "sec tra";
+  }
+}
+// view our work 2 (small viewport, underneath)
 .vow2 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+//view our work 1 (after sm breakpoint, next to title)
 .vow1 {
   display: none;
 }
 .our-services {
-      padding-bottom: 50px;
-      > .services {
-        margin-bottom: rem(20);
-      }
-    }
+  padding-bottom: 50px;
+  > .services {
+    margin-bottom: rem(20);
+  }
+}
+//h2 Our Services
 .h2up1 {
       margin-bottom: rem(30);
       margin-top: 0;
@@ -72,9 +72,6 @@
 @include md { 
   .our-services { 
     display: grid; 
-    // grid-auto-rows: 0;
-    // grid-row: auto;
-    // grid-area: auto;
     grid-template-columns: repeat(12, 1fr); 
     grid-template-rows: rem(378) rem(311) rem(311); 
     gap: 1.25rem;
@@ -102,6 +99,7 @@
     }
   }
 }
+//idk = spacing block for underneath the h2, makeshift
 @include lg { 
   .idk {
     display: block;
@@ -111,9 +109,6 @@
   }
   .our-services { 
     display: grid; 
-    // grid-auto-rows: 0;
-    // grid-row: auto;
-    // grid-area: auto;
     grid-template-columns: repeat(12, 1fr); 
     grid-template-rows: rem(334) rem(334);
     margin-bottom: 0; 

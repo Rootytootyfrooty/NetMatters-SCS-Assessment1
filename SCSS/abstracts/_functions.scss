@@ -1,5 +1,3 @@
 @function rem($pixels, $context: 16) {
     @return #{$pixels/$context}rem;
 }
-
-//remeber to change pixels to rem function

@@ -6,19 +6,12 @@
     border: rem(1) solid #bbb;
     border-radius: rem(3);
     padding: rem(10) rem(30);
-    // margin-bottom: rem(25);
 }
-// .btn-sm {
-//     align-self: center;
-//     margin-top: auto;
-//     position: relative;
-//     bottom: 0;
-// }
 .btn {
   display: inline-flex;
   width: fit-content;
   align-items: center;
-  min-height: rem(62);
+  // min-height: rem(62);
   padding: 10px 30px;
   margin: 0 0 18px 0;
 }
@@ -29,7 +22,6 @@
 }
 .btn-big {
   font-family: 'Poppins', sans-serif;
-  // height: auto;
   top: 0;
   transition: top .5s ease;
   border: 1px solid #bbb;
@@ -40,9 +32,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
     @include md {
-      // align-self: stretch;
       height: 100%;
     }
     @include lg {

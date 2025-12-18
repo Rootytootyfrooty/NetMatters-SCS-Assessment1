@@ -1,19 +1,10 @@
-            // @media (min-width: 768px) {
-            //     flex: 50%;
-            // }
-            // @media (min-width: 992px) {
-            //     flex: 25%;
-            // }
-            // @media (min-width: 1260px) {
-            //     margin-bottom: 40px;
-            // }
-
 //breakpoints
 $screen-xs: 470px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1260px;
 
+//xs needed for mobile views
 @mixin xs {
     @media (min-width: #{$screen-xs}) {
         @content; 

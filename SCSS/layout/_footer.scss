@@ -40,6 +40,18 @@ footer {
             }
         }
     }
+    padding-bottom: 0;
+    a {
+    color: white;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+            font-size: 0.8rem;
+            line-height: 1.375rem;
+            }
+    }
 }
 @include lg {
     .footer-all {
@@ -60,20 +72,6 @@ footer {
     width: 320px;
     height: auto;
 }
-footer {
-    padding-bottom: 0;
-    a {
-    color: white;
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
-        li {
-            font-size: 0.8rem;
-            line-height: 1.375rem;
-            }
-    }
-}
 .container-soc {
     text-transform: uppercase;
     margin-top: 24px;
@@ -87,7 +85,6 @@ footer {
     fill: $bg-white;
     flex-wrap: wrap;
     li {
-        // flex: 45%;
         display: flex;
         justify-content: center;
         align-items: center;

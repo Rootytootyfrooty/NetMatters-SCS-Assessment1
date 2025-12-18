@@ -19,7 +19,7 @@
 .quotee {
    color: $c__quotee-grey;
 }
-
+// wel1 = Welcome to Netmatters half
 .wel1 p {
     line-height: 1.875rem;
 }
@@ -27,10 +27,11 @@
 .wel2 .h2up {
     margin-bottom: 40px;
 }
+// wel2 = What Our Clients Think half
 .wel2 .h2up {
     margin-top: 40px;
 }
-// buttons- welcome section 1 & 2; google; trustpilot; 
+// buttons- welcome to netmatters half 
 
 .btn-wel {
     display: flex;
@@ -53,6 +54,11 @@
         }
     }
 }
+
+.btn-wel1 {
+    height: 55px;
+}
+// buttons- what our clients think half
 .btn-wel2 {
     display: flex;
     flex-direction: column;
@@ -65,37 +71,34 @@
         justify-content: left;
     }
 }
+//google button
 .btn-gg {
+    height: 55px;
     background-color: $gg-blue;
     border: $gg-blue;
-    // min-width: 260px;
     &:hover {
         background-color: $gg-blue-h;
     }
 }
+//trustpilot button
 .btn-tp {
+    height: 55px;
     background-color: $tp-green;
     border: $tp-green;
-    // min-width: 260px;
     &:hover {
         background-color: $tp-green-h;
     }
 }
 .btn-gg, .btn-tp {
-    // height: auto;
     max-width: fit-content;
 }
-
-// 992px breakpoint
 
 @include md {
     .welcome-sec {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        // height: 100%;
         padding: rem(50) rem(15);
-        // margin: 0 auto;
             .h2up {
             width: max-content;
         }
@@ -129,7 +132,6 @@
     }
 }
 
-// 1200px breakpoint
 
 @include lg {
     .welcome-sec {
@@ -145,7 +147,6 @@
             line-height: rem(35);
         }
     }
-    
 }
 
 // for star and arrow icons, see themes/icons.scss

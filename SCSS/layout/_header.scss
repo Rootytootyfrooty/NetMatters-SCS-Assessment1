@@ -4,7 +4,7 @@
     z-index: 12;
     background-color: $bg-white;
 }
-
+//netmatters logo
 .logo {
     width: 100%;
     max-width: rem(402);
@@ -20,6 +20,7 @@
 .ph-hov:hover {
     text-decoration: underline;
 }
+
 .burger {
     display: inline-block;
     position: relative;
@@ -58,7 +59,7 @@
             }
     }
 }
-
+// I accidentally mixed up the plane-icon and mouse-icon names
 #search-bar--sm-3,
 #mouse-icon,
 #plane-icon {
@@ -117,7 +118,6 @@
                 align-self: center;
             }
         }
-        
     }
     .header-order > .btn-header {
         gap: 0;
@@ -190,8 +190,7 @@
         border-radius: 0 3px 3px 0;
     }
 }
-
-
+// idk why I didn't target the header directly
 .header-order {
     background-color: $bg-white;
     display: flex;
