@@ -80,21 +80,31 @@ footer {
     margin-bottom: 26px;
 }
 .list-soc {
+    width: 320px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     fill: $bg-white;
+    flex-wrap: wrap;
     li {
+        // flex: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 65px;
+        width: 109px;
         height: 55px;
         background-color: $wel-black;
         margin-right: 10px;
         margin-bottom: 10px;
         padding: 12px 22px 16px;
     }
+    @include xs {
+        flex-wrap: nowrap;
+        li {
+            width: 65px;
+        }
+    }
+    
     a {
         display: flex;
         justify-content: center;

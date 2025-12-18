@@ -10,6 +10,7 @@
         justify-content: center;
         text-decoration: none;
         color: $bg-midnight;
+        margin-top: 2px;
         &:hover {
             text-decoration: underline;
         }
@@ -64,18 +65,31 @@
     display: none;
 }
 .news-sec {
+    max-height: 2800px;
     display: flex;
     flex-direction: column;
     padding: rem(32) 0 rem(50) 0;
     margin: 0 auto;
     justify-content: center;
+    row-gap: 25px;
+    box-sizing: border-box;
     .article {
         display: block;
-        height: 100%;
+        height: auto;
         width: 100%;
     }
+    // @include xs {
+    //     row-gap: 90px;
+    // }
     @include sm {
         flex-direction: row;
+        // gap: 80px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        .news-link {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
         .article {
             height: rem(569);
         }
@@ -127,10 +141,12 @@
 .grey {
     color: $dev-grey;
 }
-.blue:hover {
-        background-color: $btn-blue-hover;
+.blue {
+    color: $support-blue;
 }
-
+.bluen:hover {
+    background-color: $btn-blue-hover;
+}
 .yell:hover {
         background-color: $btn-yell-hover;
 }
@@ -138,35 +154,6 @@
 .green:hover {
         background-color: $btn-green-hover;
 }
-// .news-sec {
-//     display: flex;
-//     flex-direction: column;
-//     padding: rem(32) 0 rem(50) 0;
-//     margin: 0 auto;
-//     justify-content: center;
-//     @include sm {
-//         flex-direction: row;
-//         #article3 {
-//             display: none;
-//         }
-//         .news-link {
-//             object-fit: fill;
-//         }
-//     }
-//     @include md {
-//         .news-link {
-//             width: 455px;
-//         }
-//     }
-//     @include lg {
-//         .news-link {
-//             width: 370px;
-//         }
-//         .art3 {
-//             display: initial;
-//         }
-//     }
-// }
 
 .news-link:hover {
     cursor: pointer;
@@ -174,12 +161,11 @@
 .news-link {
     position: relative;
     margin: 0 rem(15);
-    // margin-bottom: 2rem;
     top: 0;
     transition: top 0.5s ease;
-    height: rem(693);
+    max-height: fit-content;
     @include sm {
-            height: rem(569);
+        height: rem(569);
     }
     @include md {
         width: 455px;
