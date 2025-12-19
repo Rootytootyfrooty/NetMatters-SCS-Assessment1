@@ -13,3 +13,6 @@
 	
 <b>View all buttons mobile:</b>
 	Mobile viewport 'view all' buttons don't extend the underline on hover to the arrow, it only underlines the word.
+
+<b>Favicon:</b>
+	the favicon on the -title- doesn't appear in the github pages version of the site, but does from the live server I'm using for testing.
