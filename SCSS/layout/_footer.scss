@@ -122,15 +122,43 @@ footer {
     padding-left: auto;
     padding-right: auto;
 }
-
 .footer-cr {
-    padding: rem(10) 0; 
+    display: flex;
+    text-wrap: wrap;
+    flex-direction: column;
     font-size: 0.8125rem;
     a {
-        margin-left: 8px;
         color: $bg-white;
         &:hover {
             text-decoration: underline;
         }
+        &::before {
+            content: "";
+            display: none;
+            margin-right: 5px;
+            margin-left: 0;
+            font-size: 0.81rem;
+            line-height: 1.375rem;
+            color: $bg-white;
+            background-color: $bg-white;
+            vertical-align: middle;
+            @include sm {
+                display: inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 5px;
+                height: 1px;
+            }
+        }
+    }
+}
+@include xs {
+    .footer-cr {
+        padding: rem(10) 0; 
+    }
+}
+@include sm {
+    .footer-cr {
+        flex-direction: row;
     }
 }

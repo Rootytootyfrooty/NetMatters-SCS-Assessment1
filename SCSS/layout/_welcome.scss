@@ -60,6 +60,7 @@
 }
 // buttons- what our clients think half
 .btn-wel2 {
+    min-height: 0;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -70,18 +71,29 @@
         flex-direction: row;
         justify-content: left;
     }
+    @include md {
+        margin-bottom: 12px;
+        padding-bottom: 0;
+    }
+
 }
 //google button
 .btn-gg {
+    min-height: 0;
     height: 55px;
     background-color: $gg-blue;
     border: $gg-blue;
+    margin-top: 20px;
     &:hover {
         background-color: $gg-blue-h;
+    }
+    @include sm {
+        margin-top: 0;
     }
 }
 //trustpilot button
 .btn-tp {
+    min-height: 0;
     height: 55px;
     background-color: $tp-green;
     border: $tp-green;
@@ -93,7 +105,22 @@
     max-width: fit-content;
 }
 
+
+// min-height: 0;
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 2rem;
+//     font-size: 20px;
+//     gap: rem(10);
+//     border-radius: 6px;
+    @include sm {
+        flex-direction: row;
+        justify-content: left;
+    }
 @include md {
+    .btn-wel2 {
+            margin-top: 75px;
+        }
     .welcome-sec {
         display: flex;
         flex-direction: row;
@@ -107,7 +134,7 @@
     .btn-wel,
     .btn-wel2 {
         flex-direction: column;
-        height: auto;
+        // height: auto;
         // gap: rem(10);
         line-height: rem(35);
         text-wrap: nowrap;
@@ -115,7 +142,7 @@
     .wel1,
     .wel2 {
         padding: rem(10);
-        flex: 1 1 0;
+        width: 615px;
         height: 100%;
         padding: 0 rem(15);
     }
@@ -125,7 +152,7 @@
     .btn-gg,
     .btn-tp {
         padding: rem(10) rem(25);
-        transform: translateY(100%);
+        // transform: translateY(100%);
     }
         .wel2 .h2up {
         margin-top: 0;
@@ -135,6 +162,9 @@
 
 @include lg {
     .welcome-sec {
+        .btn-wel2 {
+            margin-top: 67px;
+        }
         .btn-tp .arrow,
         .btn-gg .arrow {
             margin-left: 0;
@@ -142,7 +172,7 @@
         .btn-wel,
         .btn-wel2 {
             flex-direction: row;
-            height: auto;
+            // height: auto;
             gap: rem(10);
             line-height: rem(35);
         }
