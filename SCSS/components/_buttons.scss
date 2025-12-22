@@ -4,14 +4,14 @@
     cursor: pointer;
     text-transform: uppercase;
     border: rem(1) solid #bbb;
-    border-radius: rem(3);
+    
     padding: rem(10) rem(30);
 }
 .btn {
   display: inline-flex;
   width: fit-content;
   align-items: center;
-  // min-height: rem(62);
+  border-radius: rem(6);
   padding: 10px 30px;
   margin: 0 0 18px 0;
 }
@@ -19,6 +19,7 @@
 .btn-sm {
     margin-top: auto; 
     align-self: center; 
+    border-radius: rem(3);
 }
 .btn-big {
   font-family: 'Poppins', sans-serif;

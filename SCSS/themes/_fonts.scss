@@ -48,11 +48,16 @@ p {
 }
 .view:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
     color: inherit;
     & .arrow-right {
         text-decoration: underline;
+        text-decoration-thickness: 1px;
     }
 }
 .vow1, .vow2, .va1, .va2 {
     color: $bg-midnight;
+}
+.arrow-smaller {
+    margin-bottom: -2px;
 }
