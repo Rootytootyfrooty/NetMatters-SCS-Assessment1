@@ -50,7 +50,8 @@ $srch2-bg-hov: $c__search-bar2--bg-grey-hover;
 
 // hero image carousel dots
 
-$hi-dot-grey: #d6d6d6;
+$hi-dot-grey: rgba(255, 255, 255, 0.5);
+$hi-dot-hov: #869791;
 
 // our services and mg, lg nav bar
 $dev-yellow: $c__consultancy-dev-yellow;

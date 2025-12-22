@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), 33%, rgba(0, 0, 0, 0.4), 66%, rgba(0, 0, 0, 0)), url("../img/netmattersbuilding.png"), no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), 33%, rgba(0, 0, 0, 0.5), 66%, rgba(0, 0, 0, 0.45)), url("../img/netmattersbuilding.png"), no-repeat;
     background-size: cover;
     background-attachment: inherit;
     background-position: center center;
@@ -69,6 +69,8 @@
         h1 {
             margin-bottom: 0;
         }
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), 33%, rgba(0, 0, 0, 0.4), 66%, rgba(0, 0, 0, 0)), url("../img/netmattersbuilding.png"), no-repeat;
+
     }
     @include lg {
         max-height: rem(550);
@@ -93,12 +95,15 @@
         width: rem(11);
         align-self: flex-end;
         &:hover {
-            background-color: $bg-white;
+            background-color: $hi-dot-hov;;
         }
     }
     // active hero image dot
     > div:first-child {
         background-color: $bg-white;
+        &:hover {
+            background-color: $bg-white;
+        }
         &::after {
             content: "";
             position: absolute;
