@@ -36,13 +36,15 @@
     small {
         font-size: rem(10);
         padding-bottom: 1px;
-        margin-bottom: -12px;
+        padding-top: 0;
+        display: block;
+        margin-bottom: -10px;
         @include lg {
-            margin-bottom: -5px;
+            padding-top: 0;
+            margin-bottom: 0;
         }
     }
     &:hover {
-        
         background-color: $color;
         fill: $bg-white;
         //the triangle under the nav bar icons
@@ -70,11 +72,12 @@
         }
     }
     > svg {  
-      justify-self: center;
-      align-self: center;
-      height: rem(23);
-      width: auto;
-      color: $color;
+        justify-self: center;
+        align-self: center;
+        height: rem(23);
+        width: auto;
+        color: $color;
+        flex-shrink: 0;
       }
     }
   }
@@ -136,13 +139,13 @@
     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
             display: block;
             background-color: darken($color, 10%);
-            
+            cursor: pointer;
     }
   li:hover .nav-bar-icon--#{$name} {
     fill: $bg-white;
     color: $bg-white;
     background-color: $color;
-    
+    cursor: pointer;
     &::after {
             content: "";
             width: 0;
