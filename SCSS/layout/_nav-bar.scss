@@ -47,26 +47,6 @@
     &:hover {
         background-color: $color;
         fill: $bg-white;
-        //the triangle under the nav bar icons
-        // &::after {
-        //         content: "";
-        //         width: 0;
-        //         height: 0;
-        //         border-style: solid;
-        //         border-width: 35px 23px 0 23px;
-        //         border-color: $color transparent transparent transparent;
-        //         position: absolute;
-        //         top: 100%;
-        //         z-index: 13;
-        //     }
-        // &.nav-bar-icon--dev-grey:hover {
-        //     &::after {
-        //         border-width: 35px 67px 0 67px;  
-        //         @include lg {
-        //         border-width: 35px 83px 0 83px;
-        //     }
-        //         }
-        //     }
         svg {
             color: $bg-white;
         }
@@ -156,7 +136,6 @@
             top: 100%;
             z-index: 13;
             position: absolute;
-            
             @include lg {
                 border-width: 35px 83px 0 83px;
             }
@@ -168,8 +147,6 @@
                 border-width: 35px 83px 0 83px;
             }
     }
-
-
   li:hover svg {
     color: $bg-white;
   }
@@ -188,6 +165,63 @@
 .nav-bar-icon--dev-grey::after {
                 border-width: 35px 67px 0 67px;  
             }
+
+//failed different ::after triangles
+
+//   @each $name, $color in $btn-colors {
+//     .nav--#{$name}:hover  {
+//             display: block;
+//             background-color: darken($color, 10%);
+//             cursor: pointer;
+//             &::after {
+//                 content: "";
+//                 width: 0;
+//                 height: 0;
+//                 border-style: solid;
+//                 border-width: 18px 35px 0 35px;
+//                 border-color: $color transparent transparent transparent;
+//                 top: 100%;
+//                 z-index: 13;
+//                 position: absolute;
+                
+//                 @include lg {
+//                     border-width: 35px 83px 0 83px;
+//                 }
+//             }
+//     }
+//   .sub-banner--#{$name}:hover {
+//     fill: $bg-white;
+//     color: $bg-white;
+//     background-color: $color;
+//     cursor: pointer;
+    
+//         }
+//     li:hover .nav--dev-grey::after {
+//         border-width: 35px 67px 0 67px;
+//         @include lg {
+//                 border-width: 35px 83px 0 83px;
+//             }
+//     }
+
+
+//   li:hover svg {
+//     color: $bg-white;
+//   }
+//   li:hover .sub-banner--#{$name} {
+//     display: flex;
+//     flex-wrap: wrap;
+//     background-color: darken($color, 10%);
+//     ul {
+//         display: flex;
+//         flex-wrap: wrap;
+//         flex-direction: row;
+//         list-style: none;
+//     }
+//   }
+// }
+// .nav-bar-icon--dev-grey::after {
+//                 border-width: 35px 67px 0 67px;  
+//             }
 
 //list inside sub banners
 .ba-li {
