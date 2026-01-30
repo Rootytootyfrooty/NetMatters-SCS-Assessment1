@@ -3,7 +3,7 @@ $screen-xs: 470px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1260px;
-
+$screen-tb: 1179px;
 //xs needed for mobile views
 @mixin xs {
     @media (min-width: #{$screen-xs}) {
@@ -24,5 +24,11 @@ $screen-lg: 1260px;
 @mixin lg {
     @media (min-width: #{$screen-lg}) {
         @content; 
+    }
+}
+
+@mixin tb {
+    @media (min-width: #{$screen-tb}) {
+        @content;
     }
 }

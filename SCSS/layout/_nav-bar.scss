@@ -30,15 +30,15 @@
     color: $bg-white;
     border: none;
     text-align: center;
-    line-height: 1;
+    line-height: 0.9;
     text-transform: uppercase;
     font-size: rem(18);
     small {
         font-size: rem(10);
-        padding-bottom: 1px;
+        padding-bottom: -1px;
         padding-top: 0;
         display: block;
-        margin-bottom: -10px;
+        margin-bottom: -13px;
         @include lg {
             padding-top: 0;
             margin-bottom: 0;
@@ -54,10 +54,17 @@
     > svg {  
         justify-self: center;
         align-self: center;
-        height: rem(23);
+        min-height: 23px;
+        max-height: 30px;
+        // height: rem(23);
+        padding-bottom: 3px;
+        margin-bottom: -10px;
         width: auto;
         color: $color;
         flex-shrink: 0;
+        @include lg {
+            margin-bottom: 0;
+        }
       }
     }
   }
@@ -133,9 +140,13 @@
             border-style: solid;
             border-width: 18px 35px 0 35px;
             border-color: $color transparent transparent transparent;
+            margin-top: -1px;
             top: 100%;
             z-index: 13;
             position: absolute;
+            @include tb {
+                border-width: 35px 67px 0 67px;
+            }
             @include lg {
                 border-width: 35px 83px 0 83px;
             }
@@ -143,9 +154,13 @@
         }
     li:hover .nav-bar-icon--dev-grey::after {
         border-width: 35px 67px 0 67px;
+        @include tb {
+                border-width: 35px 67px 0 67px;
+            }
         @include lg {
                 border-width: 35px 83px 0 83px;
             }
+            
     }
   li:hover svg {
     color: $bg-white;
@@ -165,7 +180,12 @@
 .nav-bar-icon--dev-grey::after {
                 border-width: 35px 67px 0 67px;  
             }
-
+.nav-bar-icon--dev-grey small {
+    padding-bottom: 5px;
+    @include lg {
+        padding-bottom: 0;
+    }
+}
 //failed different ::after triangles
 
 //   @each $name, $color in $btn-colors {
