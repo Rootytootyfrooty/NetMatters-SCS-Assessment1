@@ -4,7 +4,6 @@
     cursor: pointer;
     text-transform: uppercase;
     border: rem(1) solid #bbb;
-    
     padding: rem(10) rem(30);
 }
 .btn {
@@ -20,13 +19,13 @@
 #hi-btn-1 {
   border-radius: 3px;
 }
-
-// big our services buttons
+// the small 'read more' buttons in our services, & the buttons in the last carousel tooltips
 .btn-sm {
-    margin-top: auto; 
-    align-self: center; 
-    border-radius: rem(3);
+  margin-top: auto; 
+  align-self: center; 
+  border-radius: rem(3);
 }
+// big our services buttons
 .btn-big {
   font-family: 'Poppins', sans-serif;
   top: 0;
@@ -71,7 +70,7 @@
   }
 }
 
-//the small 'buttons' in the our services section
+//the small read more buttons in the our services section
 
 .btn-sm {
 @each $name, $color in $btn-colors {
@@ -83,7 +82,7 @@
   }
 }
 
-// round colour logo/icons in the our services section
+// round colour logo/icons in the btn-bigs in the our services section
 
 .btn-logo {
 @each $name, $color in $btn-colors {

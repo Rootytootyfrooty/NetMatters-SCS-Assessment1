@@ -13,7 +13,8 @@
         height: rem(99);
     }
 }
-//nav items matching the our services buttons
+
+//nav items matching the our services buttons (not actually icons)
 
 .nav-bar-icon {
 @each $name, $color in $btn-colors {
@@ -51,6 +52,7 @@
             color: $bg-white;
         }
     }
+    //actually icons
     > svg {  
         justify-self: center;
         align-self: center;
@@ -78,9 +80,7 @@
     margin-bottom: rem(10);
     font-size: rem(32);
 }
-.sub-nav-bar {
-    height: 117px;
-}
+
 .nav-bar-icon {
     height: 117px;
     width: rem(134);
@@ -186,62 +186,6 @@
         padding-bottom: 0;
     }
 }
-//failed different ::after triangles
-
-//   @each $name, $color in $btn-colors {
-//     .nav--#{$name}:hover  {
-//             display: block;
-//             background-color: darken($color, 10%);
-//             cursor: pointer;
-//             &::after {
-//                 content: "";
-//                 width: 0;
-//                 height: 0;
-//                 border-style: solid;
-//                 border-width: 18px 35px 0 35px;
-//                 border-color: $color transparent transparent transparent;
-//                 top: 100%;
-//                 z-index: 13;
-//                 position: absolute;
-                
-//                 @include lg {
-//                     border-width: 35px 83px 0 83px;
-//                 }
-//             }
-//     }
-//   .sub-banner--#{$name}:hover {
-//     fill: $bg-white;
-//     color: $bg-white;
-//     background-color: $color;
-//     cursor: pointer;
-    
-//         }
-//     li:hover .nav--dev-grey::after {
-//         border-width: 35px 67px 0 67px;
-//         @include lg {
-//                 border-width: 35px 83px 0 83px;
-//             }
-//     }
-
-
-//   li:hover svg {
-//     color: $bg-white;
-//   }
-//   li:hover .sub-banner--#{$name} {
-//     display: flex;
-//     flex-wrap: wrap;
-//     background-color: darken($color, 10%);
-//     ul {
-//         display: flex;
-//         flex-wrap: wrap;
-//         flex-direction: row;
-//         list-style: none;
-//     }
-//   }
-// }
-// .nav-bar-icon--dev-grey::after {
-//                 border-width: 35px 67px 0 67px;  
-//             }
 
 //list inside sub banners
 .ba-li {
@@ -261,6 +205,7 @@
         align-items: center;
     }
 }
+//the icons in the lists that appear in the sub banner on hover
 .icon-ban {
     fill: $bg-white;
     height: rem(32);

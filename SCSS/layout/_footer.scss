@@ -122,6 +122,7 @@ footer {
     padding-left: auto;
     padding-right: auto;
 }
+//footer credits
 .footer-cr {
     display: flex;
     text-wrap: wrap;
@@ -160,5 +161,10 @@ footer {
 @include sm {
     .footer-cr {
         flex-direction: row;
+    }
+}
+@include sm {
+    #rights {
+        margin-left: 5px;
     }
 }

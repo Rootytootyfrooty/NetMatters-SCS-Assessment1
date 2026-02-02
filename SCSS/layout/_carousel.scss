@@ -77,7 +77,7 @@
     }
 }
 
-//hero image dots
+//hero image/pagination dots
 
 .container-hi-dot {
     display: flex;
@@ -128,7 +128,6 @@
     height: rem(70);
     gap: rem(100);
     img {
-        
         align-self: center;
         max-height: rem(70);
         padding: 0 rem(20);
