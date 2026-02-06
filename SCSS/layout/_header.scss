@@ -69,6 +69,30 @@ button {
             }
     }
 }
+.burger-burger-clicked .mid {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 34px;
+    height: 4px;
+    background-color: $bg-white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 0.4s ease;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 34px;
+            height: 4px;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            transition: transform 0.4s ease;
+            background-color: $bg-white;;
+        }
+        &::after {
+            display: none;
+        }
+}
 // I accidentally mixed up the plane-icon and mouse-icon names
 #search-bar--sm-3,
 #mouse-icon,

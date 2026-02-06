@@ -11,3 +11,10 @@
 
 <b>Favicon:</b>
 Netmatters logo has transparent background now but it looks smaller than the target site.
+
+<b>Burger button after clicked</b>
+The .mid and ::before are not perfectly centred, I'll have to figure out why eventually
+
+<b>Sidebar</b>
+Trying to have it so when the list items are hovered over, it makes the title background colour change
+I can either do all of them or none of them, or only have the effect when hovered over themselves.

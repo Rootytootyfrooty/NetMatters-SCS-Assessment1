@@ -25,7 +25,7 @@ footer {
                 flex: 25%;
             }
             @include lg {
-                padding: 0 rem(15);
+                padding: 0 15px;
             }
 
             h4 {
