@@ -25,3 +25,12 @@ backgroundToFade.addEventListener( "click", (event) => {
         burgerBtn.classList.remove("burger-burger-clicked");
     }
 });
+//cookie accept button
+const accept = document.getElementById("accept-cookie");
+const cookieAll = document.getElementById("cookie-cont");
+
+document.cookie = "cookie_accepted=false";
+accept.addEventListener("click", () => {
+    document.cookie = "cookie_accepted=true; expires=Mon, 09 Feb 2026 13:30:00 GMT";
+    cookieAll.style.display = "none";
+});
