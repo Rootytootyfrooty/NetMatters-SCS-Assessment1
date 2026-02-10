@@ -18,3 +18,10 @@ The .mid and ::before are not perfectly centred, I'll have to figure out why eve
 <b>Sidebar</b>
 Trying to have it so when the list items are hovered over, it makes the title background colour change
 I can either do all of them or none of them, or only have the effect when hovered over themselves.
+
+<b>First Carousel</b>
+There's a bit of lag in the styling for the first slide's button when the carousel starts again.
+
+<b>Carousel Three<b>
+.carousel-3 items are visible through the sidebar, can't use overflow: hidden or the popups will be invisible.
+z-index seems to be failing me.

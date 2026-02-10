@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="CSS/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-        <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"> -->
         <link rel="manifest" href="favicons/site.webmanifest">
         <title>
         Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
@@ -35,41 +35,41 @@
             </div>
             <div class="true-header">
                 <header class="container header-order">
-                        <div class="container-logo">
-                            <a href="#"><img class="logo" src="img/netmatterslogo.png" alt="The Netmatters Logo"></a>
-                        </div>
-                        <div class="btn-header">
-                            <a href="#" class="ph-hov">
-                                <svg class="icon" id="phone-icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-phone_in_talk"> </use></svg>
+                    <div class="container-logo">
+                        <a href="#"><img class="logo" src="img/netmatterslogo.png" alt="The Netmatters Logo"></a>
+                    </div>
+                    <div class="btn-header">
+                        <a href="#" class="ph-hov">
+                            <svg class="icon" id="phone-icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-phone_in_talk"> </use></svg>
+                        </a>
+                            <a href="#" class="support-btn header-btn" id="plane-icon">
+                                <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-mouse"> </use></svg>
+                                Support
                             </a>
-                                <a href="#" class="support-btn header-btn" id="plane-icon">
-                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-mouse"> </use></svg>
-                                    Support
-                                </a>
-                            <a href="#" class="contact-btn header-btn" id="mouse-icon">
-                                <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-paperplane"> </use></svg>
-                                Contact
-                            </a>
-                            <div id="search-bar--sm-3">
-                                <form>
-                                    <input type="text" placeholder="Search.." id="search-text">
-                                    <button type="submit" class="search-btn">
-                                        <svg class="icon search"> <use href="img/icons/SVG/symbol-defs.svg#icon-search"> </use></svg>
-                                    </button>
-                                </form>
-                            </div>
-                            <button id="burger-button" class="burger-default">
-                                <span class="burger header-btn">
-                                    <span class="mid"></span>
-                                </span>
-                            </button>
-                        </div>
-                            <form id="search-bar--sm">
-                                <input type="text" placeholder="Search..">
-                                <button type="submit">
-                                    <svg class="icon" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-search"> </use></svg>
+                        <a href="#" class="contact-btn header-btn" id="mouse-icon">
+                            <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-paperplane"> </use></svg>
+                            Contact
+                        </a>
+                        <div id="search-bar--sm-3">
+                            <form>
+                                <input type="text" placeholder="Search.." id="search-text">
+                                <button type="submit" class="search-btn">
+                                    <svg class="icon search"> <use href="img/icons/SVG/symbol-defs.svg#icon-search"> </use></svg>
                                 </button>
                             </form>
+                        </div>
+                        <button id="burger-button" class="burger-default">
+                            <span class="burger header-btn">
+                                <span class="mid"></span>
+                            </span>
+                        </button>
+                    </div>
+                        <form id="search-bar--sm">
+                            <input type="text" placeholder="Search..">
+                            <button type="submit">
+                                <svg class="icon" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-search"> </use></svg>
+                            </button>
+                        </form>
                 </header>
                 <nav class="main-nav-bar">
                     <ul class="container main-nav-list">
@@ -211,39 +211,106 @@
                 </nav>
             </div>
             <div class="carousel-1">
-                <div class="hero-img">
-                    <div class="container container-header">
+                <div class="hero-img hero-img--one">
+                    <div id="caro-hi-one" class="container container-header">
                         <h1>The East Of England's Leading Technology Company</h1>
                         <p>Performance-driven digital and technology services <br> with complete transparency.</p>
-                        <a href="#" id="hi-btn-1" class="btn btn-sm--design-purple">
+                        <a href="#" class="btn hi-btn">
                             Why Choose Us?
                             <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
                         </a>
                     </div>
-                    <div class="container-hi-dot">
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
-                        <div class="hi-dot">
-                            <span></span>
-                        </div>
+                </div>
+                <div class="hero-img hero-img--two">
+                    <div id="caro-hi-two" class="container container-header">
+                        <h1>Bespoke Software</h1>
+                        <p>Delivering expert bespoe software<br>
+                        solutions across a range of industries. </p>
+                        <a href="#" class="btn  hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
                     </div>
                 </div>
+                <div class="hero-img hero-img--three">
+                    <div id="caro-hi-three" class="container container-header">
+                        <h1>IT Support</h1>
+                        <p>Fast and cost-effective IT support<br>
+                        services for your business.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--four">
+                    <div id="caro-hi-four" class="container container-header">
+                        <h1>Digital Marketing</h1>
+                        <p>Generating your new business through<br>
+                        results-driven marketing activities.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--five">
+                    <div id="caro-hi-five" class="container container-header">
+                        <h1>Telecoms Services</h1>
+                        <p>A new approach to connectivity, see<br>
+                        how we can help your business.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--six">
+                    <div id="caro-hi-six" class="container container-header">
+                        <h1>Web Design</h1>
+                        <p>For businesses looking to make a strong <br>
+                        and effective first impression.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--seven">
+                    <div id="caro-hi-seven" class="container container-header">
+                        <h1>Cyber Security</h1>
+                        <p>Keeping businesses and their customers<br>
+                        sensitive information protected.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="container-hi-dot">
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                    <div class="hi-dot">
+                        <span></span>
+                    </div>
+                </div> -->
             </div>
             <div class="main">
                 <div class="container">
@@ -350,13 +417,18 @@
                 </div>
                 <div class="carousel">
                     <div class="carousel-2">
-                        <img src="img/carousel-2/logo1.png" alt="Cyber Essentionals">
+                        <img src="img/carousel-2/logo1.png" alt="Cyber Essentials">
                         <img src="img/carousel-2/logo2.png" alt="Google Partner">
                         <img src="img/carousel-2/logo3.png" alt="Good Business Charter Accredited">
                         <img src="img/carousel-2/logo4.png" alt="Norfolk Pro Help">
                         <img src="img/carousel-2/logo5.png" alt="Investing in Future Growth Winner">
                         <img src="img/carousel-2/logo6.png" alt="Norfolk Carbon Charter">
                         <img src="img/carousel-2/logo7.png" alt="Prompt Payment Code">
+                        <img src="img/carousel-2/logo10.png" alt="Princess Royal Training Award">
+                        <img src="img/carousel-2/logo11.png" alt="Future 50 Member">
+                        <img src="img/carousel-2/logo8.png" alt="ISO Certification">
+                        <img src="img/carousel-2/logo12.png" alt="ISO Certification">
+                        <img src="img/carousel-2/logo9.png" alt="Skills of Tomorrow Winner">
                     </div>
                 </div>
                 <div class="about">
@@ -542,7 +614,7 @@
                     </div>
                 </section>
             </div>
-            <div class="carousel">
+            <div class="carousel caro-behind">
                 
                 <div class="carousel-3">
                     <div class="carousel-item">
@@ -605,6 +677,71 @@
                         <div class="logo-wrap">
                             <img src="img/carousel-3/logo7.png" class="logo-img logo-img--img-7" alt="Howes Percival">
                             <div class="popup cs7"><h4>Howes Percival</h4></div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo8.png" class="logo-img logo-img--img-8" alt="Girls' Day School Trust">
+                            <div class="popup cs8">
+                                <h4>GDST</h4>
+                                <p>The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools.</p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo9.png" class="logo-img logo-img--img-9" alt="Ashcroft">
+                            <div class="popup cs9">
+                                <h4>Ashcroft LLC Partnership</h4>
+                                <p>Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP in 2020 and are 
+                                one of the top chartered accountancy firms in Cambridge, advising entrepreneurs and families. </p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo10.png" class="logo-img logo-img--img-10" alt="One Traveller">
+                            <div class="popup cs10">
+                                <h4>One Traveller</h4>
+                                <p>One Traveller, founded in 2007, is a leading provider of solo holidays for over 50s. </p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo11.png" class="logo-img logo-img--img-11" alt="Searles Leisure Resort">
+                            <div class="popup cs11">
+                                <h4>Searles Leisure Resort</h4>
+                                <p>Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK holiday resort for families.</p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo12.png" class="logo-img logo-img--img-12" alt="Busseys">
+                            <div class="popup cs12">
+                                <h4>Busseys</h4>
+                                <p>One of the UK's leading Ford dealerships.</p>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo13.png" class="logo-img logo-img--img-13" alt="Crane Garden Buildings">
+                            <div class="popup cs13">
+                                <h4>Crane Garden Buildings</h4>
+                                <p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+                            </div>
                             <div class="logo-tri"></div>
                         </div>
                     </div>
@@ -1082,6 +1219,11 @@
                 
             </ul>
         </div>
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/frontend.js"></script>
     </body>
 </html>

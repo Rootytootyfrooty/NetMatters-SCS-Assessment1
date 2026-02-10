@@ -11,22 +11,25 @@
 }
 .main {
     padding-top: 50px;
+    margin-top: 20px;
 }
 
 //hero image/carousel
 .container-header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
     margin: 0 auto;
-    height: rem(457);
+    margin-bottom: 20px;
+    min-height: 550px;
     padding: rem(60) 0;
     @include sm {
         justify-content: center;
     }
     @include md {
-        height: rem(577);
+        align-items: flex-start;
     }
     a {
         font-size: rem(20);

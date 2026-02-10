@@ -34,3 +34,33 @@ accept.addEventListener("click", () => {
     document.cookie = "cookie_accepted=true; expires=Mon, 09 Feb 2026 13:30:00 GMT";
     cookieAll.style.display = "none";
 });
+
+//carousel 1
+
+$(document).ready(function () {
+  $('.carousel-1').slick({
+    dots: true,
+    customPaging: function () {
+    return '<button type="button"></button>';
+  },
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000
+    });
+    $('.carousel-2').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    variableWidth: true,
+    slidesToScroll: 1,
+    slidesToShow: 8,
+    });
+    $('.carousel-3').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    variableWidth: true,
+    slidesToScroll: 1,
+    slidesToShow: 8,
+    });
+});
