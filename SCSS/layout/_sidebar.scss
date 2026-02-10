@@ -79,10 +79,13 @@
 }
 .list-inner-item {
     padding: 10px;
-    background-color: $grey-25;
+    background-color: #262833;
     font-size: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
 }
 .icon-bar {
     @each $name, $color in $btn-colors {
@@ -100,7 +103,7 @@
 .list-inner-item-big {
     width: 100%;
     padding: 15px 20px;
-    background-color: $grey-25;
+    background-color: #262833;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 14px;
     &:hover {
@@ -125,6 +128,14 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid $grey-25;
     &:hover {
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: #3d404e;
     }
+}
+.list-big:hover .list-title {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+.list-cat:hover .cat-title {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
 }

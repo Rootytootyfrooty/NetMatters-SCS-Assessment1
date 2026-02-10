@@ -4,7 +4,6 @@
     border: 1px #bbb clear;
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: 550px;
-    // text-align: center;
     background-color: $bg-white;
     margin-bottom: 30px;
     p {
@@ -159,9 +158,16 @@ $hero-images: (
     }
 }
 // carousel of logos/case studies- after news
-.caro-behind {
-    z-index: 1;
-}
+// .carousel-3 .slick-track {
+    
+//     overflow: visible;
+//     z-index: 1;
+// }
+
+// .carousel-3 .slick-slider {
+//     overflow: hidden;
+//     z-index: 1;
+// }
 .carousel-3 {
     position: relative;
     display: flex;
@@ -170,6 +176,7 @@ $hero-images: (
     justify-content: space-evenly;
     z-index: 1;
     height: rem(70);
+    overflow-x: clip;
     h4 {
         margin: 0;
     }    

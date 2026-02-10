@@ -35,7 +35,7 @@ accept.addEventListener("click", () => {
     cookieAll.style.display = "none";
 });
 
-//carousel 1
+// jQuery slick carousels
 
 $(document).ready(function () {
   $('.carousel-1').slick({
@@ -63,4 +63,31 @@ $(document).ready(function () {
     slidesToScroll: 1,
     slidesToShow: 8,
     });
+});
+
+// sticky header when scrolling up
+const header = document.getElementById("header-scroll");
+const spacer = document.getElementById("spacer");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > lastScroll && window.scrollY >= 231) {
+        header.classList.add("header-hidden");
+        header.classList.remove("true-header");
+        header.classList.remove("header-default");
+        spacer.classList.add("spacer-display");
+    } else if (window.scrollY >= 231) {
+        header.classList.add("true-header");
+        header.classList.remove("header-hidden");
+        header.classList.remove("header-default");
+        spacer.classList.remove("spacer-display");
+    } else if (window.scrollY === 0) {
+        header.classList.add("header-default");
+        header.classList.remove("header-hidden");
+        header.classList.remove("true-header");
+        spacer.classList.remove("spacer-display");
+    }
+    lastScroll = currentScroll;
 });
