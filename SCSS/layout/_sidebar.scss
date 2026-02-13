@@ -9,7 +9,7 @@
     color: $bg-white;
     list-style: none;
     overflow-y: scroll;
-    @include lg {
+    @include md {
         width: 350px;
     }
     
@@ -28,7 +28,7 @@
 }
 .sidebar-small-list {
     padding: 21px;
-    @include lg {
+    @include md {
         display: none;
     }
     a {
@@ -37,11 +37,11 @@
 }
 .list-services {
     display: none;
-    @include lg {
+    @include md {
         display: block;
     }
 }
-#sidebar a, li {
+#sidebar a, #sidebar li {
     color: $bg-white;
     list-style-type: none;
     text-decoration: none;

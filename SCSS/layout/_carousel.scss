@@ -1,6 +1,6 @@
 // 1st carousel containing hero image/s
 .carousel-1 {
-    position: relative;
+    // position: relative;
     border: 1px #bbb clear;
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: 550px;
@@ -9,13 +9,23 @@
     p {
         font-weight: 600;
         line-height: 1.75rem;
-        margin-bottom: rem(6);
+        margin-bottom: 0;
         font-size: rem(20);
-        // align-self: center;
-
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    @include md {
+        p {
+            text-align: left;
+        }
+        h1 {
+            text-align: left;
+        }
     }
     .btn {
-        // align-self: center;
+        padding: 0 15px;
         height: 62px;
         &:hover {
             background-color: #7e57a0;
@@ -66,13 +76,19 @@ $hero-images: (
                 text-decoration: none;
                 color: $bg-white;
                 border: none;
-                margin: 31px 0 18px 0;
+                margin: 28px 0 18px 0;
+                padding: 5px 20px;
+                border-radius: 3px;
+                min-height: 62px;
                 &:hover {
                     background-color: darken($hero-color, 7%);
                 }
             }
         }
     }
+}
+#button-1 {
+    margin-top: -10px;
 }
 #caro-hi-one {
     height: 581px;
@@ -84,10 +100,10 @@ $hero-images: (
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: absolute;
+    position: relative;
     margin: 0 auto;
     padding: 0;
-    bottom: 25px;
+    bottom: 75px;
     right: 50%;
     transform: translateX(50%);
     li {
@@ -96,6 +112,8 @@ $hero-images: (
         background-color: $hi-dot-grey;
         width: 11px;
         height: 11px;
+        position: relative;
+        list-style: none;
         &:hover {
             background-color: $bg-white;
             cursor: pointer;
@@ -177,14 +195,17 @@ $hero-images: (
     z-index: 1;
     height: rem(70);
     overflow-x: clip;
+    
     h4 {
-        margin: 0;
+        margin: 0 0 17px;
+        font-size: 18px;
+        font-weight: 400;
     }    
     img {
         align-self: center;
         max-height: rem(70);
         filter: grayscale(1);
-        
+        max-width: 200px;
         opacity: 0.8;
         &:hover {
             filter: grayscale(0);
@@ -193,6 +214,9 @@ $hero-images: (
     }
     .slick-list {
         overflow: visible;
+    }
+    p {
+        font-size: 13px;
     }
 }
 

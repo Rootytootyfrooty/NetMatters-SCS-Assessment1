@@ -122,14 +122,16 @@
     color: $support-blue;
 }
 .bluen:hover {
-    background-color: $btn-blue-hover;
+    background-color: darken($support-blue, 10%);
 }
 .yell:hover {
-        background-color: $btn-yell-hover;
+    background-color: darken($dev-yellow, 10%);
 }
-
+.purple:hover {
+    background-color: darken($design-purple, 10%);
+}
 .green:hover {
-        background-color: $btn-green-hover;
+    background-color: darken($market-green, 10%);
 }
 // new articles parent anchor
 .news-link:hover {

@@ -4,6 +4,7 @@ body {
     letter-spacing: 0.4px;
     font-size: 1rem;
     background-color: $bg-white;
+    overflow-x: clip;
 }
 * {
     box-sizing: border-box;
@@ -52,7 +53,7 @@ body {
     left: -275px;
     height: 100%;
     overflow: hidden;
-    @include lg {
-        left: -350px;
+    @include md {
+        left: -345px;
     }
 }

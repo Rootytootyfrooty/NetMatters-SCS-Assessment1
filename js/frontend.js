@@ -2,6 +2,37 @@ const burgerBtn = document.getElementById("burger-button");
 const backgroundToFade = document.getElementById("background");
 const body = document.getElementById("body");
 
+//experimental refactoring in progress
+// function setStateBB(state) {
+//     burgerBtn.classList.toggle("burger-default", state === "burger-click");
+//     backgroundToFade.classList.toggle("default-background", state === "burger-click");
+//     body.classList.toggle("body-default", state === "burger-click");
+
+//     if (state === "burger-click") {
+//         burgerBtn.classList.add("burger-burger-clicked");
+//         backgroundToFade.classList.add("body-burger-clicked");
+//         body.classList.add("body-shifted");
+//     } else if (state === "unclicked") {
+//         burgerBtn.classList.add("burger-default");
+//         backgroundToFade.classList.add("default-background");
+//         body.classList.add("body-default");
+//     }
+
+// }
+// burgerBtn.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     if (backgroundToFade.classList.contains("default-background")) {
+//         setStateBB("burger-click");
+//     }
+// });
+
+// backgroundToFade.addEventListener( "click", (event) => {
+//     event.stopPropagation();
+//     if (backgroundToFade.classList.contains("body-burger-clicked")) {
+//         setState("unclicked");
+//     }
+// });
+
 burgerBtn.addEventListener("click", (event) => {
     event.stopPropagation();
     if (backgroundToFade.classList.contains("default-background")) {
@@ -70,24 +101,50 @@ const header = document.getElementById("header-scroll");
 const spacer = document.getElementById("spacer");
 
 let lastScroll = 0;
+const triggerPoint = 231;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;
-    if (currentScroll > lastScroll && window.scrollY >= 231) {
-        header.classList.add("header-hidden");
-        header.classList.remove("true-header");
-        header.classList.remove("header-default");
-        spacer.classList.add("spacer-display");
-    } else if (window.scrollY >= 231) {
-        header.classList.add("true-header");
-        header.classList.remove("header-hidden");
-        header.classList.remove("header-default");
-        spacer.classList.remove("spacer-display");
-    } else if (window.scrollY === 0) {
-        header.classList.add("header-default");
-        header.classList.remove("header-hidden");
-        header.classList.remove("true-header");
-        spacer.classList.remove("spacer-display");
+    const scrollingDown = currentScroll > lastScroll;
+    if (currentScroll === 0) {
+        setState("default");
+    } else if (currentScroll >= triggerPoint) {
+        setState(scrollingDown ? "hidden" : "sticky");
     }
     lastScroll = currentScroll;
 });
+
+function setState(state) {
+    header.classList.remove("header-hidden", "true-header", "header-default");
+    spacer.classList.toggle("spacer-display", state === "hidden");
+
+    if (state === "hidden") {
+        header.classList.add("header-hidden");
+    } else if (state === "sticky") {
+        header.classList.add("true-header");
+    } else {
+        header.classList.add("header-default");
+    }
+
+}
+
+//old logic for sticky scroll
+
+// window.addEventListener("scroll", () => {
+//     const currentScroll = window.scrollY;
+//     const scrollingDown = currentScroll > lastScroll;
+//     if (currentScroll > lastScroll && window.scrollY >= 231) {
+//         header.classList.add("header-hidden");
+//         header.classList.remove("true-header", "header-default");
+//         spacer.classList.add("spacer-display");
+//     } else if (window.scrollY >= 231) {
+//         header.classList.add("true-header");
+//         header.classList.remove("header-hidden", "header-default");
+//         spacer.classList.remove("spacer-display");
+//     } else if (window.scrollY === 0) {
+//         header.classList.add("header-default");
+//         header.classList.remove("header-hidden", "true-header");
+//         spacer.classList.remove("spacer-display");
+//     }
+//     lastScroll = currentScroll;
+// });
