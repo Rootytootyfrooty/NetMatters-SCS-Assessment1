@@ -2,7 +2,8 @@ const burgerBtn = document.getElementById("burger-button");
 const backgroundToFade = document.getElementById("background");
 const body = document.getElementById("body");
 
-//experimental refactoring in progress
+//new burger button logic
+//I'm not sure that this is really any more efficient
 function setStateBB(state) {
     if (state === "burger-click") {
         burgerBtn.classList.toggle("burger-burger-clicked", true);
@@ -34,7 +35,7 @@ backgroundToFade.addEventListener( "click", (event) => {
         setStateBB("unclicked");
     }
 });
-
+//old burger button logic
 // burgerBtn.addEventListener("click", (event) => {
 //     event.stopPropagation();
 //     if (backgroundToFade.classList.contains("default-background")) {
@@ -58,15 +59,32 @@ backgroundToFade.addEventListener( "click", (event) => {
 //         burgerBtn.classList.remove("burger-burger-clicked");
 //     }
 // });
+
 //cookie accept button
 const accept = document.getElementById("accept-cookie");
 const cookieAll = document.getElementById("cookie-cont");
 
-document.cookie = "cookie_accepted=false";
-accept.addEventListener("click", () => {
-    document.cookie = "cookie_accepted=true; expires=Mon, 09 Feb 2026 13:30:00 GMT";
+
+function getCookie(name) {
+    return document.cookie
+        .split("; ")
+        .map(c => c.trim())
+        .find(row => row.startsWith(name + "="))
+        ?.split("=")[1];
+}
+
+const accepted = getCookie("cookie_accepted");
+
+if (accepted !== "true") {
+    cookieAll.style.display ="block";
+    accept.addEventListener("click", () => {
+        let date = new Date(Date.now() + 604800e3);
+        document.cookie = `cookie_accepted=true; expires=${date.toUTCString()}; path=/; SameSite=Lax`;
+        cookieAll.style.display ="none";
+    });
+} else {
     cookieAll.style.display = "none";
-});
+}
 
 // jQuery slick carousels
 
