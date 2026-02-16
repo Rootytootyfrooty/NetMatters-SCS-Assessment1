@@ -31,7 +31,6 @@ body {
 }
 .body-burger-clicked:hover {
     cursor: pointer;
-    transition: left 0.4s ease;
 }
 .body-burger-clicked::after {
     background-color: rgba(0, 0, 0, 0.4);
@@ -44,7 +43,9 @@ body {
     height: 100%;
     transition: left 0.4s ease;
 }
-.body-default {
+.default-body {
+    transition: left 0.4s ease;
+    left: 0;
     position: relative;
 }
 .body-shifted {

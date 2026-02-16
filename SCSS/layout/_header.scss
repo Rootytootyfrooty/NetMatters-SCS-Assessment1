@@ -60,7 +60,8 @@ button {
         width: 35px;
         height: 4px;
         background-color: $bg-white;
-        transform: translate(50%, -50%);        
+        transform: translate(50%, -50%);    
+        transition: transform 0.4s ease, top 0.4s ease; 
             &::before,
             &::after {
                 content: "";
@@ -68,10 +69,10 @@ button {
                 width: 35px;
                 height: 4px;
                 top: -10px;
-                transition: 0.4s;
                 background-color: $bg-white;
                 left: 0;
-}
+                transition: transform 0.4s ease, top 0.4s ease; 
+            }
             &::before {
                 top: -10px;
             }
@@ -82,38 +83,16 @@ button {
 }
 .burger-burger-clicked .mid {
   transform: translate(50%, -50%) rotate(45deg);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, top 0.4s ease;
   &::before {
     top: 0;
     transform: rotate(90deg);
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, top 0.4s ease;
   }
   &::after {
     display: none;
   }
 }
-    // position: absolute;
-    // bottom: 0;
-    // left: 50%;
-    // width: 34px;
-    // height: 4px;
-    // background-color: $bg-white;
-    // transform: translate(-50%, -50%) rotate(45deg);
-    // transition: transform 0.4s ease;
-    //     &::before {
-    //         content: "";
-    //         position: absolute;
-    //         top: 0;
-    //         width: 34px;
-    //         height: 4px;
-    //         left: 50%;
-    //         transform: translate(-50%, -50%) rotate(90deg);
-    //         transition: transform 0.4s ease;
-    //         background-color: $bg-white;;
-    //     }
-    //     &::after {
-    //         display: none;
-    //     }
 
 // I accidentally mixed up the plane-icon and mouse-icon names
 #search-bar--sm-3,

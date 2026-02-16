@@ -11,6 +11,3 @@
 
 <b>Favicon:</b>
 Netmatters logo has transparent background now but it looks smaller than the target site.
-
-<b>First Carousel</b>
-There's a bit of lag in the styling for the first slide's button when the carousel starts again.

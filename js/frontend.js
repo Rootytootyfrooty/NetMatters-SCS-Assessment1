@@ -3,59 +3,61 @@ const backgroundToFade = document.getElementById("background");
 const body = document.getElementById("body");
 
 //experimental refactoring in progress
-// function setStateBB(state) {
-//     burgerBtn.classList.toggle("burger-default", state === "burger-click");
-//     backgroundToFade.classList.toggle("default-background", state === "burger-click");
-//     body.classList.toggle("body-default", state === "burger-click");
+function setStateBB(state) {
+    if (state === "burger-click") {
+        burgerBtn.classList.toggle("burger-burger-clicked", true);
+        backgroundToFade.classList.toggle("body-burger-clicked", true);
+        body.classList.toggle("body-shifted", true);
+        burgerBtn.classList.toggle("burger-default", false);
+        backgroundToFade.classList.toggle("default-background", false);
+        body.classList.toggle("default-body", false);
+    } else if (state === "unclicked") {
+        burgerBtn.classList.toggle("burger-default", true);
+        backgroundToFade.classList.toggle("default-background", true);
+        body.classList.toggle("default-body", true);
+        burgerBtn.classList.toggle("burger-burger-clicked", false);
+        backgroundToFade.classList.toggle("body-burger-clicked", false);
+        body.classList.toggle("body-shifted", false);
+    }
 
-//     if (state === "burger-click") {
-//         burgerBtn.classList.add("burger-burger-clicked");
-//         backgroundToFade.classList.add("body-burger-clicked");
-//         body.classList.add("body-shifted");
-//     } else if (state === "unclicked") {
-//         burgerBtn.classList.add("burger-default");
-//         backgroundToFade.classList.add("default-background");
-//         body.classList.add("body-default");
-//     }
-
-// }
-// burgerBtn.addEventListener("click", (event) => {
-//     event.stopPropagation();
-//     if (backgroundToFade.classList.contains("default-background")) {
-//         setStateBB("burger-click");
-//     }
-// });
-
-// backgroundToFade.addEventListener( "click", (event) => {
-//     event.stopPropagation();
-//     if (backgroundToFade.classList.contains("body-burger-clicked")) {
-//         setState("unclicked");
-//     }
-// });
-
+}
 burgerBtn.addEventListener("click", (event) => {
     event.stopPropagation();
     if (backgroundToFade.classList.contains("default-background")) {
-        backgroundToFade.classList.add("body-burger-clicked");
-        backgroundToFade.classList.remove("default-background");
-        body.classList.add("body-shifted");
-        body.classList.remove("body-default");
-        burgerBtn.classList.add("burger-burger-clicked");
-        burgerBtn.classList.remove("burger-default");
+        setStateBB("burger-click");
     }
 });
 
 backgroundToFade.addEventListener( "click", (event) => {
     event.stopPropagation();
     if (backgroundToFade.classList.contains("body-burger-clicked")) {
-        backgroundToFade.classList.add("default-background");
-        backgroundToFade.classList.remove("body-burger-clicked");
-        body.classList.add("body-default");
-        body.classList.remove("body-shifted");
-        burgerBtn.classList.add("burger-default");
-        burgerBtn.classList.remove("burger-burger-clicked");
+        setStateBB("unclicked");
     }
 });
+
+// burgerBtn.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     if (backgroundToFade.classList.contains("default-background")) {
+//         backgroundToFade.classList.add("body-burger-clicked");
+//         backgroundToFade.classList.remove("default-background");
+//         body.classList.add("body-shifted");
+//         body.classList.remove("body-default");
+//         burgerBtn.classList.add("burger-burger-clicked");
+//         burgerBtn.classList.remove("burger-default");
+//     }
+// });
+
+// backgroundToFade.addEventListener( "click", (event) => {
+//     event.stopPropagation();
+//     if (backgroundToFade.classList.contains("body-burger-clicked")) {
+//         backgroundToFade.classList.add("default-background");
+//         backgroundToFade.classList.remove("body-burger-clicked");
+//         body.classList.add("body-default");
+//         body.classList.remove("body-shifted");
+//         burgerBtn.classList.add("burger-default");
+//         burgerBtn.classList.remove("burger-burger-clicked");
+//     }
+// });
 //cookie accept button
 const accept = document.getElementById("accept-cookie");
 const cookieAll = document.getElementById("cookie-cont");

@@ -1,6 +1,5 @@
 // 1st carousel containing hero image/s
 .carousel-1 {
-    // position: relative;
     border: 1px #bbb clear;
     box-shadow: 0 4px 35px rgba(0,0,0,0.1);
     height: 550px;
@@ -71,7 +70,7 @@ $hero-images: (
             @include md {
                 background: linear-gradient(to right, rgba(0, 0, 0, 0.8), 33%, rgba(0, 0, 0, 0.4), 66%, rgba(0, 0, 0, 0)), url("../img/carousel-image-#{$name}.png");
             }
-            #caro-hi-#{$name} .hi-btn {
+            .hi-btn {
                 background-color: $hero-color;
                 text-decoration: none;
                 color: $bg-white;
@@ -80,21 +79,30 @@ $hero-images: (
                 padding: 5px 20px;
                 border-radius: 3px;
                 min-height: 62px;
+                display: flex;
                 &:hover {
                     background-color: darken($hero-color, 7%);
+                }
+            }
+            .button-1 {
+                margin-top: -10px;
+                @include lg {
+                    margin-top: 0;
                 }
             }
         }
     }
 }
-#button-1 {
-    margin-top: -10px;
-}
+
 #caro-hi-one {
     height: 581px;
     @include sm {
         height: 550px;
     }
+}
+.carousel-1 .slick-initialized .slick-slide {
+    visibility: visible;
+    display: block;
 }
 .carousel-1 .slick-dots {
     display: flex;
@@ -106,6 +114,12 @@ $hero-images: (
     bottom: 75px;
     right: 50%;
     transform: translateX(50%);
+    @include md {
+        bottom: 100px;
+    }
+    @include lg {
+        bottom: 60px;
+    }
     li {
         margin: 0 10px;
         border-radius: 50%;
@@ -159,7 +173,6 @@ $hero-images: (
     }
 }
 
-
 //carousel after our services 
 .carousel-2 .slick-track {
     height: rem(70);
@@ -175,17 +188,6 @@ $hero-images: (
         }
     }
 }
-// carousel of logos/case studies- after news
-// .carousel-3 .slick-track {
-    
-//     overflow: visible;
-//     z-index: 1;
-// }
-
-// .carousel-3 .slick-slider {
-//     overflow: hidden;
-//     z-index: 1;
-// }
 .carousel-3 {
     position: relative;
     display: flex;
