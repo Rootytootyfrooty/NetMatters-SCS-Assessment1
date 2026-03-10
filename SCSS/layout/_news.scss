@@ -209,7 +209,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 28px;
     border-top: 1px solid #ccc;
     .post-deet {
         padding-left: 20px;
@@ -221,8 +221,8 @@
 }
 //author profile picture
 .news-logo {
-    height: rem(47);
-    width: rem(47);
+    height: rem(49);
+    // padding-top: 5px;
     border-radius: 50%;
 }
 // bs = Bethany Shakespeare
@@ -232,7 +232,7 @@
 //author name
 .nm {
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 0;
     font-weight: 800;
     strong {
         color: $bg-midnight;
@@ -260,4 +260,7 @@
 .career-tooltip {
     background-color: #4183d7;
     border: none;
+}
+.date {
+    margin: 0;
 }

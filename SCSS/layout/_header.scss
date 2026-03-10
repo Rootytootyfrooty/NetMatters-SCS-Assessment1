@@ -1,21 +1,30 @@
 .true-header {
-    position: sticky;
     top: 0;
     z-index: 12;
     background-color: $bg-white;
+    position: sticky;
     transition: top 0.4s ease;
 }
 .header-hidden {
-    position: absolute;
-    top: -212px;
-    transition: top 0.4s ease;
+    top: -107px;
     z-index: 12;
+    position: sticky;
+    // transition: top 0.4s ease-out;
+    @include md {
+        top: -230px;
+    }
 }
 .header-default {
     position: relative;
     top: 0;
     z-index: 12;
     width: 100vw;
+    transition: top 0.4s ease-out;
+}
+#header-scroll {
+    background-color: $bg-white;
+    overflow: hidden;
+    transition: top 0.4s ease;
 }
 //netmatters logo
 .logo {
@@ -316,19 +325,20 @@ button {
     }
 }
 
-#header-scroll {
-    background-color: $bg-white;
-}
+
 #spacer {
     width: 100vw;
-    height: 212px;
     margin: 0;
     padding: 0;
     background-color: $bg-white;
 }
 .spacer-hidden {
-    display: none;
+    height: 0;
 }
+
 .spacer-display {
-    display: block;
+    height: 108px;
+    @include md {
+        height: 212px;
+    }
 }

@@ -105,6 +105,7 @@ $(document).ready(function () {
     variableWidth: true,
     slidesToScroll: 1,
     slidesToShow: 8,
+    draggable: false
     });
     $('.carousel-3').slick({
     arrows: false,
@@ -113,6 +114,7 @@ $(document).ready(function () {
     variableWidth: true,
     slidesToScroll: 1,
     slidesToShow: 8,
+    draggable: false
     });
 });
 
@@ -121,7 +123,7 @@ const header = document.getElementById("header-scroll");
 const spacer = document.getElementById("spacer");
 
 let lastScroll = 0;
-const triggerPoint = 231;
+const triggerPoint = 300;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;

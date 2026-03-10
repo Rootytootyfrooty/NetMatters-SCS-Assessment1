@@ -269,12 +269,19 @@ $hero-images: (
 .logo-wrap {
     position: relative;
     &:hover .popup,
-    &:focus-within .popup {
+    &:focus-within .popup,
+    &:active .popup {
         display: flex;
     }
     &:hover .logo-tri::after,
     &:focus-within .logo-tri::after {
         display: inline-block;
+    }
+    &:hover img,
+    &:focus-within img,
+    &:active img {
+        filter: grayscale(0);
+        opacity: 1;
     }
 }
 
