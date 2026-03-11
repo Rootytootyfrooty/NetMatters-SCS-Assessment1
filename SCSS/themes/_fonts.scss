@@ -1,9 +1,11 @@
+// why did I give the head a font size?
 head {
     font-size: 16px;
 }
 body {
     font-family: 'Poppins', sans-serif;
 }
+//titles on the hero images/first carousel images
 h1 {
     font-size: 2.5rem;
     line-height: rem(48);
@@ -38,8 +40,6 @@ p {
 .container-head {
     font-weight: 400;
     font-size: rem(43);
-    // margin-bottom: -50px;
-
 }
 .inline-title {
     margin: 0;

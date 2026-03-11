@@ -1,31 +1,36 @@
-.true-header {
-    top: 0;
-    z-index: 12;
-    background-color: $bg-white;
-    position: sticky;
-    transition: top 0.4s ease;
-}
-.header-hidden {
-    top: -107px;
-    z-index: 12;
-    position: sticky;
-    // transition: top 0.4s ease-out;
-    @include md {
-        top: -230px;
-    }
-}
+//non-sticky header
 .header-default {
     position: relative;
     top: 0;
     z-index: 12;
     width: 100vw;
-    transition: top 0.4s ease-out;
+    overflow-x: clip;
 }
+
+//sticky header
 #header-scroll {
+    position: fixed;
     background-color: $bg-white;
-    overflow: hidden;
-    transition: top 0.4s ease;
+    // overflow: initial;
+    overflow-x: clip;
+    transition: all 0.4s ease;
+    z-index: 13;
+    width: 100vw;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
+.true-header {
+    transform: translateY(0);
+    background-color: $bg-white;
+}
+.header-hidden {
+    transform: translateY(-100%);
+}
+.invisible {
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+}
+
 //netmatters logo
 .logo {
     max-width: 100%;
@@ -35,10 +40,12 @@
     padding-right: rem(15);
 }
 
-#phone-icon {
+#phone-icon,
+#phone-icon2 {
     height: rem(32);
     width: rem(32);
 }
+//mobile screen phone icon
 .ph-hov:hover {
     text-decoration: underline;
 }
@@ -48,6 +55,7 @@ button {
     border: none;
     border-radius: 3px;
 }
+//burger button
 .burger {
     display: flex;
     flex-direction: column;
@@ -90,6 +98,7 @@ button {
             }
     }
 }
+//burger button styling after clicked
 .burger-burger-clicked .mid {
   transform: translate(50%, -50%) rotate(45deg);
   transition: transform 0.4s ease, top 0.4s ease;
@@ -104,17 +113,23 @@ button {
 }
 
 // I accidentally mixed up the plane-icon and mouse-icon names
+//icons and search bars in the header
 #search-bar--sm-3,
 #mouse-icon,
-#plane-icon {
+#plane-icon,
+#search-bar--sm-3-2,
+#mouse-icon2,
+#plane-icon2 {
     display: none;
 }
 
 @include sm {
-    #phone-icon {
+    #phone-icon,
+    #phone-icon2 {
         display: none;
     }
-    #search-bar--sm-3 {
+    #search-bar--sm-3,
+    #search-bar--sm-3-2 {
         display: inline-block;
         position: relative;
         height: 56px;
@@ -172,14 +187,17 @@ button {
 }
 
 @include md {
-    #plane-icon {
+    #plane-icon,
+    #plane-icon2  {
         background-color: #4183d7;
         &:hover {
             background-color: #2a6ec6;
         }
     }
         #mouse-icon,
-        #search-icon {
+        #search-icon,
+        #mouse-icon2,
+        #search-icon2 {
         background-color: $srch2-bg;
         &:hover {
             background-color: $srch2-bg-hov;
@@ -187,6 +205,8 @@ button {
     }
     #plane-icon,
     #mouse-icon,
+    #plane-icon2,
+    #mouse-icon2,
     .search-btn {
         display: flex;
         position: relative;
@@ -205,7 +225,8 @@ button {
             align-self: center;
         }
     }
-    #search-bar--sm-3 {
+    #search-bar--sm-3,
+    #search-bar--sm-3-2 {
         margin-right: 0;
         button {
             width: 63px;
@@ -214,13 +235,16 @@ button {
         }
     } 
     #plane-icon,
-    #mouse-icon {
+    #mouse-icon,
+    #plane-icon2,
+    #mouse-icon2 {
         padding: rem(5) rem(15);
         & svg {
             margin-right: rem(5);
         }
     }
-    #search-text {
+    #search-text,
+    #search-text2 {
         display: none;
     }
     .header-order > .btn-header {
@@ -229,11 +253,13 @@ button {
 }
 
 @include lg {
-    #search-text {
+    #search-text,
+    #search-text2 {
         display: inline-block;
         min-width: rem(240);
     }
-    #search-bar--sm-3 button {
+    #search-bar--sm-3 button,
+    #search-bar--sm-3-2 button {
         border-radius: 0 3px 3px 0;
     }
 }
@@ -272,7 +298,8 @@ button {
     align-items: center;
     gap: rem(18);
   }
-  > #search-bar--sm {
+  > #search-bar--sm,
+  > #search-bar--sm-2 {
     grid-area: search;
     width: 100%;
   }
@@ -287,7 +314,8 @@ button {
 
 //smallest screen search bar
 
-#search-bar--sm {
+#search-bar--sm,
+#search-bar--sm-2 {
     display: flex;
     flex: 1;
     width: 100%;
@@ -322,23 +350,5 @@ button {
     }
     @include sm {
         display: none;
-    }
-}
-
-
-#spacer {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    background-color: $bg-white;
-}
-.spacer-hidden {
-    height: 0;
-}
-
-.spacer-display {
-    height: 108px;
-    @include md {
-        height: 212px;
     }
 }

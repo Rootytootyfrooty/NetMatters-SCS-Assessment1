@@ -1,3 +1,9 @@
+//coookie container
+#cookie-cont {
+    display: none;
+}
+
+//manage consent button
 .cookie-manage {
     display: flex;
     position: fixed;
@@ -14,17 +20,16 @@
     font-weight: 600;
     font-size: 13px;
 }
-#cookie-cont {
-    display: none;
-}
+
+//grey background over everything but cookie
 #cookie-background {
     display: flex;
     flex-direction: row;
     position: fixed;
     width: 100%;
-    // padding: 30px;
     top: 0;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 30px;
     bottom: 0;
     align-items: center;
     justify-content: center;
@@ -33,15 +38,15 @@
     margin: 0 auto;
     overflow: hidden;
 }
-
+//the popup itself
 #cookie-popup {
     position: absolute;
     max-width: 600px;
     background-color: $bg-white;
     z-index: 31;
+    // margin: auto auto;
     border-radius: 5px;
     border: 1px solid $grey-25;
-    // margin: auto auto;
 }
 .cookie-title {
     padding: 15px 20px;
@@ -64,7 +69,6 @@
 }
 #cookie-buttons {
     display: flex;
-    // flex-wrap: wrap;
     flex-direction: column;
     padding: 20px;
     border-top: 1px solid #e5e5e5;

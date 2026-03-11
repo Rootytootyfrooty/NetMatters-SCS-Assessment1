@@ -51,7 +51,7 @@
     padding: rem(50) 0;
     position: relative;
 }
-
+//map for hero image buttons and background gradient colour
 $hero-images: (
     one: $design-purple,
     two: $dev-yellow,
@@ -93,7 +93,7 @@ $hero-images: (
         }
     }
 }
-
+//first image in carousel is taller until sm breakpoint
 #caro-hi-one {
     height: 581px;
     @include sm {
@@ -285,7 +285,7 @@ $hero-images: (
     }
 }
 
-// mixin for logo/case studies popups
+// map for logo/case studies popups
 
 $logo-pops: (
     img-1: cs1,

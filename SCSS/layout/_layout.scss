@@ -32,6 +32,7 @@ body {
 .body-burger-clicked:hover {
     cursor: pointer;
 }
+//grey background over everything when sidebar is open
 .body-burger-clicked::after {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 21;
@@ -43,6 +44,7 @@ body {
     height: 100%;
     transition: left 0.4s ease;
 }
+//style to make body shift to the left when sidebar is open
 .default-body {
     transition: left 0.4s ease;
     left: 0;

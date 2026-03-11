@@ -77,6 +77,7 @@ footer {
     margin-top: 24px;
     margin-bottom: 26px;
 }
+//social media buttons
 .list-soc {
     width: 320px;
     display: flex;
@@ -153,6 +154,7 @@ footer {
         }
     }
 }
+//spacing for the credits
 @include xs {
     .footer-cr {
         padding: rem(10) 0; 

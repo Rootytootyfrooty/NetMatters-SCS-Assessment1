@@ -1,3 +1,4 @@
+//nav bar that appears when at md breakpoint
 .main-nav-bar {
     display: none;
     z-index: 12;
@@ -89,6 +90,7 @@
         width: rem(167);
     }
 }
+//sub-banners that appear below nav bar sections on hover
 .sub-banner {
     display: none;
     position: absolute;
@@ -96,7 +98,6 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    margin-top: -rem(15);
     padding-top: rem(50);
     padding-bottom: rem(50);
     color: $bg-white;
@@ -121,7 +122,7 @@
     margin: 0;
 }
 
-
+//reusing btn-colors map for nav bar section colours
 @each $name, $color in $btn-colors {
     .nav-bar-icon--#{$name}:hover + .sub-banner--#{$name} {
             display: block;

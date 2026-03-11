@@ -12,8 +12,8 @@
     @include md {
         width: 350px;
     }
-    
 }
+// container to cover rest of page when sidebar is open
 #background {
     position: relative;
     z-index: 10;
@@ -60,6 +60,7 @@
         cursor: pointer;
     }
 }
+//category title
 .cat-title {
     display: flex;
     flex-direction: column;
@@ -70,6 +71,7 @@
     small {
         font-size: 10px;
     }
+    //icon for title
     .icon-bar {
         margin: 0;
         padding-bottom: 10px;
@@ -77,6 +79,7 @@
         width: 35px;
     }
 }
+//items in each sidebar-small-list category
 .list-inner-item {
     padding: 10px;
     background-color: #262833;
@@ -94,6 +97,7 @@
         }
     }
 }
+//the sidebar list on bottom for smaller screens, only menu for larger screens
 .list-inner-item-big,
 .sidebar-big-list {
     padding: 0;

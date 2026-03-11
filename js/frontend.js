@@ -1,4 +1,5 @@
 const burgerBtn = document.getElementById("burger-button");
+const burgerBtn2 = document.getElementById("burger-button2");
 const backgroundToFade = document.getElementById("background");
 const body = document.getElementById("body");
 
@@ -7,20 +8,23 @@ const body = document.getElementById("body");
 function setStateBB(state) {
     if (state === "burger-click") {
         burgerBtn.classList.toggle("burger-burger-clicked", true);
+        burgerBtn2.classList.toggle("burger-burger-clicked", true);
         backgroundToFade.classList.toggle("body-burger-clicked", true);
         body.classList.toggle("body-shifted", true);
         burgerBtn.classList.toggle("burger-default", false);
+        burgerBtn2.classList.toggle("burger-default", false);
         backgroundToFade.classList.toggle("default-background", false);
         body.classList.toggle("default-body", false);
     } else if (state === "unclicked") {
         burgerBtn.classList.toggle("burger-default", true);
+        burgerBtn2.classList.toggle("burger-default", true);
         backgroundToFade.classList.toggle("default-background", true);
         body.classList.toggle("default-body", true);
         burgerBtn.classList.toggle("burger-burger-clicked", false);
+        burgerBtn2.classList.toggle("burger-burger-clicked", false);
         backgroundToFade.classList.toggle("body-burger-clicked", false);
         body.classList.toggle("body-shifted", false);
     }
-
 }
 burgerBtn.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -35,36 +39,19 @@ backgroundToFade.addEventListener( "click", (event) => {
         setStateBB("unclicked");
     }
 });
-//old burger button logic
-// burgerBtn.addEventListener("click", (event) => {
-//     event.stopPropagation();
-//     if (backgroundToFade.classList.contains("default-background")) {
-//         backgroundToFade.classList.add("body-burger-clicked");
-//         backgroundToFade.classList.remove("default-background");
-//         body.classList.add("body-shifted");
-//         body.classList.remove("body-default");
-//         burgerBtn.classList.add("burger-burger-clicked");
-//         burgerBtn.classList.remove("burger-default");
-//     }
-// });
-
-// backgroundToFade.addEventListener( "click", (event) => {
-//     event.stopPropagation();
-//     if (backgroundToFade.classList.contains("body-burger-clicked")) {
-//         backgroundToFade.classList.add("default-background");
-//         backgroundToFade.classList.remove("body-burger-clicked");
-//         body.classList.add("body-default");
-//         body.classList.remove("body-shifted");
-//         burgerBtn.classList.add("burger-default");
-//         burgerBtn.classList.remove("burger-burger-clicked");
-//     }
-// });
+//burger button on second header
+burgerBtn2.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (backgroundToFade.classList.contains("default-background")) {
+        setStateBB("burger-click");
+    }
+});
 
 //cookie accept button
 const accept = document.getElementById("accept-cookie");
 const cookieAll = document.getElementById("cookie-cont");
 
-
+//function to check for cookies already on webpage for user
 function getCookie(name) {
     return document.cookie
         .split("; ")
@@ -74,7 +61,8 @@ function getCookie(name) {
 }
 
 const accepted = getCookie("cookie_accepted");
-
+//if the cookie has not been accepted, the popup will show
+//once accepted it adds a expiration date for one week in the future
 if (accepted !== "true") {
     cookieAll.style.display ="block";
     accept.addEventListener("click", () => {
@@ -119,54 +107,29 @@ $(document).ready(function () {
 });
 
 // sticky header when scrolling up
+
 const header = document.getElementById("header-scroll");
-const spacer = document.getElementById("spacer");
 
 let lastScroll = 0;
-const triggerPoint = 300;
+//trigger point is when the second header kicks in 500px from the top of the page
+const triggerPoint = 500;
 
+//checks scroll positions when user scrolls to determine if they're scrolling up or down
 window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;
-    const scrollingDown = currentScroll > lastScroll;
     if (currentScroll === 0) {
-        setState("default");
-    } else if (currentScroll >= triggerPoint) {
-        setState(scrollingDown ? "hidden" : "sticky");
+        header.classList.add("invisible");
+        header.classList.remove("true-header");
+    } if (currentScroll >= triggerPoint) {
+        if (currentScroll > lastScroll) {
+            header.classList.add("header-hidden");
+            header.classList.remove("true-header");
+            header.classList.remove("invisible");
+        } else {
+            header.classList.remove("invisible");
+            header.classList.add("true-header");
+            header.classList.remove("header-hidden");
+        }
     }
     lastScroll = currentScroll;
 });
-
-function setState(state) {
-    header.classList.remove("header-hidden", "true-header", "header-default");
-    spacer.classList.toggle("spacer-display", state === "hidden");
-
-    if (state === "hidden") {
-        header.classList.add("header-hidden");
-    } else if (state === "sticky") {
-        header.classList.add("true-header");
-    } else {
-        header.classList.add("header-default");
-    }
-
-}
-
-//old logic for sticky scroll
-
-// window.addEventListener("scroll", () => {
-//     const currentScroll = window.scrollY;
-//     const scrollingDown = currentScroll > lastScroll;
-//     if (currentScroll > lastScroll && window.scrollY >= 231) {
-//         header.classList.add("header-hidden");
-//         header.classList.remove("true-header", "header-default");
-//         spacer.classList.add("spacer-display");
-//     } else if (window.scrollY >= 231) {
-//         header.classList.add("true-header");
-//         header.classList.remove("header-hidden", "header-default");
-//         spacer.classList.remove("spacer-display");
-//     } else if (window.scrollY === 0) {
-//         header.classList.add("header-default");
-//         header.classList.remove("header-hidden", "true-header");
-//         spacer.classList.remove("spacer-display");
-//     }
-//     lastScroll = currentScroll;
-// });

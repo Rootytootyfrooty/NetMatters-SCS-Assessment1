@@ -1,3 +1,4 @@
+//default button styling
 .btn, .btn-sm {
     height: auto;
     text-align: center;
@@ -43,7 +44,7 @@
       }
     }
   }
-
+//specific colours
 .btn-big {
 @each $name, $color in $btn-colors {
   &--#{$name} {
