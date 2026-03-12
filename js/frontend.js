@@ -84,7 +84,8 @@ $(document).ready(function () {
   },
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    pauseOnFocus: false
     });
     $('.carousel-2').slick({
     arrows: false,
@@ -93,7 +94,8 @@ $(document).ready(function () {
     variableWidth: true,
     slidesToScroll: 1,
     slidesToShow: 8,
-    draggable: false
+    draggable: false,
+    pauseOnFocus: false
     });
     $('.carousel-3').slick({
     arrows: false,
@@ -102,7 +104,8 @@ $(document).ready(function () {
     variableWidth: true,
     slidesToScroll: 1,
     slidesToShow: 8,
-    draggable: false
+    draggable: false,
+    pauseOnFocus: false
     });
 });
 

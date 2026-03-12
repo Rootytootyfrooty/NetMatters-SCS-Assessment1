@@ -16,7 +16,7 @@
     transition: all 0.4s ease;
     z-index: 13;
     width: 100vw;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 35px $grey-10;
 }
 .true-header {
     transform: translateY(0);
