@@ -39,7 +39,7 @@ backgroundToFade.addEventListener( "click", (event) => {
         setStateBB("unclicked");
     }
 });
-//burger button on second header
+//burger button on second header, two headers for the scrolling effect
 burgerBtn2.addEventListener("click", (event) => {
     event.stopPropagation();
     if (backgroundToFade.classList.contains("default-background")) {

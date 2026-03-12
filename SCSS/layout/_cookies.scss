@@ -44,9 +44,9 @@
     max-width: 600px;
     background-color: $bg-white;
     z-index: 31;
-    // margin: auto auto;
     border-radius: 5px;
-    border: 1px solid $grey-25;
+    border: 1px solid $grey-20;
+    box-shadow: 0 5px 15px $grey-50;
 }
 .cookie-title {
     padding: 15px 20px;
