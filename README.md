@@ -1,13 +1,64 @@
-<b>Our services:</b>
-	The spacing between the Our Services h2 and the View Our Work anchor is kind of botched.
-	The target site isn't perfectly aligned on the y axis.
-	I used margin-bottom: -50px; ...at least it looks...okay.
- > at ~1855px screen width, the view all button ends up beside the our services grid.
-	I added a div box at the LG breakpoint and removed the bottom margin for the our services/view all text.
-	
-	
-<b>Footer:</b>
-	LG breakpoint- ULs are not as wide as the target site, and I can't seem to change it.
+Fork project -> feature ✅
 
-<b>Favicon:</b>
-Netmatters logo has transparent background now but it looks smaller than the target site.
+Backup main branch project locally ✅
+
+Remove git files from backup project ✅
+
+Move project to laragon folder ✅
+
+Make sure github can still find it ✅
+
+Add .gitignore file to ignore .env file ✅
+
+Add .env file ✅
+
+Create a database locally
+	Create empty database ✅
+	Figure out which columns you need ✅
+	Figure out which tables you need
+	Add each table
+	Populate it with news article data
+
+	Columns needed:
+		Author ID
+		Author name
+		Author picture PNG
+
+		Article author ID
+		Article ID
+		Date posted
+
+		Article ID
+		Article news image PNG
+		Article body title
+		Article body excerpt
+
+		Style Button colour?
+		Style Text colour?
+		Style Tooltip?
+
+Add .env variable for database name, username, password ✅
+
+Link database to project files using .env variables
+
+Update index.html to index.php ✅
+
+Move header, footer, menu into reusable partials
+
+Make sure cookie acceptance works on both pages
+
+Move homepage news to database, loop to display
+
+Create contact-us.php using partials
+
+Link contact button with contact page
+
+Add content to contact.php page
+
+Add 'Out of Hours IT Support" accordion using JS
+
+Create contact form:
+	JS client side validation
+	PHP server side validation, error messages for incorrect or missing fields
+	Success message
+	Storing successful enquiries to database.
