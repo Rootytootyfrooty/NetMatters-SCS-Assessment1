@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="manifest" href="favicons/site.webmanifest">
+        <title>
+        Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
+        </title>
+    </head>
+    
+    <body id="body" class="default-body">
+        <div id="background" class="default-background">
+            <?php require('views/partials/header.view.php') ?>
+            <div class="carousel-1">
+                <div class="hero-img hero-img--one">
+                    <div id="caro-hi-one" class="container container-header">
+                        <h1>The East Of England's Leading Technology Company</h1>
+                        <p>Performance-driven digital and technology services <br> with complete transparency.</p>
+                        <a href="#" id="button-1" class="btn hi-btn button-1">
+                            Why Choose Us?
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--two">
+                    <div id="caro-hi-two" class="container container-header">
+                        <h1>Bespoke Software</h1>
+                        <p>Delivering expert bespoke software<br>
+                        solutions across a range of industries. </p>
+                        <a href="#" class="btn  hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--three">
+                    <div id="caro-hi-three" class="container container-header">
+                        <h1>IT Support</h1>
+                        <p>Fast and cost-effective IT support<br>
+                        services for your business.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--four">
+                    <div id="caro-hi-four" class="container container-header">
+                        <h1>Digital Marketing</h1>
+                        <p>Generating your new business through<br>
+                        results-driven marketing activities.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--five">
+                    <div id="caro-hi-five" class="container container-header">
+                        <h1>Telecoms Services</h1>
+                        <p>A new approach to connectivity, see<br>
+                        how we can help your business.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--six">
+                    <div id="caro-hi-six" class="container container-header">
+                        <h1>Web Design</h1>
+                        <p>For businesses looking to make a strong <br>
+                        and effective first impression.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img hero-img--seven">
+                    <div id="caro-hi-seven" class="container container-header">
+                        <h1>Cyber Security</h1>
+                        <p>Keeping businesses and their customers<br>
+                        sensitive information protected.</p>
+                        <a href="#" class="btn hi-btn">
+                            Find Out More
+                            <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="main" class="main">
+                <div class="container">
+                    <h2 class="container-head h2up1">Our Services</h2>
+                    <div class="vowg1 view">
+                        <a href="#" class="vow1">
+                            <h3 class="inline-title">View Our Work</h3>
+                            <span class="arrow-right underline">&#129030;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="idk"></div>
+                <div class="container our-services">
+                    <div class="services con">
+                        <a href="#">
+                            <div class="btn-big btn-big--dev-grey">
+                                <span class="btn-logo--dev-grey btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-laptop"> </use></svg>
+                                </span>
+                                <h2>Consultancy & Development</h2>
+                                <p>Bespoke software solutions & consultancy for all your business needs including integrations and reporting.</p>
+                                <span class="btn-sm btn-sm--dev-yellow">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services sup">
+                        <a href="#">
+                            <div class="btn-big btn-big--support-blue">
+                                <span class="btn-logo--support-blue btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-display"> </use></svg>
+                                </span>
+                                <h2>IT Support</h2>
+                                <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                                <span class="btn-sm btn-sm--support-blue">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services mar">
+                        <a href="#">
+                            <div class="btn-big btn-big--market-green">
+                                <span class="btn-logo--market-green btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-bar-graph"> </use></svg>
+                                </span>
+                                <h2>Digital Marketing</h2>
+                                <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
+                                <span class="btn-sm btn-sm--market-green">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services tel">
+                        <a href="#">
+                            <div class="btn-big btn-big--telecoms-red">
+                                <span class="btn-logo--telecoms-red btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-phone_in_talk"> </use></svg>
+                                </span>
+                                <h2>Telecoms Services</h2>
+                                <p>Business telephony solutions including mobile & connectivity solutions.</p>
+                                <span class="btn-sm btn-sm--telecoms-red">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services des">
+                        <a href="#">
+                            <div class="btn-big btn-big--design-purple">
+                                <span class="btn-logo--design-purple btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-code"> </use></svg>
+                                </span>
+                                <h2>Web Design</h2>
+                                <p>User-centric design for businesses looking to make a lasting impression.</p>
+                                <span class="btn-sm btn-sm--design-purple">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services sec">
+                        <a href="#">
+                            <div class="btn-big btn-big--security-pink">
+                                <span class="btn-logo--security-pink btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-security"> </use></svg>
+                                </span>
+                                <h2>Cyber Security</h2>
+                                <p>Web design & software training courses designed to secure a job in tech.</p>
+                                <span class="btn-sm btn-sm--security-pink">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="services tra">
+                        <a href="#">
+                            <div class="btn-big btn-big--training-orange">                                   
+                                <span class="btn-logo--training-orange btn-logo">
+                                    <svg class="icon"> <use href="img/icons/SVG/symbol-defs.svg#icon-school"> </use></svg>
+                                </span>
+                                <h2>Developer Training</h2>
+                                <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
+                                <span class="btn-sm btn-sm--training-orange">Read More</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="view">
+                    <a href="#" class="vow2">
+                        <h3 class="inline-title">View Our Work</h3>
+                        <span class="arrow-right underline arrowsmaller">&#129030;</span>
+                    </a>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-2">
+                        <img src="img/carousel-2/logo1.png" alt="Cyber Essentials">
+                        <img src="img/carousel-2/logo2.png" alt="Google Partner">
+                        <img src="img/carousel-2/logo3.png" alt="Good Business Charter Accredited">
+                        <img src="img/carousel-2/logo4.png" alt="Norfolk Pro Help">
+                        <img src="img/carousel-2/logo5.png" alt="Investing in Future Growth Winner">
+                        <img src="img/carousel-2/logo6.png" alt="Norfolk Carbon Charter">
+                        <img src="img/carousel-2/logo7.png" alt="Prompt Payment Code">
+                        <img src="img/carousel-2/logo10.png" alt="Princess Royal Training Award">
+                        <img src="img/carousel-2/logo11.png" alt="Future 50 Member">
+                        <img src="img/carousel-2/logo8.png" alt="ISO Certification">
+                        <img src="img/carousel-2/logo12.png" alt="ISO Certification">
+                        <img src="img/carousel-2/logo9.png" alt="Skills of Tomorrow Winner">
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="container welcome-sec"> 
+                        <div class="wel1">
+                            <h2 class="h2up">Welcome to Netmatters</h2>
+                            <p>
+                                <strong>
+                                    Netmatters is a leading 
+                                    <a href="#">Bespoke Software,</a>
+                                    <a href="#">IT Support,</a>
+                                    and 
+                                    <a href="#">Digital Marketing </a>
+                                    company based in the East of England with offices in 
+                                    <a href="#">Cambridge,</a>
+                                    <a href="#">Wymondham,</a>
+                                    and 
+                                    <a href="#">Great Yarmouth.</a>
+                                </strong>
+                            </p>
+                            <p>
+                                    We aren't tied into contracts with third-party providers, so you know that our recommendations 
+                                    for your business are based purely with one benefit in mind: to help improve your business with
+                                    the most appropriate solutions.
+                            </p>
+                            <p>
+                                    We pride ourselves on being an ethical business and have a unique business offering and cost 
+                                    model that ensures you get the most from our relationship in an upfront manner.
+                            </p>
+                            <div class="btn-wel">
+                                <a href="#" class="btn btn-wel1">Why Choose Us?
+                                    <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                                </a>
+                                <a href="#" class="btn btn-wel1">Our Culture
+                                    <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="wel2">
+                            <h2 class="h2up">What Our Clients Think</h2>
+                            <div class="stars">
+                                <svg class="star" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-star"> </use></svg>
+                                <svg class="star" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-star"> </use></svg>
+                                <svg class="star" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-star"> </use></svg>
+                                <svg class="star" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-star"> </use></svg>
+                                <svg class="star" viewbox="0 0 32 32"> <use href="img/icons/SVG/symbol-defs.svg#icon-star"> </use></svg>
+                            </div>
+                            <p>
+                                <span class="quote">
+                                    <strong>
+                                    Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital
+                                    marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!)
+                                    expectations and went over and above to ensure we were satisfied clients - and we are!
+                                    </strong>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="quotee">Eleanor Bishop, Head of Marketing - </span>
+                                <cite><a href="#">Ashcroft Partnership</a></cite>
+                            </p>
+                            <div class="btn-wel2">
+                                <a href="#" class="btn btn-gg">Google Reviews
+                                    <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                                </a>
+                                <a href="#" class="btn btn-tp">Trustpilot Reviews
+                                    <img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="news">
+                    <div class="container news-top">
+                        <h2 class="container  h2up">Latest News</h2>
+                        <div class="view">
+                            <a href="#" class="va1"><h3 class="inline-title">View All</h3>
+                                <span class="arrow-right underline arrowsmaller">&#129030;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container news-sec">
+
+                        <a href="#" class="news-link">
+                            <div class="article news article1">
+                                <div class="image">
+                                    <span class="news-tool insight-tooltip btn-sm">Insights</span>
+                                    <span class="news-img">
+                                        <img src="img/article1pic.png" class="news-image" alt="Increase Exit Value With Bespoke Software- Our Key Strategies">
+                                    </span>
+                                </div>
+                                <div class="news-txt">
+                                    <h3 class="newh3 grey"><span>How Much Could Bespoke Software Add to Your E...</span></h3>
+                                    <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
+                                    <div class="btn-new btn-sm--dev-yellow"><p>Read More</p></div>
+                                
+                            
+
+                                    <div class="poster">
+                                        <div class="post-pic">
+                                            <img class="news-logo" src="img/netmatterslogosmall.png" alt="The Netmatters Logo">
+                                        </div>
+                                        <div class="post-deet">
+                                            <p class="nm">
+                                                <strong>Posted by Netmatters</strong>
+                                            </p>
+                                            <p class="date">
+                                                27th June 2025
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="news-link">
+                            <div class="article news article2">
+                                <div class="image">
+                                    <span class="news-tool insight-tooltip btn-sm">Insights</span>
+                                    <span class="news-img">
+                                        <img src="img/article2pic.png" class="news-image" alt="Article: AI Integration for Businesses">
+                                    </span>
+                                </div>
+                                <div class="news-txt">
+                                    <h3 class="newh3 grey"><span>How Can AI Benefit My Business?</span></h3>
+                                    <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
+                                    <div class="btn-new btn-sm--dev-yellow"><p>Read More</p></div>
+                                
+
+                                    <div class="poster">
+                                        <div class="post-pic">
+                                            <img class="news-logo" src="img/netmatterslogosmall.png" alt="The Netmatters Logo">
+                                        </div>
+                                        <div class="post-deet">
+                                            <p class="nm">
+                                                <strong>Posted by Netmatters</strong>
+                                            </p>
+                                            <p class="date">
+                                                26th June 2025
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                            
+                        <a href="#" class="news-link" id="article3">
+                            <div class="article news article3">
+                                <div class="image">
+                                    <span class="news-tool career-tooltip btn-sm">Careers</span>
+                                    <span class="news-img">
+                                        <img src="img/article3pic.png" class="news-image" alt="We Are Hiring: 1st Line Technician">
+                                    </span>
+                                </div>
+                                <div class="news-txt">
+                                    <h3 class="newh3 blue"><span>1st Line Technician</span></h3>
+                                    <p>Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
+                                    <div class="btn-new btn-sm--support-blue"><p>Read More</p></div>
+                                
+                            
+
+                                    <div class="poster">
+                                        <div class="post-pic">
+                                            <img class="news-logo bs" src="img/authorsmall.png" alt="The Netmatters Logo">
+                                        </div>
+                                        <div class="post-deet">
+                                            <p class="nm">
+                                                <strong>Posted by Bethany Shakespeare</strong>
+                                            </p>
+                                            <p class="date">
+                                                20th June 2025
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="view">
+                        <a href="#" class="va2"><h3 class="inline-title">View All</h3>
+                            <span class="arrow-right underline arrowsmaller">&#129030;</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div class="carousel caro-behind">
+                
+                <div class="carousel-3">
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo1.png" class="logo-img logo-img--img-1" alt="Xupes">
+                            <div class="popup cs1"><h4>Xupes</h4>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo2.png" class="logo-img logo-img--img-2" alt="Beat Eating Disorders">
+                            <div class="popup cs2"><h4>Beat</h4>
+                            <p>The UK's eating disorder charity founded in 1989.</p>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo3.png" class="logo-img logo-img--img-3" alt="Survey Solutions">
+                            <div class="popup cs3"><h4>Survey Solutions</h4></div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo5.png" class="logo-img logo-img--img-5" alt="Girlguiding Anglia">
+                            <div class="popup cs5"><h4>Girl Guiding Anglia</h4>
+                                <p>Girl Guiding Anglia is part of Girlguiding, the UK's leading charity for girls and young women in
+                                the UK.</p>
+                                <a href="#" class="logo-btn btn-sm--support-blue bluen">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo6.png" class="logo-img logo-img--img-6" alt="Sweetzy">
+                            <div class="popup cs6"><h4>Sweetzy</h4>
+                                <p>Sweetzy are an online sweets retailer, based in Wymondham.</p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo7.png" class="logo-img logo-img--img-7" alt="Howes Percival">
+                            <div class="popup cs7"><h4>Howes Percival</h4></div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo8.png" class="logo-img logo-img--img-8" alt="Girls' Day School Trust">
+                            <div class="popup cs8">
+                                <h4>GDST</h4>
+                                <p>The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools.</p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo9.png" class="logo-img logo-img--img-9" alt="Ashcroft">
+                            <div class="popup cs9">
+                                <h4>Ashcroft LLC Partnership</h4>
+                                <p>Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP in 2020 and are 
+                                one of the top chartered accountancy firms in Cambridge, advising entrepreneurs and families. </p>
+                                <a href="#" class="logo-btn btn-sm--design-purple purple">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo10.png" class="logo-img logo-img--img-10" alt="One Traveller">
+                            <div class="popup cs10">
+                                <h4>One Traveller</h4>
+                                <p>One Traveller, founded in 2007, is a leading provider of solo holidays for over 50s. </p>
+                                <a href="#" class="logo-btn btn-sm--market-green green">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo4.png" class="logo-img logo-img--img-4" alt="Searles Leisure Resort">
+                            <div class="popup cs4"><h4>Searles Leisure Resort</h4>
+                                <p>Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK holiday
+                                resort for families.</p>
+                                <a href="#" class="logo-btn btn-sm--dev-yellow yell">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo11.png" class="logo-img logo-img--img-11" alt="Busseys">
+                            <div class="popup cs11">
+                                <h4>Busseys</h4>
+                                <p>One of the UK's leading Ford dealerships.</p> 
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo12.png" class="logo-img logo-img--img-12" alt="Crane Garden Buildings">
+                            <div class="popup cs12">
+                                <h4>Crane Garden Buildings</h4>
+                                <p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="logo-wrap">
+                            <img src="img/carousel-3/logo13.png" class="logo-img logo-img--img-13" alt="Black Swan Care Group">
+                            <div class="popup cs13">
+                                <h4>Black Swan Care Group</h4>
+                                <p>Black Swan Care Group own and manage 21 high-quality care and residential homes with a focus on putting the needs of their residents first. </p>
+                                <a href="#" class="logo-btn btn-sm--dev-yellow yell">View Our Case Study<img src="img/icons/SVG/arrow-wh.svg" alt="arrow icon" class="arrow arrow-right"></a>
+                            </div>
+                            <div class="logo-tri"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <?php require('views/partials/footer.view.php') ?>
+
+        <?php require('views/partials/menu.view.php') ?>
+
+
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/frontend.js"></script>
+    </body>
+    
+</html>

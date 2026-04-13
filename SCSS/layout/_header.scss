@@ -10,7 +10,7 @@
 //sticky header
 #header-scroll {
     position: fixed;
-    background-color: $bg-white;
+    background-color: $bg-midnight;
     // overflow: initial;
     overflow-x: clip;
     transition: all 0.4s ease;
@@ -20,7 +20,7 @@
 }
 .true-header {
     transform: translateY(0);
-    background-color: $bg-white;
+    background-color: $bg-midnight;
 }
 .header-hidden {
     transform: translateY(-100%);

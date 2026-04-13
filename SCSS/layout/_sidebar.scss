@@ -1,4 +1,8 @@
 #sidebar {
+    //set to display none for now so I can work out the php
+    //I must remember to come back and remove this and figure out why it's
+    //overlapping weirdly!!
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -9,6 +13,7 @@
     color: $bg-white;
     list-style: none;
     overflow-y: scroll;
+    overflow-x: clip;
     @include md {
         width: 350px;
     }
