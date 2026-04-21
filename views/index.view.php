@@ -14,7 +14,7 @@
         Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
         </title>
     </head>
-    
+                    
     <body id="body" class="default-body">
         <div id="background" class="default-background">
             <?php require('views/partials/header.view.php') ?>
@@ -293,10 +293,65 @@
                             </a>
                         </div>
                     </div>
-
+                    
                     <div class="container news-sec">
+                        <?php
+                            require 'Database.php';
+                            $db = new Database();
+                            
+                            foreach ($db->queryAll('SELECT  articles.title, 
+                                                            articles.article_id,
+                                                            articles.date,
+                                                            articles.png,
+                                                            articles.excerpt,
+                                                            
+                                                            authors.author_id AS author_id,
+                                                            authors.name AS author_name,
+                                                            authors.author_png,
+                                                            authors.png_alt,
+                                                            styling.tooltip,
+                                                            styling.button,
+                                                            styling.title_colour FROM articles
+                                                            JOIN authors ON authors.author_id = articles.author_id
+                                                            JOIN styling ON styling.article_id = articles.article_id') as $article) :
+                            ?>
+                            <a href="#" class="news-link">
+                            <div class="article news article<?= $article['article_id'] ?>">
+                                <div class="image">
+                                    <?=  $article['tooltip']; ?>
+                                    <span class="news-img">
+                                        <img src="<?=  $article['png']; ?>" class="news-image" alt="Increase Exit Value With Bespoke Software- Our Key Strategies">
+                                    </span>
+                                </div>
+                                <div class="news-txt">
+                                    <h3 class="<?=  $article['title_colour']; ?>"><span><?= $article['title']; ?></span></h3>
+                                    <p><?=  $article['excerpt']; ?></p>
+                                    <div class="<?=  $article['button']; ?>"><p>Read More</p></div>
+                                
+                            
 
-                        <a href="#" class="news-link">
+                                    <div class="poster">
+                                        <div class="post-pic">
+                                            <img class="news-logo" src="<?= $article['author_png']; ?>" alt="The Netmatters Logo">
+                                        </div>
+                                        <div class="post-deet">
+                                            <p class="nm">
+                                                <strong>Posted by <?= $article['author_name']; ?></strong>
+                                            </p>
+                                            <p class="date">
+                                                <?=  $article['date']; ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <?php endforeach ?>
+
+
+
+
+                        <!-- <a href="#" class="news-link">
                             <div class="article news article1">
                                 <div class="image">
                                     <span class="news-tool insight-tooltip btn-sm">Insights</span>
@@ -358,6 +413,7 @@
                                 </div>
                             </div>
                         </a>
+
                             
                         <a href="#" class="news-link" id="article3">
                             <div class="article news article3">
@@ -389,7 +445,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </a> -->
                     </div>
                     <div class="view">
                         <a href="#" class="va2"><h3 class="inline-title">View All</h3>

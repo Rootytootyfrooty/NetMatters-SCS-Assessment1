@@ -1,15 +1,29 @@
+body {
+    color: $bg-midnight;
+}
 #contact-offices {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     gap: 35px;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    @include md {
+        flex-direction: row;
+    }
 }
 .office-box {
     max-width: 718px;
     border: 1px solid #ccc;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 3px 35px $grey-10;
+    @include md {
+        max-width: 332px;
+    }
+    @include lg {
+        max-width: 400px;
+    }
 }
 .office-img {
     width: 100%;
@@ -27,7 +41,7 @@
     p {
         font-size: 14px;
         color: #666;
-        margin: 0;
+        margin-bottom: 0;
     }
 }
 .office-title {
@@ -59,26 +73,76 @@
 .office-phone:hover, .office-title:hover {
     text-decoration: underline;
 }
-
+#link-container {
+    display: none;
+    background-color: $bg-white;
+    min-height: 47px;
+    border-top: 1px solid $bg-midnight;
+    box-shadow: 0 5px 35px $grey-10;
+    @include sm {
+        display: block;
+    }
+}
 .link-top {
     display: none;
-    height: 0;
-    margin: 0;
+    background-color: $bg-white;
+    color: $bg-midnight;
+    font-size: 13px;
+    width: 100%;
+    max-width: 718px;
+    padding: 13px 0;
+    margin-bottom: 0;
+    @include sm {
+        display: block;
+    }
+    @include md {
+        max-width: 940px;
+    }
+    @include lg {
+        max-width: 1170px;
+    }
+    a {
+        font-weight: 700;
+        color: $bg-midnight;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-.top {
+#top-of-page {
     background-color: $bg-midnight;
     color: $bg-white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: 400;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    h1 {
+        font-weight: 400;
+        padding: 20px 15px;
+        font-size: 36px;
+        @include lg {
+            padding: 20px 0;
+        }
+    }
+    @include md {
+        background-color: $bg-white;
+        h1 {
+            color: $bg-midnight;
+            text-align: left;
+            max-width: 1170px;
+        }
+    }
+    .top {
+        height: 88px;
+    }
 }
 
 //contact info section
 #contact-info {
     font-weight: 600;
     padding-top: 40px;
+    @include lg {
+        padding-top: 0;
+        
+    }
     p {
         padding-bottom: 8px;
     }
@@ -90,64 +154,180 @@
         }
     }
 }
-.accord-title {
+//accordion
+#accord-title {
     font-weight: 600;
     &:hover {
         text-decoration: underline;
         cursor: pointer;
     }
 }
+#accord-text {
+    transition: all 0.6s ease-in-out;
+    p {
+        line-height: 28px;
+        color: #666;
+        font-size: 16px;
+        strong {
+            color: $bg-midnight;
+            font-weight: 600;
+        }
+    }
+}
+.accord-body-default {
+    max-height: 405px;
+}
 .accord-body-hide {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
 }
 
 //contact form
 #contact-form {
     display: flex;
-    flex-direction: column;
     padding: 30px;
     background-color: #e6e7e9;
     border-radius: 10px;
     color: #555;
     margin-bottom: 50px;
-    input {
-        height: 47px;
-        padding: 5px 15px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-        border-radius: 2px;
+    max-width: 770px;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    @include md {
+        column-gap: 5px;
     }
-    label {
-        margin-bottom: 5px;
-        font-weight: 600;
-        color: #333655;
-        font-size: 16px;
+    .form-pair {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        input {
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            border-radius: 2px;
+            
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333655;
+            font-size: 16px;
+            strong {
+                color: #d24d57;
+            }
+        }
+    }
+    .pair-sm {
+        width: 100%;
+        @include md {
+            width: 48%;
+            input {
+                max-width: 425px;
+            }
+        }
+    }
+}
+//bottom of contact form
+#form-bottom1 {
+   display: flex;
+flex-direction: row; 
+}
+ #form-bottom2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    small {
+        margin-bottom: 10px;
+        font-size: 80%;
+    }
+    small strong {
+        color: #d24d57;
+    }
+    @include xs {
+        flex-direction: row;
+        small {
+            font-size: 85%;
+        }
     }
 }
 
-//bottom of contact form
-
-#form-bottom1, #form-bottom2 {
-    display: flex;
-    flex-direction: row;
-    button {
+#enquiry-button {
         height: 47px;
-        background-color: #22242e;
+        background-color: $bg-midnight;
         border-color: #191a22;
         color: $bg-white;
         line-height: 35px;
         font-size: 17px;
         width: 150px;
+        &:hover {
+            background-color: #22242e;
+            cursor: pointer;
+        }
     }
-}
+
 #form-bottom1 {
     justify-content: left;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 #checkbox {
     height: 32px;
     fill: $bg-midnight;
-    margin-right: 20px;
-    align-self: center;
+    margin-right: 10px;
+    max-width: 50px;
+}
+
+#form-bottom1::before {
+    content: "";
+    width: 29px;
+    height: 32px;
+    background-color: $bg-midnight;
+    position: absolute;
+    border-radius: 4px;
+    margin-left: 9px;
+}
+
+#form-bottom1.checkmark-there::before {
+    display: inline-block;
+}
+
+#form-bottom1.checkmark-gone::before {
+    display: none;
+}
+
+#checkbox-text {
+    line-height: 32px;
+    color: $bg-midnight;
+    font-size: 16px;
+    font-weight: 600;
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+
+#form-hours-wrapper {
+    @include lg {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+.input {
+    border: 1px solid #ccc;
+}
+.error {
+    border-color: $telecoms-red;
+}
+.input-sm {
+    height: 47px;
+}
+#message {
+    height: 100px;
 }

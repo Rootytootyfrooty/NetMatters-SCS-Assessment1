@@ -12,38 +12,46 @@ Add .gitignore file to ignore .env file ✅
 
 Add .env file ✅
 
-Create a database locally
+Create a database locally ✅
 	Create empty database ✅
 	Figure out which columns you need ✅
 	Figure out which tables you need ✅
-	Add each table
-	Populate it with news article data
+	Add each table ✅
+	Populate it with news article data ✅
 
-	Columns needed:
+	Columns needed: ✅
 		Table name: authors
-		Author ID
+		Author ID -primary key
 		Author name
 		Author picture PNG
 
-		Table name: ids
-		Article author ID
-		Article ID
+		Table name: articles ✅
+		Article ID -primary key
+		Article author id - foreign key for authors
 		Date posted
-
-		Table name: articles
-		Article ID
 		Article news image PNG
 		Article body title
 		Article body excerpt
 
-		Table name: styling?
-		Style Button colour?
-		Style Text colour?
-		Style Tooltip?
+		Table name: styling  ✅
+		Article id
+		Style Button colour
+		Style Text colour
+		Style Tooltip
+
+Enquiries Database ✅
+	Columns needed:
+		Table name: enquiries
+		id
+		Name
+		Company (can be blank)
+		Email 
+		Number
+		Message
 
 Add .env variable for database name, username, password ✅
 
-Link database to project files using .env variables
+Link database to project files using .env variables ✅
 
 Update index.html to index.php ✅
 
@@ -54,7 +62,7 @@ Make sure cookie acceptance works on both pages  ✅? I think
 
 Figure out navigation  ✅
 
-Move homepage news to database, loop to display
+Move homepage news to database, loop to display  ✅
 
 Create contact-us.php using partials  ✅
 
@@ -62,20 +70,25 @@ Link contact button with contact page  ✅
 
 Add content to contact.php page  ✅
 
-Add 'Out of Hours IT Support" accordion using JS
+Add 'Out of Hours IT Support" accordion using JS  ✅
+
+Style accordion ✅
+
+Accordion transition 🟨
 
 Create contact form:
-	JS client side validation
-	PHP server side validation, error messages for incorrect or missing fields
-	Success message
-	Storing successful enquiries to database.
+	JS client side validation ✅
+	PHP server side validation, error messages for incorrect or missing fields ✅
+	Success message 🟨
+	Storing successful enquiries to database. 🟨
+	JS induced styling on error (red inset) flashes only. Figure out why.
 
-Figure out why the sidebar menu overlaps now
+Figure out why the sidebar menu overlaps now 🟨
 	>>Remember you have set the sidebar to display: none while you sort the php side first
-
-
+ 
+Basic layout/styling:
 Contact page:
-	Our Offices section
-	Form
-	Contact info
-	OOH it accordion
+	Our Offices section  ✅
+	Form  ✅
+	Contact info  ✅
+	OOH it accordion  ✅

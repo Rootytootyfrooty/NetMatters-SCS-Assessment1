@@ -13,6 +13,7 @@
         <title>
         Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
         </title>
+        
     </head>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="icon-checkbox-unchecked" viewBox="0 0 32 32">
@@ -22,19 +23,22 @@
     <body id="body" class="default-body">
         <div id="background" class="default-background">
 
-            <?php require('views/partials/header.view.php') ?>
+            <?php require('views/partials/header.view.php');
+                     ?>
             <div id="top-of-page">
-                <p class="link-top container">
-                    <a href='/'>Home </a>
-                    / Our Offices
-                </p>
+                <div id="link-container">
+                    <p class="link-top container">
+                        <a href='/'>Home </a>
+                        / Our Offices
+                    </p>
+                </div>
                 <h1 class="top container">Our Offices</h1>
             </div>
             <div class="contact-body container">
                 <div id="contact-offices">
                     <div class="office-box">
                         <a href="#" class="office-img">
-                            <img src="img/carousel-image-one.png" alt="Cambridge Office">
+                            <img src="img/offices/cambridge.jpg" alt="Cambridge Office">
                         </a>
                         <div class="office-text">
                             <a href="#" class="office-title">Cambridge Office</a>
@@ -51,7 +55,7 @@
                     </div>
                     <div class="office-box">
                         <a href="#" class="office-img">
-                            <img src="img/carousel-image-one.png" alt="Cambridge Office">
+                            <img src="img/offices/wymondham.jpg" alt="Cambridge Office">
                         </a>
                         <div class="office-text">
                             <a href="#" class="office-title">Wymondham Office</a>
@@ -68,7 +72,7 @@
                     </div>
                     <div class="office-box">
                         <a href="#" class="office-img">
-                            <img src="img/carousel-image-one.png" alt="Cambridge Office">
+                            <img src="img/offices/yarmouth.jpg" alt="Cambridge Office">
                         </a>
                         <div class="office-text">
                             <a href="#" class="office-title">Great Yarmouth Office </a>
@@ -84,55 +88,80 @@
                         </div>
                     </div>
                 </div>
-                <div id="contact-info">
-                    <p>Email us on:</p>
-                    <p><a href="#">sales@netmatters.com</a></p>
-                    <p>Speak to Sales on:</p>
-                    <p><a href="">01603 515007</a></p>
-                    <p>Business hours:</p>
-                    <p>Monday - Friday 07:00 - 18:00</p>
-                </div>
-                <div id="ooh-contact-info">
-                    <p class="accord-title">Out of Hours IT Support &#128899;</p>
-                    <div class="accord-body-hide">
-                        <p>
-                            Netmatters IT are offering an Out of Hours service for Emergency 
-                            and Critical tasks.
-                        </p>
-                        <p>
-                            Monday - Friday 18:00 - 22:00 <br>
-                            Saturday 08:00 - 16:00 <br>
-                            Sunday 10:00 - 18:00
-                        </p>
-                        <p>
-                            To log a critical task, you will need to call our main line number 
-                            and select Option 2 to leave an Out of Hours  voicemail. A technician 
-                            will contact you on the number provided within 45 minutes of your call.
-                        </p>
+                <div id="form-hours-wrapper">
+                    <div id="wrapper-2">
+                        <div id="contact-info">
+                            <p>Email us on:</p>
+                            <p><a href="#">sales@netmatters.com</a></p>
+                            <p>Speak to Sales on:</p>
+                            <p><a href="">01603 515007</a></p>
+                            <p>Business hours:</p>
+                            <p>Monday - Friday 07:00 - 18:00</p>
+                        </div>
+                        <div id="ooh-contact-info">
+                            <p id="accord-title">Out of Hours IT Support &#128899;</p>
+                            <div id="accord-text" class="accord-body-hide">
+                                <p>
+                                    Netmatters IT are offering an Out of Hours service for Emergency 
+                                    and Critical tasks.
+                                </p>
+                                <p><strong>
+                                    Monday - Friday 18:00 - 22:00 <br>
+                                    Saturday 08:00 - 16:00 <br>
+                                    Sunday 10:00 - 18:00
+                                </strong></p>
+                                <p>
+                                    To log a critical task, you will need to call our main line number 
+                                    and select Option 2 to leave an Out of Hours  voicemail. A technician 
+                                    will contact you on the number provided within 45 minutes of your call.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    
+                    <form action="/contact-us" method="POST" id="contact-form">
+                        <div class="form-pair pair-sm">
+                            <label for="name">Your Name <strong>*</strong></label>
+                            <input id="name" name="name" class="input input-sm" value="<?= htmlspecialchars($name) ?>"></input>
+                            <?php if (isset($errors['name'])) : ?>
+                                <p class="error-msg"><?= $errors['name'] ?></p>
+                            <?php endif; ?>
+                        </div>
 
-                    <form id="contact-form">
-                        <label for="name">Your name</label>
-                        <input id="name" name="name" required></input>
+                        <div class="form-pair pair-sm">
+                            <label for="company">Company Name</label>
+                            <input id="company" name="company" class="input input-sm" value="<?= htmlspecialchars($company) ?>"></input>
+                        </div>
 
-                        <label for="company">Your company</label>
-                        <input id="company" name="company"></input>
+                        <div class="form-pair pair-sm">
+                            <label for="email">Your Email <strong>*</strong></label>
+                            <input id="email" name="email" class="input input-sm" value="<?= htmlspecialchars($email) ?>"></input>
+                            <?php if (isset($errors['email'])) : ?>
+                                <p class="error-msg"><?= $errors['email'] ?></p>
+                            <?php endif; ?>
+                        </div>
 
-                        <label for="email">Your email</label>
-                        <input id="email" name="email" required></input>
+                        <div class="form-pair pair-sm">
+                            <label for="number">Your Telephone Number <strong>*</strong></label>
+                            <input id="number" name="number" class="input input-sm" value="<?= htmlspecialchars($number) ?>"></input>
+                            <?php if (isset($errors['number'])) : ?>
+                                <p class="error-msg"><?= $errors['number'] ?></p>
+                            <?php endif; ?>
+                        </div>
 
-                        <label for="number">Your Telephone Number</label>
-                        <input id="number" name="number" required></input>
-
-                        <label for="message">Message</label>
-                        <input id="message" name="message" required></input>
+                        <div class="form-pair">
+                            <label for="message">Message <strong>*</strong></label>
+                            <input id="message" name="message" class="input" value="<?= htmlspecialchars($message) ?>"></input>
+                            <?php if (isset($errors['message'])) : ?>
+                                <p class="error-msg"><?= $errors['message'] ?></p>
+                            <?php endif; ?>
+                        </div>
 
                         <div>
-                            <div id="form-bottom1">
+                            <div id="form-bottom1" class="checkmark-gone">
                                 
                                 <svg id="checkbox"><use xlink:href="#icon-checkbox-unchecked"></use></svg>
-                                <span> Please tick this box if you wish to receive marketing 
+                                <span id="checkbox-text"> Please tick this box if you wish to receive marketing 
                                     information from us. Please see our 
                                     <a href="#">Privacy Policy</a> 
                                     for more 
@@ -140,12 +169,12 @@
                                 </span>
                             </div>
                             <div id="form-bottom2">
-                                <button>SEND ENQUIRY</button>
-                                <span>* Fields Required</span>
+                                <input id="enquiry-button" type="submit" VALUE="SEND ENQUIRY"></input>
+                                <small><strong>* </strong>Fields Required</small>
                             </div>
                         </div>
                     </form>
-
+                </div>
             </div>
 
 
@@ -160,6 +189,7 @@
         crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/frontend.js"></script>
+        <script src="js/formvalidation.js"></script>
     </body>
     
 </html>
