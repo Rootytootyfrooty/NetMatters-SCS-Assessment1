@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Validator.php';
-require_once "Database.php";
+require "Database.php";
 
 $errors = [];
 
@@ -16,10 +16,10 @@ $message  = $_POST['message'] ?? '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!Validator::email($email)) {
-        $errors['email'] = 'Please Provide a valid email address';
+        $errors['email'] = 'Please provide a valid email address';
     }
     if (!Validator::string($message, 1, 1000)) {
-        $errors['message'] = 'Message must be between 1 and 10,000 characters';
+        $errors['message'] = 'Message must be between 1 and 1,000 characters';
     }
     if (!Validator::string($name)) {
         $errors['name'] = 'Please provide a name';
@@ -30,10 +30,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!Validator::number($number)) {
         $errors['number'] = 'Please enter a valid phone number';
     }
-    if (!empty($errors)) {
-        require "views/contact-us.view.php";
-    } else {
+    if (empty($errors)) {
+        $db = new Database();
+        $db->queryAll('INSERT INTO enquiries(name, company, email, number, message) VALUES(:name, :company, :email, :number, :message)', [
+            'name' => $name,
+            'company' => $company,
+            'email' => $email,
+            'number' => $number,
+            'message' => $message
+        ]);
         header('Location: /');
+        exit();
     }
 }
 

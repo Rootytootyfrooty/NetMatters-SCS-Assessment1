@@ -163,7 +163,8 @@ body {
     }
 }
 #accord-text {
-    transition: all 0.6s ease-in-out;
+    transition: max-height 0.5s cubic-bezier(0.54, 0.4, 0.6, 1);
+    overflow: hidden;
     p {
         line-height: 28px;
         color: #666;
@@ -179,7 +180,7 @@ body {
 }
 .accord-body-hide {
     max-height: 0;
-    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
 }
 
 //contact form
@@ -301,17 +302,21 @@ flex-direction: row;
 
 #checkbox-text {
     line-height: 32px;
-    color: $bg-midnight;
     font-size: 16px;
+    color: $bg-midnight;
     font-weight: 600;
     a {
-        color: inherit;
+        color: $bg-midnight;
         text-decoration: underline;
+        &:hover {
+        color: #121419;
+        }
     }
 }
 
 
 #form-hours-wrapper {
+    padding-bottom: 50px;
     @include lg {
         display: flex;
         flex-direction: row-reverse;
@@ -330,4 +335,14 @@ flex-direction: row;
 }
 #message {
     height: 100px;
+}
+.error-msg {
+    color: #d24d57;
+}
+
+//because the sidebar overlaps
+#main-body, #form-hours-wrapper {
+    position: relative;
+    z-index: 10;
+    background: $bg-white;
 }

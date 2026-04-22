@@ -1,8 +1,4 @@
 #sidebar {
-    //set to display none for now so I can work out the php
-    //I must remember to come back and remove this and figure out why it's
-    //overlapping weirdly!!
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -21,9 +17,9 @@
 // container to cover rest of page when sidebar is open
 #background {
     position: relative;
+    background-color: $bg-white;
     z-index: 10;
     min-height: 100vh;
-    background: $bg-white;
     transition: transform 0.4s ease;
 }
 .list-inner-menu,

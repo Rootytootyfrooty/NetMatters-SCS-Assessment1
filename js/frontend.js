@@ -5,25 +5,59 @@ const body = document.getElementById("body");
 
 //new burger button logic
 //I'm not sure that this is really any more efficient
+// function setStateBB(state) {
+//     if (state === "burger-click") {
+
+//         burgerBtn.classList.toggle("burger-burger-clicked", true);
+//         burgerBtn2.classList.toggle("burger-burger-clicked", true);
+//         backgroundToFade.classList.toggle("body-burger-clicked", true);
+//         body.classList.toggle("body-shifted", true);
+
+//         burgerBtn.classList.toggle("burger-default", false);
+//         burgerBtn2.classList.toggle("burger-default", false);
+//         backgroundToFade.classList.toggle("default-background", false);
+//         body.classList.toggle("default-body", false);
+
+//     } else if (state === "unclicked") {
+//         burgerBtn.classList.toggle("burger-default", true);
+//         burgerBtn2.classList.toggle("burger-default", true);
+//         backgroundToFade.classList.toggle("default-background", true);
+//         body.classList.toggle("default-body", true);
+
+//         burgerBtn.classList.toggle("burger-burger-clicked", false);
+//         burgerBtn2.classList.toggle("burger-burger-clicked", false);
+//         backgroundToFade.classList.toggle("body-burger-clicked", false);
+//         body.classList.toggle("body-shifted", false);
+//     }
+// }
+// const toggleArray = [
+//     burgerBtn,
+//     burgerBtn2,
+    
+// ]
 function setStateBB(state) {
     if (state === "burger-click") {
-        burgerBtn.classList.toggle("burger-burger-clicked", true);
-        burgerBtn2.classList.toggle("burger-burger-clicked", true);
-        backgroundToFade.classList.toggle("body-burger-clicked", true);
-        body.classList.toggle("body-shifted", true);
-        burgerBtn.classList.toggle("burger-default", false);
-        burgerBtn2.classList.toggle("burger-default", false);
-        backgroundToFade.classList.toggle("default-background", false);
-        body.classList.toggle("default-body", false);
+
+        burgerBtn.classList.toggle("burger-burger-clicked");
+        burgerBtn2.classList.toggle("burger-burger-clicked");
+        backgroundToFade.classList.toggle("body-burger-clicked");
+        body.classList.toggle("body-shifted");
+
+        burgerBtn.classList.toggle("burger-default");
+        burgerBtn2.classList.toggle("burger-default");
+        backgroundToFade.classList.toggle("default-background");
+        body.classList.toggle("default-body");
+
     } else if (state === "unclicked") {
-        burgerBtn.classList.toggle("burger-default", true);
-        burgerBtn2.classList.toggle("burger-default", true);
-        backgroundToFade.classList.toggle("default-background", true);
-        body.classList.toggle("default-body", true);
-        burgerBtn.classList.toggle("burger-burger-clicked", false);
-        burgerBtn2.classList.toggle("burger-burger-clicked", false);
-        backgroundToFade.classList.toggle("body-burger-clicked", false);
-        body.classList.toggle("body-shifted", false);
+        burgerBtn.classList.toggle("burger-default");
+        burgerBtn2.classList.toggle("burger-default");
+        backgroundToFade.classList.toggle("default-background");
+        body.classList.toggle("default-body");
+
+        burgerBtn.classList.toggle("burger-burger-clicked");
+        burgerBtn2.classList.toggle("burger-burger-clicked");
+        backgroundToFade.classList.toggle("body-burger-clicked");
+        body.classList.toggle("body-shifted");
     }
 }
 burgerBtn.addEventListener("click", (event) => {

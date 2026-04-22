@@ -4,7 +4,8 @@
     top: 0;
     z-index: 12;
     width: 100vw;
-    overflow-x: clip;
+    //overflow-x: clip;
+    background-color: $bg-white;
 }
 
 //sticky header
@@ -12,11 +13,13 @@
     position: fixed;
     background-color: $bg-midnight;
     // overflow: initial;
-    overflow-x: clip;
+    //overflow-x: clip;
     transition: all 0.4s ease;
     z-index: 13;
     width: 100vw;
     box-shadow: 0 5px 35px $grey-10;
+    background-color: $bg-white;
+
 }
 .true-header {
     transform: translateY(0);
@@ -267,7 +270,8 @@ button {
 .header-order {
     background-color: $bg-white;
     display: flex;
-    // width: 100%;
+    position: relative;
+    //width: 100%;
     padding: rem(20) rem(15);
     z-index: 12;
     > .container-logo,

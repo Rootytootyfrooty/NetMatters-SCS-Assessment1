@@ -74,16 +74,17 @@ Add 'Out of Hours IT Support" accordion using JS  ✅
 
 Style accordion ✅
 
-Accordion transition 🟨
+Accordion transition ✅
 
 Create contact form:
 	JS client side validation ✅
 	PHP server side validation, error messages for incorrect or missing fields ✅
 	Success message 🟨
-	Storing successful enquiries to database. 🟨
-	JS induced styling on error (red inset) flashes only. Figure out why.
+	Storing successful enquiries to database. ✅
+	JS induced styling on error (red inset) flashes only. Figure out why. ✅
+	Time out error messages? 🟨
 
-Figure out why the sidebar menu overlaps now 🟨
+Figure out why the sidebar menu overlaps now ✅
 	>>Remember you have set the sidebar to display: none while you sort the php side first
  
 Basic layout/styling:
