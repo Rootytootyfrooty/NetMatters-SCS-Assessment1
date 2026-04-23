@@ -3,8 +3,8 @@
 class Validator {
     //regex for UK phone numbers I found online
     public static function number($string) {
-        $string = str_replace(array('(', ')', ' '), '', $string);
-        return preg_match('/(0|\\+44)\\d{9,11}\\#?\\d{3,4}?/', $string) !== false;
+        $string = preg_replace('/[()\s-]/', '', $string);
+    return preg_match('/^(?:0\d{10}|\+44\d{10})$/', $string) === 1;
     }
 
     public static function string($value, $min = 1, $max = 255) {

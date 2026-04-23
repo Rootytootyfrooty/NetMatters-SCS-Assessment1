@@ -21,6 +21,7 @@
         </symbol>
     </svg>
     <body id="body" class="default-body">
+
         <div id="background" class="default-background">
 
             <?php require('views/partials/header.view.php'); ?>
@@ -185,6 +186,23 @@
                     </div>
                 </div>
             </div>
+            <?php if (isset($_SESSION['MSG'])) : ?>
+                <div id="success-container">
+                    <div id="success-msg">
+                        <h3>Message Successfully Sent</h3>
+                        <p id="p">Redirecting...</p>
+                    </div>
+                </div>
+                <script>
+                    window.location.href = "/contact-us#contact-form";
+                    document.body.style.overflow = "hidden";
+                    setTimeout(function() {
+                        window.location.href = "/";
+                    }, 2000);
+                </script>
+            <?php 
+                unset($_SESSION['MSG']);
+            endif ?>
 
 
             <?php require('views/partials/footer.view.php') ?>

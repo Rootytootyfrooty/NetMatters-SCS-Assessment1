@@ -41,9 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitBtn = document.getElementById('enquiry-button');
     
     submitBtn.addEventListener("click", event => {
+        
         validateText();
         validateEmail(document.getElementById('email'));
         validateNumber(document.getElementById('number'));
+        window.location.href = "/contact-us#contact-form";
     });
 });
 

@@ -2,6 +2,7 @@
 
 require_once 'Validator.php';
 require "Database.php";
+require "functions.php";
 
 $errors = [];
 
@@ -10,6 +11,7 @@ $company = $_POST['company'] ?? '';
 $email = $_POST['email'] ?? '';
 $number = $_POST['number'] ?? '';
 $message  = $_POST['message'] ?? '';
+
 
 // When a post request is received, it runs the inputs through the validator methods
 
@@ -25,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['name'] = 'Please provide a name';
     }
     if (!Validator::string($number)) {
-        $errors['number'] = 'Please enter a valid phone number';
+        $errors['number'] = 'Please enter a phone number';
     }
     if (!Validator::number($number)) {
         $errors['number'] = 'Please enter a valid phone number';
@@ -39,8 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'number' => $number,
             'message' => $message
         ]);
-        header('Location: /');
-        exit();
+        $_SESSION['MSG'] = "Message Successfully Sent";
     }
 }
 
