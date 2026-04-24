@@ -79,9 +79,13 @@ Accordion transition ✅
 Create contact form:
 	JS client side validation ✅
 	PHP server side validation, error messages for incorrect or missing fields ✅
-	Success message 🟨
+	Success message ✅
+		Pop styling ✅
+		If statement control ✅
+		Session storage ✅
+		Redirect ✅
 	Storing successful enquiries to database. ✅
-	JS induced styling on error (red inset) flashes only. Figure out why. ✅
+	JS induced styling on error (red inset) flashes only. Figure out why & fix ✅
 	Time out error messages? 🟨
 
 Figure out why the sidebar menu overlaps now ✅
@@ -93,3 +97,6 @@ Contact page:
 	Form  ✅
 	Contact info  ✅
 	OOH it accordion  ✅
+
+Extra to-dos:
+	Change checkbox SVG to include tick ✅
