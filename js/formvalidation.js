@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         validateEmail(document.getElementById('email'));
         validateNumber(document.getElementById('number'));
         window.location.href = "/contact-us#contact-form";
+        document.body.style.overflow = "hidden";
     });
 });
 

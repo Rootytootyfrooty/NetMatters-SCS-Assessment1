@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
         <link rel="manifest" href="favicons/site.webmanifest">
         <title>
-        Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
+        Contact Us
         </title>
         
     </head>
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                         
-                        <form action="/contact-us" method="POST" id="contact-form">
+                        <form action="/contact-us#contact-form" method="POST" id="contact-form">
                             <div class="form-pair pair-sm">
                                 <label for="name">Your Name <strong>*</strong></label>
                                 <input id="name" name="name" class="input input-sm <?php if (isset($errors['name'])) : ?>
@@ -161,9 +161,9 @@
 
                             <div class="form-pair">
                                 <label for="message">Message <strong>*</strong></label>
-                                <input id="message" name="message" class="input <?php if (isset($errors['message'])) : ?>
+                                <textarea id="message" name="message" class="input <?php if (isset($errors['message'])) : ?>
                                     <?= "error" ?>
-                                <?php endif; ?>"" value="<?= htmlspecialchars($message, ENT_QUOTES) ?>"></input>
+                                <?php endif; ?>"" value="<?= htmlspecialchars($message, ENT_QUOTES) ?>"></textarea>
                                 <?php if (isset($errors['message'])) : ?>
                                     <p class="error-msg"><?= $errors['message'] ?></p>
                                 <?php endif; ?>
