@@ -1,6 +1,9 @@
 <?php 
 
-require 'routes.php';
+const BASE_PATH = __DIR__ . '/';
+
+require BASE_PATH . ('core/functions.php');
+require base_path('core/routes.php');
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 

@@ -1,6 +1,7 @@
 <!-- Sticky header below -->
             <div id="header-scroll" class="header-hidden">
                 <header class="container header-order">
+                    
                     <div class="container-logo">
                         <a href="/"><img class="logo" src="img/netmatterslogo.png" alt="The Netmatters Logo"></a>
                     </div>

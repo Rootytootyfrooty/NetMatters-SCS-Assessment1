@@ -6,5 +6,7 @@ function dd($data) {
   echo '</pre>';
 }
 
+function base_path(string $path) {
+    return BASE_PATH . $path;
+}
 
-?>

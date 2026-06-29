@@ -1,9 +1,9 @@
 <?php
 
 //connecting to dotenv package so I can access my .env variables
-require __DIR__ . '/vendor/autoload.php';
+require base_path('vendor/autoload.php');
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 class Database {
@@ -16,13 +16,14 @@ class Database {
             'dbname' => $_ENV['DATABASE_NAME'],
             'username' => $_ENV['USERNAME'],
             'password' => $_ENV['PASSWORD'],
-            'host' => '127.0.0.1'
+            'host' => 'localhost'
         ];
     }
     //use variables from config array
     public function connect() {
         if ($this->connection === null) {
-            $dsn = "mysql:host={$this->config['host']};dbname={$this->config['dbname']};charset=utf8mb4";
+
+            $dsn = "mysql:host={$this->config['host']};port=3306;dbname={$this->config['dbname']};charset=utf8mb4";
         
             $this->connection = new PDO(
                 $dsn,

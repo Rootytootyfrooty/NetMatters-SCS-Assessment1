@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: left;
+    // align-items: left;
     p {
         font-size: 14px;
         color: #666;
@@ -189,8 +189,7 @@ body {
     padding: 30px;
     background-color: #e6e7e9;
     border-radius: 10px;
-    color: #555;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     max-width: 770px;
     flex-wrap: wrap;
     flex: 0 0 auto;
@@ -208,6 +207,13 @@ body {
             margin-bottom: 15px;
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
             border-radius: 2px;
+            color: #555;
+            font-size: 14px;
+            &:focus {
+                border-color: #5bc0de;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+                outline: 0;
+            }
         }
         label {
             margin-bottom: 5px;
@@ -270,14 +276,15 @@ flex-direction: row;
 
 #form-bottom1 {
     justify-content: left;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     cursor: pointer;
 }
 
 #checkbox {
     height: 32px;
     fill: $bg-midnight;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: -8px;
     max-width: 50px;
 }
 
@@ -329,6 +336,13 @@ flex-direction: row;
     margin-bottom: 15px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     border-radius: 2px;
+    color: #555;
+    font-size: 14px;
+    &:focus {
+        border-color: #5bc0de;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+        outline: 0; 
+    }
 }
 .error {
     border-color: $telecoms-red;

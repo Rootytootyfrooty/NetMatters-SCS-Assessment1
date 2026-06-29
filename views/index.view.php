@@ -14,8 +14,9 @@
         Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters
         </title>
     </head>
-                    
+        <script>0</script>
     <body id="body" class="default-body">
+        
         <div id="background" class="default-background">
             <?php require('views/partials/header.view.php') ?>
             <div class="carousel-1">
@@ -296,7 +297,8 @@
                     
                     <div class="container news-sec">
                         <?php
-                            require 'Database.php';
+                            require base_path('core/Database.php');
+                            
                             $db = new Database();
                             
                             foreach ($db->queryAll('SELECT  articles.title, 
@@ -313,7 +315,11 @@
                                                             styling.button,
                                                             styling.title_colour FROM articles
                                                             JOIN authors ON authors.author_id = articles.author_id
-                                                            JOIN styling ON styling.article_id = articles.article_id') as $article) :
+                                                            JOIN styling ON styling.article_id = articles.article_id
+                                                            ORDER BY articles.date DESC
+                                                            LIMIT 3') 
+                                                            as $article) :
+                                                            
                             ?>
                             <a href="#" class="news-link">
                             <div class="article news article<?= $article['article_id'] ?>">

@@ -36,10 +36,10 @@
 .btn-wel {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    // justify-content: left;
     @include sm {
         flex-direction: row;
-        justify-content: left;
+        // justify-content: left;
         gap: rem(10);
     }
     > a {
@@ -69,7 +69,7 @@
     border-radius: 6px;
     @include sm {
         flex-direction: row;
-        justify-content: left;
+        // justify-content: left;
     }
     @include md {
         margin-bottom: 12px;
@@ -105,10 +105,10 @@
     max-width: fit-content;
 }
 
-@include sm {
-    flex-direction: row;
-    justify-content: left;
-}
+// @include sm {
+//     flex-direction: row;
+//     justify-content: left;
+// }
 @include md {
     .btn-wel2 {
             margin-top: 75px;

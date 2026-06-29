@@ -193,7 +193,7 @@
             <?php if (isset($_SESSION['MSG'])) : ?>
                 <div id="success-container">
                     <div id="success-msg">
-                        <h3>Message Successfully Sent</h3>
+                        <h3 id="h3">Message Successfully Sent</h3>
                         <p id="p">Redirecting...</p>
                     </div>
                 </div>

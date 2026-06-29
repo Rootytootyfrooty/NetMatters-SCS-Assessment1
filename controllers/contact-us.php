@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Validator.php';
-require "Database.php";
-require "functions.php";
+// require_once 'Validator.php';
+require base_path('core/Validator.php');
+require base_path('core/Database.php');
 
 $errors = [];
 
