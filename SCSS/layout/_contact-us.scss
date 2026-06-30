@@ -250,7 +250,7 @@ flex-direction: row;
         font-size: 80%;
     }
     small strong {
-        color: #d24d57;
+        color: #a94442;
     }
     @include xs {
         flex-direction: row;
@@ -268,6 +268,7 @@ flex-direction: row;
         line-height: 35px;
         font-size: 17px;
         width: 150px;
+        border-radius: 3px;
         &:hover {
             background-color: #22242e;
             cursor: pointer;
@@ -294,7 +295,7 @@ flex-direction: row;
     height: 32px;
     position: absolute;
     border-radius: 4px;
-    margin-left: 9px;
+    margin-left: 1px;
 }
 
 #form-bottom1.checkmark-there #checkbox-mark {
